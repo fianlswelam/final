@@ -107,10 +107,27 @@ class Site extends CI_Controller {
                 if ($amount < $order_p) {
 //redirect
 //                    echo 'Not Engh';
-                    $data = array(
-                        "title" => 'حدث مشكلة',
-                        "mesg" => 'رصيدك لا يكفى لأتمام عملية الشراء'
-                    );
+//                    $data = array(
+//                        "title" => 'حدث مشكلة',
+//                        "mesg" => 'رصيدك لا يكفى لأتمام عملية الشراء'
+//                    );
+//                    $this->load->view('message', $data);
+                    $amount_money = $this->sitead->get_amount_money($user_id);
+                    if ($amount_money > 0) {
+                        $data = array(
+                            'title' => 'خطاء',
+                            'mesg' => 'خطاء أثناء  العملية الرصيد لا يكفى
+                                <a href="' . base_url() . 'payment/convertFromCreditToShelinat">أذهب الى صفحة تحويل  رصيد من دولرات الى شلنات من هنا </a>
+                                '
+                        );
+                    } else {
+                        $data = array(
+                            'title' => 'خطاء',
+                            'mesg' => 'خطاء أثناء  العملية الرصيد لا يكفى ولا يوجد لديك دولارات 
+                                <a href="' . base_url() . 'payment/addCreditPage"> يمكنك تحويل رصيد من خلال هذا الرابط </a>
+                        '
+                        );
+                    }
                     $this->load->view('message', $data);
                 } else {
 // decrimint from user point and insert in orders 

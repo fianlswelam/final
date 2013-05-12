@@ -44,33 +44,35 @@
                         }
                     }
                     ?>
-                    <h3 class = "sub-header text-center">#sh00id فاتوره <i class="icon-file-alt"></i></h3>
+                    <h3 class = "sub-header text-center"> فاتوره <i class="icon-file-alt"></i></h3>
                     <div class = "row-fluid">
-                        <?php
-                        $this->db->from('user');
-                        $this->db->where('id', $this->session->userdata('user_id'));
-                        $user_query = $this->db->get();
-                        if ($user_query->num_rows() > 0) {
-                            $user_rows = $user_query->result();
-                            foreach ($user_rows as $user_row) {
-                                
-                            }
-                        }
-                        ?>
+                        //<?php
+//                        $this->db->from('user');
+//                        $this->db->where('id', $this->session->userdata('user_id'));
+//                        $user_query = $this->db->get();
+//                        if ($user_query->num_rows() > 0) {
+//                            $user_rows = $user_query->result();
+//                            foreach ($user_rows as $user_row) {
+//                                
+//                            }
+//                        }
+//                        ?>
                         <div class = "span8 offset2">
                             <div class = "dash-tile dash-tile-dark no-opacity remove-margin">
                                 <div class = "dash-tile-content">
                                     <div class = "dash-tile-content-inner-fluid dash-tile-content-light" >
                                         <div class = "row-fluid">
                                             <div class = "span6" style = "float: right;">
-                                                <address style = "float: right;">
+<!--                                                <address style = "float: right;">
                                                     <strong>
                                                         <?php echo $this->session->userdata('user_name'); ?>
                                                         <i class = "icon-home"></i>
                                                     </strong><br>
-                                                    <?php echo $user_row->phone . ' '; ?><abbr title = "Phone"><i class = "icon-phone"></i> </abbr> <br>
-                                                    <?php echo $user_row->country; ?><br>
-                                                </address>
+                                                    <?php echo $user_row->phone . ' '; ?>
+                                                    <abbr title = "Phone"><i class = "icon-phone"></i> </abbr> <br>
+                                                    <?php echo $user_row->country; ?>
+                                                    <br>
+                                                </address>-->
                                             </div>
 
 
@@ -107,7 +109,7 @@
                                             <input type="submit" class = "btn btn-large btn-success pull-right push" value="تاكيد عمليت الشراء"> </input>
                                             <a href = "<?php echo base_url(); ?>site/market/" class = "btn btn-large btn-danger pull-right push">ألغاء</a>
                                             <?php echo form_close();?>
-                                            <p><strong>Sent To:</strong> <a href = ""><?php echo $user_row->email; ?></a>
+                                            <!--<p><strong>Sent To:</strong> <a href = ""><?php echo $user_row->email; ?></a>-->
                                                 <br> <span class = "label label-success"><?php
                                             $this->load->helper('date');
                                             echo date('Y-m-d H:i:s', now());

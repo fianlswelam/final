@@ -1,37 +1,33 @@
-<p style="color: #ffffff;">حجزات قيد التنفيذ</p>
-<table border="1"  style="width: 800px;">
-    <tr>
-        <td><p>تنفيذ الخدمة</p></td>
-        <td><p>سعر الخدمة</p></td>
-        <td> <p>وقت الحجز</p></td>
-        <td><p>اسم المستخدم</p> </td>
-        <td><p>اسم الخدمة</p> </td>
-    </tr>
+<h3 class="text-right">حجزات قيد التنفيذ</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th class="span1 text-center">تنفيذ الخدمة</th>
+            <th class="span1 text-center">سعر الخدمة</th>
+            <th class="hidden-phone">وقت الحجز</th>
+            <th class="hidden-phone">اسم المستخدم</th>
+            <th class="hidden-phone">اسم الخدمة</th>
+        </tr>
+    </thead>
     <?php
     foreach ($res as $record) {
         ?>
+    <tbody>
         <tr>
-            <td>
-                <p><a href="<?php echo base_url();?>csad/c_sad/perform/<?php echo $record->order_id; ?>/<?php echo $record->duration?>">
-                        تنفيذ الخدمة
-                    </a></p> 
-            </td>
+            <td class="span1 text-center">
+                <a href="<?php echo base_url(); ?>csad/c_sad/perform/<?php echo $record->order_id; ?>/<?php echo $record->duration ?>">
+                    تنفيذ الخدمة
+                </a>
+                <a href="<?php echo base_url(); ?>csad/c_sad/perform/<?php echo $record->order_id; ?>/<?php echo $record->duration ?>" data-toggle="tooltip" title="Details" class="btn btn-mini btn-info"><i class="icon-ok"></i></a>
 
-            <td>
-                <p><?php echo $record->price_point; ?></p> 
             </td>
-            <td>
-                <p><?php echo $record->start; ?></p> 
-            </td>
+            <td><?php echo $record->price_point; ?></td>
+            <td class="hidden-phone"><?php echo $record->start; ?></td>
+            <td class="hidden-phone"><?php echo $record->username; ?></td>
+            <td class="hidden-phone"><?php echo $record->name; ?></td>
 
-            <td>
-                <p> <?php echo $record->username; ?></p> 
-            </td>
-            <td>
-                <p> <?php echo $record->name; ?></p> 
-            </td>
         </tr>
-
+    </tbody>
         <?php
     }
     ?>

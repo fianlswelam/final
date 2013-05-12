@@ -15,12 +15,12 @@ class sitead extends CI_Model {
             return false;
         }
     }
-    
+
     public function update($data, $table, $where) {
         $this->db->where('id', $where);
         return $this->db->update($table, $data);
     }
-    
+
     function approve_topic($id, $data) {
 
         $this->db->where('id', $id);
@@ -186,14 +186,41 @@ class sitead extends CI_Model {
         return $row->amount_point;
     }
 
+    function get_amount_money($user_id) {
+        $this->db->from('user');
+        $this->db->where('id', $user_id);
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+            $rows = $query->result();
+            foreach ($rows as $row) {
+                
+            }
+        }
+        return $row->amount_money;
+    }
+
     /////////////////
     function do_buy_process($user_id, $order_id, $order_point, $amount, $c_id, $sc_id, $duration) {
 
         if ($order_point > $amount) {
-            $data = array(
-                'title' => 'خطاء',
-                'mesg' => 'خطاء أثناء  العملية الرضيد لا يكفى'
-            );
+            //amount_money
+            $amount_money = $this->get_amount_money($user_id);
+            if ($amount_money > 0) {
+                $data = array(
+                    'title' => 'خطاء',
+                    'mesg' => 'خطاء أثناء  العملية الرصيد لا يكفى
+                                <a href="'. base_url() .'payment/convertFromCreditToShelinat">أذهب الى صفحة تحويل  رصيد من دولرات الى شلنات من هنا </a>
+                                '
+                );
+            } else {
+                $data = array(
+                    'title' => 'خطاء',
+                    'mesg' => 'خطاء أثناء  العملية الرصيد لا يكفى ولا يوجد لديك دولارات 
+                                <a href="'. base_url() .'payment/addCreditPage"> يمكنك تحويل رصيد من خلال هذا الرابط </a>
+                        '
+                );
+            }
+
             $this->load->view('message', $data);
         } else {
 //            echo 'Amount : ' . $amount;
@@ -248,12 +275,11 @@ class sitead extends CI_Model {
         return $this->db->update('news', array('active' => $active));
     }
 
-    
     function activeStatue($id, $active, $table) {
         $this->db->where('id', $id);
         return $this->db->update($table, array('statue' => $active));
     }
-        
+
     function update_amount($id, $amount) {
         //UPDATE `user` SET `amount_point`=(`user`.`amount_point` +90) WHERE `id`=2
 //        $this->db->where('id', $id);
@@ -277,7 +303,7 @@ class sitead extends CI_Model {
         $this->db->where('name', $name);
         return $this->db->update('block', $data);
     }
-        
+
     function get_user_id($id) {
         $this->db->where('id', $id);
         $query = $this->db->get('topic');

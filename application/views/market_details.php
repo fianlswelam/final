@@ -120,14 +120,14 @@
                                                         <td><li class="icon-asterisk"></li></td>
                                                     </tr>
 
-                                                    <tr>
+<!--                                                    <tr>
                                                         <td><span class="label label-important">Unapproved</span></td>
                                                         <td><a href="#">تقيم الموظف</a></td>
                                                         <td><li class="icon-signal"></li></td>
-                                                    </tr>
+                                                    </tr>-->
 
                                                     <tr>
-                                                        <td><span class="label label-important">Unapproved</span></td>
+                                                        <td><span class="label label-important"><?php echo $row->rate_up;?></span></td>
                                                         <td><a href="#">تقيم الخدمه</a></td>
                                                         <td><li class="icon-signal"></li></td>
                                                     </tr>
@@ -273,12 +273,12 @@
                                         <!---------------------->
 
                                         <!-------------------------------------------->
-                                        <div class="media media-hover">
+<!--                                        <div class="media media-hover">
                                             <a href="#" class="pull-left">
                                                 <img src="<?php echo base_url(); ?>images/image_dark_64x64.png"  class="media-object img-polaroid" alt="Image">
                                             </a>
                                             <div class="media-body">
-                                                <!--<form class="form-horizontal" onsubmit="return false;">-->
+                                                <form class="form-horizontal" onsubmit="return false;">
                                                 <?php
                                                 echo form_open('site/addcomment');
                                                 ?>
@@ -298,9 +298,9 @@
                                                 <?php
                                                 echo form_close();
                                                 ?>
-                                                <!--</form>-->
+                                                </form>
                                             </div>
-                                        </div>
+                                        </div>-->
                                     </div>
                                 </div>
                             </div>

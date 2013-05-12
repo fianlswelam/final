@@ -8,11 +8,11 @@ class payment extends CI_Controller {
     function addCreditPage() {
 
         if ($this->session->userdata('logged_in')) {
-		
-		
-           
-			
-			  $id = $this->session->userdata('user_id');
+
+
+
+
+            $id = $this->session->userdata('user_id');
             $this->load->model('site_model');
             if ($this->site_model->select_user($id)) {
                 $user_data = $this->site_model->select_user($id);
@@ -34,16 +34,14 @@ class payment extends CI_Controller {
             } else {
                 $data['owner'] = 'no';
             }
-			
-            $this->load->view('view_selectBank',$data);
+
+            $this->load->view('view_selectBank', $data);
         } else {
             
         }
     }
 
     function convertFromCreditToShelinat() {
-        
-          
         
     }
 
