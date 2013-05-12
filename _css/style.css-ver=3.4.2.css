@@ -1,0 +1,160 @@
+/*
+Theme Name: Dreamy
+Support URI: http://www.themeskingdom.com/support/
+Description: Theme is suitable for personal bloggers, newspapers, online magazines… With great look and very useful features you’ll leave a lasting impression upon your public.
+Author: Themeskingdom
+Author URI: http://www.themeskingdom.com/support/
+Version: 1.1
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Theme URI: http://www.themeskingdom.com/
+Tags: one-column, two-columns, three-columns, four-columns, featured-images, post-formats, theme-options, threaded-comments, translation-ready
+*/
+
+@import url("reset.css")/*tpa=http://demo.themeskingdom.com/dreamy/wp-content/themes/dreamy/style/reset.css*/;
+@import url("style.css")/*tpa=http://demo.themeskingdom.com/dreamy/wp-content/themes/dreamy/style/style.css*/;
+
+
+/*DEMO*/
+
+
+/*PICKER*/
+.demo_wrap {
+    width: 155px;
+    position:absolute;
+    z-index:9999;
+    padding:20px;
+    margin: 0 0 0 -195px;
+    background-color:#fff;
+    top: 79px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 400px;
+    -moz-box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.hider2 {
+    display:none;
+}
+
+.demo_wrap label{
+    color: #5d5d5d;
+    font-size: 12px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 18px;
+    width: 100%;
+    display: inline-block;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.demo_wrap select{width: 75%}
+
+.demo_wrap input {
+    border:none;
+    height: 14px;
+    width: 195px;
+    margin: 0 0 0px 0;
+    padding: 0 0 0 6px;
+    background-color:#fff;
+    background-position: center right;
+    background-repeat: no-repeat;
+    border: 1px solid #AAA;
+    color: #555;
+    font-size: inherit;
+    overflow: hidden;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.field-desc {
+ color:#5a5a5a!important;
+ margin:3px 0 3px 0;
+}
+
+.demo_text {
+float: left;
+text-align: center;
+width: 100%;
+display: inline-block;
+overflow: hidden;
+color: #5d5d5d!important;
+font-size: 14px;
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-weight: bold;
+line-height: 24px;
+}
+
+.hider{
+    background: url(demo-button.png)/*tpa=http://demo.themeskingdom.com/dreamy/wp-content/themes/dreamy/style/img/demo-button.png*/ no-repeat;
+    height: 400px;
+    left: -30px;
+    position: absolute;
+    top: 75px;
+    width: 80px;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.hiderfont {
+    background: url(demo-font.png)/*tpa=http://demo.themeskingdom.com/dreamy/wp-content/themes/dreamy/img/demo-font.png*/ no-repeat;
+    height: 38px;
+    left: 0px;
+    position: fixed;
+    top: 50px;
+    width: 41px;
+}
+
+.font-picker {
+    width:211px;
+    background-color:#e7e7e7;
+    position:fixed;
+    top:64px;
+    z-index:9999;
+    padding:0 0 20px 20px;
+    margin:0 0 0 -231px;
+
+}
+
+.font-picker select {
+    float:left;
+    display:block;
+    width:90%;
+    margin:5px 0 15px 0;
+    height:23px;
+    padding:0 0 0 5px;
+    -webkit-appearance: button;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none;
+  background-image: -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 1px solid #AAA;
+  color: #555!important;
+  font-size: inherit;
+  overflow: hidden;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.demo-headers {
+    font-size:12px;
+    color: #303337;
+    font-family: 'Helvetica';
+    padding: 6px 0 2px;
+    font-weight: bold;
+}

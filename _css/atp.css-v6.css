@@ -1,0 +1,8359 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@charset "UTF-8";
+/* CSS Document */
+
+/***********************************
+*  ATP common Stylesheet
+*  Created on: 01/30/2009
+*  Matthew Ausonio
+***********************************/
+
+
+
+/* Basic Layout */
+
+p {
+	margin-bottom:1em;
+}
+/* homepage layout styles */
+.layoutHome #wrapper {
+	background:none;
+	padding:0;
+	width:985px;
+}
+.layoutHome #navAdCol {
+	width:985px;
+	padding:0;
+	margin:0;
+}
+.layoutHome #mainContentColWrap {
+	clear:both;
+	
+	min-height:1%;
+	_height:1%;
+	padding:10px;
+}
+.layoutHome #mainTripleColWrap {
+	width:963px;
+}
+.layoutHome #mainContentCol1 {
+	float:left;
+	width:653px;
+	margin-right:10px;
+}
+.layoutHome #mainContentCol2 {
+	float:right;
+	width:300px;
+}
+.layoutHome #mainContentCol3 {
+	float:left;
+	clear:both;
+	width:963px; 
+}
+.layoutHome #mainContentCol4,
+.layoutHome #mainContentColExtra {
+	display:none;
+}
+/* homepage styles */
+.layoutHome #homeHeadlines {
+	float:left;
+	height:256px;
+	width:643px;
+	padding:10px;
+	background:url("home_news_feature_bg.png") 0 0;
+	overflow:hidden;
+	margin-bottom: 15px;
+}
+.layoutHome #homeHeadlines a {
+ 	color:#6dd7fe;
+}
+#homeHeadlinesHeader {
+	border-bottom:1px solid #3b4150;
+	height:31px;
+}
+#homeHeadlinesHeader h2 {
+	line-height:31px;
+	float:left;
+	font-size:16px;
+	color:white;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#homeHeadlinesList .genericButton,
+#homeHeadlinesHeader .genericButton {
+	float:right;
+	clear:none;
+	background-image:url("generic_button.png");
+}
+#homeHeadlinesHeader .genericButton span {
+	_padding-top:3px;
+	_height:17px;
+}
+#homeHeadlinesList .genericButton span,
+#homeHeadlinesHeader .genericButton span {
+	background-image:url("generic_button.png");
+}
+#homeHeadlinesFeature {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:white;
+	font-size:11px;
+	width:259px;
+	float:left;
+	height:224px;
+	padding:12px 3px 0 0;
+	background:url("home_feature_headlines_bg.png") no-repeat top right;
+}
+#homeHeadlinesContent {
+	position:relative;
+	padding-left:100px;
+	margin-top:5px;
+	_height:1%;
+}
+#homeHeadlinesContent img {
+	position:absolute;
+	top:0;
+	left:0;
+	border:1px solid #333;
+}
+#homeHeadlinesContent a.moreLink {
+	margin-top:1em;
+	display:block;
+	background:url("link_chevrons_black.gif") no-repeat scroll 0 3px;
+	padding-left:14px;
+	line-height:15px;
+}
+#homeHeadlinesFeature p {
+	margin:0;
+}
+#homeHeadlinesFeature h3 {
+	font-size:12px;
+	font-weight:bold;
+}
+#homeHeadlinesList {
+	float:left;
+	height:226px;
+	padding:5px 0 5px 10px;
+	width:370px;
+}
+#homeHeadlinesList ul {
+	padding:0;
+	margin:0 0 10px 0;
+}
+#homeHeadlinesList ul li {
+	height:26px;
+	line-height:26px;
+	border-bottom:1px solid #2d3340;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:white;
+}
+#homeHeadlinesList ul li a {
+	font-weight:bold;
+}
+.layoutHome #homeMatchfacts {
+	height:256px;
+	_height:266px;
+	width:302px;
+	float:left;
+	padding:0 10px 10px;
+	_overflow:hidden;
+	background:url("home_matchfacts_bg.png") 0 0;
+}
+.layoutHome #navAdCol .adModule {
+	background:none;
+	float:right;
+	width:300px;
+	padding:0 10px 15px 10px;
+	clear: right;
+}
+.layoutHome #mainContentColWrap {margin-top: 10px;}
+.layoutHome #homeMatchfacts #homeMatchfactsHeader {
+	height:31px;
+	border-bottom:1px solid #3c607d;
+	padding: 5px 0;
+	margin-bottom:5px;
+}
+.layoutHome #homeMatchfacts #homeMatchfactsHeader h2 {
+	line-height:31px;
+	float:left;
+	font-size:16px;
+	color:white;
+	text-transform:uppercase;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.layoutHome #homeMatchfacts #homeMatchfactsContent {
+	color:white;
+}
+.layoutHome #homeMatchfacts #homeMatchfactsContent a {
+	color:#6dd7fe;
+	font-weight:bold;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:12px;
+}
+.layoutHome #homeMatchfacts #homeMatchfactsContent .genericButton {
+	float:right;
+	background-image:url("generic_button.png");
+}
+.layoutHome #homeMatchfacts #homeMatchfactsContent .genericButton span {
+	background-image:url("generic_button.png");
+}
+.layoutHome #homeMatchfacts #homeMatchfactsContent table {
+	margin:5px 0 10px;
+}
+.layoutHome #homeMatchfacts #homeMatchfactsContent table,
+.layoutHome #homeMatchfacts #homeMatchfactsContent table a {
+	font-weight:normal;
+	font-size:11px;
+}
+.layoutHome #homeMatchfacts #homeMatchfactsContent table tr {
+	height:21px;
+}
+.layoutHome #homeMatchfacts #homeMatchfactsContent table th {
+	border-bottom:2px solid #3c607d;
+	font-size:10px;
+	text-align:left;
+	font-weight:bold;
+}
+.layoutHome #homeMatchfacts #homeMatchfactsContent table td {
+	border-bottom:1px solid #3c607d;
+}
+.layoutHome .staticTabModule {
+	margin-bottom:10px;
+}
+.layoutHome .staticTabModule .staticTabContent {
+	padding:4px 4px 10px 10px;
+}
+.layoutHome .staticTabModule .staticTabSingle,
+.layoutHome .staticTabModule .staticTabDouble {
+	display:none;
+}
+.layoutHome .staticTabModule .staticTabsList li {
+	margin-left:0;
+	margin-right:5px;
+	font-size:16px;
+}
+.layoutHome .staticTabModule .staticTabContent .singlesCol1 {
+	float:left;
+	height:273px;
+	width:413px;
+	margin-right:10px;
+}
+.layoutHome .staticTabModule .staticTabContent .singlesCol2 {
+	height:273px;
+	float:left;
+	width:214px;
+}
+.layoutHome .staticTabModule .staticTabsList {
+	background:url("ajax_tabs_bg_2.gif") no-repeat bottom left;
+}
+.homeRankingsTop {
+	height:86px;
+	width:413px;
+	border-bottom:2px solid #999;
+	overflow:hidden;
+	padding-top:5px;
+}
+.homeRankingsTop img {
+	float:left;
+	margin-right:10px;
+}
+.homeRankingsTop h2 {
+	font-size:16px;
+	font-weight:bold;
+	line-height:18px;
+	color:#080f3c;
+	margin-bottom:1em;
+}
+.homeRankingsTop p {
+	font-size:14px;
+	font-weight:bold;
+}
+.staticTabDouble .homeRankingsTop p {
+	margin-top:1em;
+}
+.homeRankingsTop p span {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:normal;
+	font-style:italic;
+	margin:0;
+}
+.homeRankingsSinglesCol {
+	float:left;
+	width:203px;
+}
+.homeRankingsSinglesCol2 {
+	margin-left:6px;
+}
+.homeRankingsSinglesCol .homeRankingInfo img {
+	float:left;
+	margin-right:7px;
+}
+.homeRankingsSinglesCol .homeRankInfoRank {
+	font-size:16px;
+	font-weight:bold;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	width:106px;
+	float:left;
+	border-bottom:1px solid #999;
+	margin-bottom:0;
+}
+.homeRankingsSinglesCol .homeRankInfoRank span {
+	display:block;
+	font-size:10px;
+	font-weight:normal;
+}
+.homeRankingsDoublesCol3 .homeRankingInfo a.homeRankingInfoLink,
+.homeRankingsSinglesCol .homeRankingInfo a.homeRankingInfoLink {
+	line-height:27px;
+	border-bottom:1px solid #999;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	width:106px;
+	float:left;
+}
+.homeRankingsDoublesCol3 .homeRankingInfo a.homeRankingInfoLink {
+	width:213px;
+}
+.homeRankingsDoublesCol3 .currentRanking,
+.homeRankingsSinglesCol .currentRanking {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	padding-left:19px;
+	margin:10px 0 0 0;
+	min-height:1em;
+}
+.homeRankingsDoublesCol3 .currentRanking {
+	margin:0;
+}
+.homeRankingsDoublesCol3 .currentRanking span,
+.homeRankingsSinglesCol .currentRanking span {
+	font-size:10px;
+	font-weight:normal;
+}
+.homeRankingsDoublesCol3 .rankingUp,
+.homeRankingsSinglesCol .rankingUp {
+	background:url("home_rankings_up.gif") no-repeat 0 0;
+}
+.homeRankingsDoublesCol3 .rankingDown,
+.homeRankingsSinglesCol .rankingDown {
+	background:url("home_rankings_down.gif") no-repeat 0 0;
+}
+.homeRankingsSinglesCol .homeRankingPlayerName {
+	font-size:13px;
+	font-weight:bold;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	margin-bottom:5px;
+	display:block;
+}
+.singlesCol2 h3 {
+	background:#00AFF0 url("module_header_bg.gif") repeat-x left bottom;
+	border:2px solid #00AFF0;
+	height:24px;
+	padding:0 8px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:white;
+	line-height:24px;
+}
+.singlesCol2 .homeRankingsTableWrap {
+	border:1px solid #666;
+	border-top:0;
+	height:201px;
+	width:212px;
+	padding:2px 0;
+	background:url("home_rankings_table.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/home_rankings_table.gif*/
+}
+.homeRankingsTableWrap table {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:white;
+}
+.homeRankingsTableWrap table a {
+	font-weight:bold;
+	font-size:10px;
+}
+.homeRankingsTableWrap table tr.mHover {
+	background:black;
+}
+.homeRankingsTableWrap table tr.altRow {
+	/*color:#aaa;*/
+}
+.singlesCol2 .homeRankingsTableWrap table tr {
+	height:20px;
+}
+.singlesCol2 .homeRankingsTableWrap table tr td {
+	padding-left:2px;
+}
+.singlesCol2 .homeRankingsTableWrap table tr td.firstCell {
+	padding-left:11px;
+}
+.singlesCol2 .homeRankingsTableWrap table tr td.lastCell {
+	padding-right:9px;
+}
+.singlesCol2 .genericButton {
+	float:right;
+	clear:none;
+	margin-top:20px;
+	margin-right:8px;
+}
+.homeRankingsDoublesCol1,
+.homeRankingsDoublesCol2 {
+	float:left;
+	width:90px;
+	padding-top:10px;
+	margin-right:10px;
+	text-align:center;
+	font-size:10px;
+}
+.homeRankingsDoublesCol1 img,
+.homeRankingsDoublesCol2 img {
+	margin-bottom:6px;
+}
+.homeRankingsDoublesCol3 {
+	padding-top:10px;
+	float:left;
+	width:213px;
+}
+.homeRankingsDoublesCol3 .homeRankingPlayerName {
+	margin-bottom:0;
+	font-size:13px;
+	font-weight:bold;
+}
+.homeRankingsDoublesCol3 .homeRankingInfo {
+	border-bottom:1px solid #999;
+}
+.homeRankingsDoublesCol3 .homeRankingInfo .homeRankInfoRank {
+	font-weight:bold;
+	font-size:16px;
+	margin-bottom:0;
+	line-height:27px;
+}
+.homeRankingsDoublesCol3 .homeRankingInfo .homeRankInfoRank span {
+	font-weight:normal;
+	font-size:10px;
+}
+/* inside atp module */
+.insideATPModule .moduleContentInner {
+	background:none;
+	margin:8px 0 10px 8px;
+}
+.insideATPModule .moduleContentInner a.insideATPItem {
+	float:left;
+	height:260px;
+	width:180px;
+	margin-right:10px;
+	position:relative;
+	background:url("home_inside_atp_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/home_inside_atp_bg.gif*/ no-repeat bottom right;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#666;
+}
+.insideATPModule .moduleContentInner a.insideATPItem .insideATPItemPlayButton {
+	position:absolute;
+	top:60px;
+	left:50%;
+	height:58px;
+	width:58px;
+	margin-left:-29px;
+	display:block;
+	background:url("home_inside_atp_play.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/home_inside_atp_play.png*/ no-repeat 0 0;
+}
+.insideATPModule .moduleContentInner a.insideATPItem:hover {
+	text-decoration:none;
+	background:url("home_inside_atp_hover.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/home_inside_atp_hover.gif*/ no-repeat bottom right;
+}
+.insideATPModule .moduleContentInner a.insideATPItem:hover img {
+	border-color:#00aff0;
+}
+.insideATPModule .moduleContentInner a.insideATPItem img {
+	border:1px solid #bbb;
+}
+.insideATPModule .moduleContentInner a.insideATPItem span.insideATPItemType {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	padding-bottom:5px;
+	display:block;
+}
+.insideATPModule .moduleContentInner a.insideATPItem span.insideATPItemTitle {
+	font-size:12px;
+	color:#00aff0;
+	font-weight:bold;
+	padding:5px 0;
+	display:block;
+	font-family:Arial, Helvetica, sans-serif;
+}
+/* ATP Nav Bar*/
+#atpNavBarCredentials {
+	height:22px;
+	min-width:142px;
+	background:url("your_credentials.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/your_credentials.gif*/ no-repeat 0 0;
+	padding-left:144px;
+	margin:3px 0 0 95px;
+	float:left;
+}
+#atpNavBarCredentials a {
+	height:22px;
+	float:left;
+	text-align:center;
+	font-size:10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#888;
+	line-height:22px;
+}
+#atpNavBarCredentials a#atpNavBarLogin {
+	background:url("credential_login.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/credential_login.gif*/ no-repeat 0 0;
+	min-width:51px;
+}
+#atpNavBarCredentials a#atpNavBarSignup {
+	background:url("credential_signup.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/credential_signup.gif*/ no-repeat 0 0;
+	width:60px;
+}
+#atpNavBar #atpNavBarCredentials a:hover {
+	background-position:0 -22px;
+	text-decoration:none;
+}
+#atpNavBar #atpNavBarCredentials .loggedIn {
+	background:url("credential_loggedin.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/credential_loggedin.gif*/ no-repeat top right;
+	min-width:51px;
+	padding:0 4px;
+}
+#atpNavBar {
+	height:38px;
+	width:100%;
+	background:url("atp_nav_bar_bg.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/atp_nav_bar_bg.png*/ repeat-x 0 0;
+	_background:url("atp_nav_bar_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/atp_nav_bar_bg.gif*/ repeat-x 0 0;
+}
+#atpNavBarInner {
+	width:985px;
+	background:url("atp_nav_bar_center.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/atp_nav_bar_center.gif*/ no-repeat 0 0;
+	height:28px;
+	margin:0 auto;
+	position:relative;
+	z-index:99999;
+}
+#atpNetworkTitle {
+	float:left;
+	background:url("pro_tennis_network_title.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/pro_tennis_network_title.gif*/ no-repeat 10px 10px;
+	width:208px;
+	height:28px;
+	text-indent:-9999px;
+}
+#atpNavNetwork li {
+	float:left;
+}
+#atpNavNetwork li:hover ul,
+#atpNavNetwork li.sfhover ul {
+	display:block;
+}
+#atpNetworkNavMens a#atpNetworkNavMensLink {
+	height:28px;
+	width:72px;
+	display:block;
+	text-indent:-9999px;
+	background:url("mens_tour_nav.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/mens_tour_nav.gif*/ no-repeat 0 0;
+}
+#atpNetworkNavMens:hover a#atpNetworkNavMensLink,
+#atpNetworkNavWomens:hover a#atpNetworkNavWomensLink {
+	background-position:0 -28px;
+}
+#atpNetworkNavWomens a#atpNetworkNavWomensLink {
+	height:28px;
+	width:91px;
+	display:block;
+	text-indent:-9999px;
+	background:url("womens_tour_nav.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/womens_tour_nav.gif*/ no-repeat top right;
+}
+#atpNavNetwork li.sfhover a#atpNetworkNavMensLink,
+#atpNavNetwork li.sfhover a#atpNetworkNavWomensLink {
+	background-position:0 -28px;
+}
+#globalBarLanguage {
+	position:absolute;
+	height:22px;
+	width:118px;
+	top:3px;
+	right:9px;
+	padding:0 2px 0 1px;
+	overflow:hidden;
+	background:url("language_drop.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/language_drop.gif*/ no-repeat 0 0;
+}
+.globalBarLanguageShown {
+	height:67px !important;
+	background-position:-121px 0 !important;
+}
+#globalBarLanguage li a {
+	height:22px;
+	display:block;
+	width:81px;
+	overflow:hidden;
+	padding-left:37px;
+	line-height:22px;
+	font-size:10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#888;
+}
+#globalBarLanguage li a#languageEnglish {
+	background:url("language_english.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/language_english.gif*/ no-repeat 0 0;
+}
+#globalBarLanguage li a#languageSpanish {
+	background:url("language_spanish.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/language_spanish.gif*/ no-repeat 0 0;
+}
+#globalBarLanguage li a#languageChinese {
+	background:url("language_chinese.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/language_chinese.gif*/ no-repeat 0 0;
+}
+#globalBarLanguage li a:hover {
+	background-position:0 -22px !important;
+	text-decoration:none;
+}
+/* tour ribbon nav */
+.globalBarRibbonWrap {
+	position:absolute;
+	width:979px;
+	border:3px solid #b0b0b0;
+	background:white;
+	min-height:10px;
+	top:28px;
+	left:0;
+	z-index:99999 !important;
+	display:none;
+}
+.globalBarRibbonTitle {
+	height:34px;
+	margin:6px 7px 5px;
+	width:925px;
+	padding-left:40px;
+	background:url("ribbon_logo.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/ribbon_logo.gif*/ no-repeat 0 0;
+}
+#menTourLink {
+	position:absolute;
+	top:6px;
+	left:6px;
+/*	border:1px solid red;*/
+	text-indent:-4000px;
+	width:92px;
+	height:34px;
+}
+#atpNetworkNavWomens .globalBarRibbonTitle {
+	background:url("ribbon_logo_womens.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/ribbon_logo_womens.gif*/ no-repeat 0 0;
+	padding-left:100px;
+	width:865px;
+}
+#atpNetworkNavWomens .globalBarRibbonTitle .floatLeft {
+	margin-right:5px;
+}
+#womenTourLink {
+	position:absolute;
+	top:6px;
+	left:6px;
+/*	border:1px solid red;*/
+	text-indent:-4000px;
+	width:92px;
+	height:34px;
+}
+.globalBarRibbonTitle img {
+	float:left;
+	margin-right:10px;
+}
+.globalBarRibbonTitle .genericButton {
+	margin:3px 0 0 8px;
+	clear:none;
+}
+.globalBarRibbonTitle span {
+	float:left;
+	padding-top:11px;
+	font-size:16px;
+	color:#666;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+.globalBarRibbonTitle .genericButton span {
+	text-transform:none;
+}
+.globalBarRibbonTitle .globalBarRibbonTitleSecondary span {
+	float:right;
+	width:272px;
+	font-size:14px;
+	font-weight:bold;
+	padding-top:13px;
+}
+.globalBarRibbonKey {
+	border-top:1px solid #b1b1b1;
+	padding:10px 0 3px;
+	margin:0 7px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+}
+.globalBarRibbonKey p {
+	margin-bottom:7px;
+}
+.globalBarRibbonKey span {
+	color:#00aff0;
+}
+.globalBarRibbonKey span.footnote {
+	color:#666666;
+	float:right;
+	margin-top:-1.5em;
+}
+.globalBarRibbonKey img {
+	margin:0 5px 0 3px;
+	vertical-align:text-bottom;
+}
+.worldTourDatesCols {
+	margin:0 6px 0 7px;
+	padding-bottom:10px;
+}
+.worldTourDatesCol {
+	float:left;
+	width:134px;
+	margin-right:4px;
+}
+.worldTourDatesCol li {
+	display:block;
+	margin:5px 0 0 0;
+	line-height:13px;
+	height:13px;
+	padding-left:6px;
+	font-size:10px;
+
+
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	width:128px;
+	background-position:0 0;
+	background-repeat:no-repeat;
+	background-color:#f1f1f1;
+	overflow:hidden;
+}
+.worldTourDatesCol li.wt250 {
+	background-image:url("wt_250.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/wt_250.gif*/;
+}
+.worldTourDatesCol li.wt500 {
+	background-image:url("wt_500.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/wt_500.gif*/;
+}
+.worldTourDatesCol li.wt1000 {
+	background-image:url("wt_1000.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/wt_1000.gif*/;
+}
+.worldTourDatesCol li.wt1500 {
+	background-image:url("wt_1500.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/wt_1500.gif*/;
+}
+.worldTourDatesCol li.wtGrandSlam {
+	background-image:url("wt_GrandSlam.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/wt_GrandSlam.gif*/;
+}
+.worldTourDatesCol li.wtDavis {
+	background-image:url("wt_davis.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/wt_davis.gif*/;
+}
+
+/* share box styles */
+#shareBox {
+	background:white;
+	border:1px solid #bebebe;
+	position:absolute;
+	width:110px;
+	display:none;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	padding:0 5px;
+	position:absolute;
+	font-size:11px;
+}
+.showShare {
+	display:block !important;
+}
+#shareBox a {
+	display:block;
+	line-height:27px;
+	height:27px;
+	clear:both;
+	border-bottom:1px solid #bebebe;
+}
+#shareBox a.lastItem {
+	border:0;
+}
+#shareBox a img {
+	vertical-align:middle;
+	margin-right:3px;
+}
+/* Site Header 
+********************************************************************************************************/
+.defaultScoreBg {
+	width:12px;
+}
+#scoreBoardSetsLbl {
+	text-align:center;	
+}
+#siteLogo {
+	float:left;
+	height:148px;
+	width:114px;
+	margin-left:-11px;
+}
+.headerSocial #siteLogo 
+{
+    margin-left:-11px;
+}
+.headerSocial #siteLogo img 
+{
+    width:110px;
+	margin-left:11px;
+}
+#headerTop {
+	height:146px;
+	width:985px;
+	clear:both;
+	/*overflow:hidden;*/
+	position:relative;
+	z-index:1000;
+}
+#headerTopLinks {
+	float:right;
+	height:30px;
+	width:880px;
+	margin-top:1px;
+}
+#headerSocialWrap 
+{
+    position:absolute;
+    left:10px;
+    bottom:5px;
+    height:20px;
+}
+.headerSocial #headerTopLinks 
+{
+    width:870px;
+}
+#headerLinkList {
+	text-align:center;
+	width:660px;
+	float:right;
+	margin-top:10px;
+}
+#headerLinkList li {
+	display:inline;
+	line-height:16px;
+	padding-top:3px;
+}
+#headerLinkList li a {
+	color:#6dd7fe;
+	font-size:12px;
+	font-weight:bold;
+	padding:0 10px 0 14px;
+	background:url("header_link_bullets.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/header_link_bullets.png*/ no-repeat 0 3px;
+}
+#headerLinkList li a:hover {
+	background:url("link_chevrons_black_hover.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_black_hover.gif*/ no-repeat 0 3px;
+	text-decoration:none;
+	color:white;
+}
+#headerTopLinks h2 {
+	color:white;
+	font-size:16px;
+	margin:7px 0 0 22px;
+	float:left;
+}
+#headerSponsor {
+	float:left;
+	height:100px;
+	width:103px;
+	padding:15px 0 0 0px;
+}
+#headerSponsor p {
+	width:60px;
+	margin:10px auto;
+	line-height:11px;
+	color:white;
+	text-transform:uppercase;
+	font-size:10px;
+	font-family:Arial;
+	text-align:center;
+	font-weight:bold;
+}
+#headerTopScoreboards,
+#headerTopScoreboardsEmpty {
+	float:left;
+	width:755px;
+	height:114px;
+	margin-top:5px;
+	padding-left:34px;
+}
+#headerTopScoreboards {
+	padding-left:23px;	
+}
+#headerTopScoreboardsEmpty {
+	width:745px;
+}
+.headerLiveScoreBox .liveStreamLink {
+	position:absolute;
+	top:0;
+	right:0;
+	height:25px;
+	width:25px;
+	display:block;
+	z-index:30;
+	background:url("live_stream_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/live_stream_bg.gif*/ no-repeat right top;
+}
+.miniScoreBoardLinks 
+{   
+    background:url("scoreboard_links.png")/*tpa=http://www.atpworldtour.com/media/scoreboard_links.png*/ no-repeat 0 0;
+    _background:black;
+    height:13px;
+    width:247px;
+    position:absolute;
+    left:0;
+    top:48px;
+    z-index:20;
+}
+.miniScoreBoardLinks .liveStream,
+.miniScoreBoardLinks .liveScoresLink 
+{
+    font-size:11px;
+    text-transform:uppercase;
+    padding-left:14px;
+    font-weight:bold;
+    background:url("header_link_bullets.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/header_link_bullets.png*/ no-repeat scroll 2px 2px;
+    position:absolute;
+    top:0px;
+}
+.miniScoreBoardLinks a.liveStream:hover,
+.miniScoreBoardLinks a.liveScoresLink:hover 
+{
+    background:url("link_chevrons_black_hover.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_black_hover.gif*/ no-repeat 2px 2px;
+	text-decoration:none;
+	color:white;
+}
+.miniScoreBoardLinks .liveScoresLink 
+{
+    left:135px;
+}
+.miniScoreBoardLinks .liveStream 
+{
+    left:10px;
+}
+.headerLiveScoreBox .liveStreamLink:hover {
+	width:111px;
+	background-position:right -25px;
+}
+
+.headerScoreboard1500 {
+	background:url("header_scoreboard_cyan.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/header_scoreboard_cyan.gif*/ bottom left no-repeat;
+}
+
+.headerScoreboard1000 {
+	background:url("header_scoreboard_gold.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/header_scoreboard_gold.gif*/ bottom left no-repeat;
+}
+.headerScoreboard500 {
+	background:url("header_scoreboard_silver.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/header_scoreboard_silver.gif*/ bottom left no-repeat;
+}
+.headerScoreboard250, .headerScoreboardWT {
+	background:url("header_scoreboard_black.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/header_scoreboard_black.gif*/ bottom left no-repeat;
+}
+.headerLiveScoreBox .loadingBox {
+	position:absolute;
+	top:50%;
+	left:50%;
+	marign-top:-12px;
+	margin-left:-12px;
+	background:url("scoreboard_loader.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/scoreboard_loader.gif*/ no-repeat 0 0;
+	height:24px;
+	width:24px;
+}
+.headerLiveScoreBox {
+	float:left;
+	height:98px;
+	width:235px;
+	padding: 3px 6px 6px;
+	margin-right:5px;
+	color:white;
+	font-size:10px;
+	line-height:14px;
+	position:relative;
+}
+#headerLiveScoreBox3 {
+	margin-right:0;
+}
+.headerLiveScoreBox .backgroundFrame {
+	height:61px;
+	top:-2px;
+	left:0;
+	width:247px;
+	position:absolute;
+	z-index:-1px;
+	background:#020725;
+	display:none;
+}
+.headerPromo {
+	display:block;
+	position:absolute;
+	top:36px;
+}
+#headerPromo1 {left:127px;}
+#headerPromo2 {left:379px;}
+#headerPromo3 {left:631px;}
+#headerBanner1 {left:139px;}
+
+.headerLiveScoreBox table {
+	height:41px;
+	width:235px;
+	position:absolute;
+	bottom:2px;
+	left:6px;
+	z-index:10;
+}
+.headerLiveScoreBox table td {
+	height:14px;
+}
+.headerScoreboard1500 table td {
+	background:url("header_scoreboard_blue_row.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/header_scoreboard_blue_row.gif*/ top left repeat-x;
+	vertical-align:top;
+	line-height:13px;
+}
+
+.headerScoreboard1000 table td {
+	background:url("header_scoreboard_gold_row.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/header_scoreboard_gold_row.gif*/ top left repeat-x;
+	vertical-align:top;
+	line-height:13px;
+}
+.headerScoreboard500 table td {
+	background:url("header_scoreboard_silver_row.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/header_scoreboard_silver_row.gif*/ top left repeat-x;
+	vertical-align:top;
+	line-height:13px;
+}
+.headerScoreboard250 table td, .headerScoreboardWT table td {
+	background:url("header_scoreboard_black_row.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/header_scoreboard_black_row.gif*/ top left repeat-x;
+	vertical-align:top;
+	line-height:13px;
+}
+table td .scoreaboardPlayerName {
+	padding:0 3px 0 12px;
+	display:block;
+	height:13px;
+	overflow:hidden;
+	padding:0 3px 0 12px;
+	width:137px;
+}
+
+.headerScoreboard1500 table td .scoreWin1500Bg {
+	background:url("scoreboard_check_blue.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/scoreboard_check_blue.gif*/ no-repeat 2px 3px;
+}
+.headerScoreboard1000 table td .scoreWin1000Bg {
+	background:url("scoreboard_check_gold.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/scoreboard_check_gold.gif*/ no-repeat 2px 3px;
+}
+.headerScoreboard500 table td .scoreWin500Bg {
+	background:url("scoreboard_check_gray.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/scoreboard_check_gray.gif*/ no-repeat 2px 3px;
+}
+.headerScoreboard250 table td .scoreWin250Bg, .headerScoreboardWT table td .scoreWinWTBg {
+	background:url("scoreboard_check_black.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/scoreboard_check_black.gif*/ no-repeat 2px 3px;
+}
+table td .scoreSrv1500Bg,
+table td .scoreSrv1000Bg,
+table td .scoreSrv500Bg,
+table td .scoreSrv250Bg,
+table td .scoreSrvWTBg {
+	background:url("scoreboard_dot.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/scoreboard_dot.gif*/ no-repeat 3px 4px;
+}
+.headerLiveScoreBox table td.scoreCell {
+	text-align:center;
+}
+.headerLiveScoreBox table th {
+	line-height:10px;
+	height:10px;
+	color:#666;
+	text-align:left;
+}
+.headerLiveScoreBox .scoreboardLogo {
+	float:left;
+	margin-right:11px;
+	position:relative;
+}
+.headerLiveScoreBox p {
+	line-height:14px;
+	margin:0;
+	position:relative;
+}
+.headerLiveScoreBox .headScorebrdTitle {
+	/*padding-right:30px;*/
+}
+.headerLiveScoreBox .headScorebrdTitleNoPad {
+	padding-right:0;	
+}
+.headerLiveScoreBox .headerScorebrdPlace {
+	margin-top:0px;
+}
+.headerLiveScoreBox .headScorebrdTitle,
+.headerLiveScoreBox .headScorebrdTitle a {
+	font-weight:bold;
+	color:white;
+}
+#headerBottom {
+	height:36px;
+	width:985px;
+	margin:12px 0 9px 0;
+	*margin-top:14px;
+	background:url("main_nav_bg.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/main_nav_bg.jpg*/ repeat-x 0 0;
+}
+#siteHeader {
+	height:204px;
+	width:985px;
+	margin: 0 auto;
+}
+/* main navigation styles */
+#siteNavMain {
+	float:left;
+	height:35px;
+}
+#siteNavMain li {
+	float:left;
+	position:relative;
+	z-index:8999;
+}
+#siteNavMain li a {
+	float:left;
+	height:35px;
+	background-repeat:no-repeat;
+	background-position:0 0;
+	text-indent:-9999px;
+}
+#siteNavMain li.lastItem a {}
+#siteNavMain li.activeNav a,
+#siteNavMain li.activeNav ul.subNavDrop li a:hover {
+	color:#fff;
+}
+#siteNavMain li.activeNav a,
+#siteNavMain li:hover a,
+#siteNavMain li.sfhover a,
+#siteNavMain li a:hover {
+	background-position:bottom left;
+}
+#siteNavMain li a#nav_home {
+	background-image:url("nav_home.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/nav_home.jpg*/;
+	width:60px;
+}
+#siteNavMain li a#nav_scores {
+	background-image:url("nav_scores.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/nav_scores.jpg*/;
+	width:125px;
+}
+#siteNavMain li a#nav_news {
+	background-image:url("nav_news.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/nav_news.jpg*/;
+	width:61px;
+}
+#siteNavMain li a#nav_tournaments {
+	background-image:url("nav_tournaments.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/nav_tournaments.jpg*/;
+	width:116px;
+}
+#siteNavMain li a#nav_tickets {
+	background-image:url("nav_tickets.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/nav_tickets.jpg*/;
+	width:72px;
+}
+
+#siteNavMain li a#nav_players {
+	background-image:url("nav_players.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/nav_players.jpg*/;
+	width:78px;
+}
+#siteNavMain li a#nav_rankings {
+	background-image:url("nav_rankings.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/nav_rankings.jpg*/;
+	width:87px;
+}
+#siteNavMain li a#nav_fans {
+	background-image:url("nav_fans.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/nav_fans.jpg*/;
+	width:57px;
+}
+#siteNavMain li a#nav_photos {
+	background-image:url("nav_photos.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/nav_photos.jpg*/;
+	width:72px;
+}
+#siteNavMain li a#nav_video {
+	background-image:url("nav_video.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/nav_video.jpg*/;
+	width:61px;
+}
+#siteNavMain li a#nav_shop {
+	background-image:url("nav_shop.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/nav_shop.jpg*/;
+	width:58px;
+}
+
+
+#siteNavMain li ul.subNavDrop {
+	display:none;
+	position:absolute;
+	width:183px;
+	z-index:8999;
+	top:35px;
+	left:0;
+	background:#01050D;
+	border:1px solid #0083d9;
+	border-top:0;
+}
+#siteNavMain li ul.subNavDrop li {
+	display:inline;
+}
+#siteNavMain li.activeNav ul.subNavDrop li a,
+#siteNavMain li ul.subNavDrop li a {
+	width:171px;
+	clear:both;
+	padding:5px;
+	background:#00050D url("generic_drop_item_static.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_drop_item_static.gif*/ repeat-x scroll 0 0;
+	color:#ca0002;
+	border-bottom:#333F45 1px solid;
+	color:white;
+	display:block;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:10px;
+	height:auto;
+	padding:0 6px 3px;
+	text-indent:0;
+}
+#siteNavMain li ul.subNavDrop li a:hover {
+	background:#33373e url("generic_drop_item.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_drop_item.gif*/ repeat-x scroll 0 0;
+	text-decoration:none;
+}
+#siteNavMain li:hover ul.subNavDrop,
+#siteNavMain li.sfhover ul.subNavDrop {
+	display:block;
+}
+/* Site header search */
+#headerSearch {
+	width:176px;
+	height:29px;
+	padding:6px 0 0 9px;
+	float:right;
+}
+#headerSearch input {
+	height:19px;
+	width:121px;
+	background:url("nav_bar_search.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/nav_bar_search.gif*/ no-repeat 0 0;
+	border:0;
+	float:left;
+	padding:3px 0 0 25px;
+}
+#headerSearch button {
+	border:0;
+	background:url("nav_bar_search_button.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/nav_bar_search_button.gif*/ no-repeat 0 0;
+	cursor:pointer;
+	height:22px;
+	width:26px;
+	text-indent:-9999px;
+}
+#headerSearch button:hover {
+	background-position:0 -22px;
+}
+/* generic buttons */
+.genericButton {
+	background:url("generic_button.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_button.gif*/ no-repeat top left;
+	padding:0 0 0 3px;
+	display:inline;
+	min-height:1%;
+	clear:both;
+	float:left;
+}
+.genericButton button,
+a.genericButton span {
+	border:0;
+	height:17px;
+	padding:0 25px 3px 2px;
+	_padding-bottom:0;
+	_height:20px;
+	line-height:20px;
+	font-size:10px;
+	font-weight:bold;
+	color:#fff;
+	background:url("generic_button.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_button.gif*/ no-repeat top right;
+	cursor:pointer;
+	margin-right:-3px;
+	width:auto;
+	_overflow:hidden;
+}
+a.genericButton span {
+	display:block;
+	_display:inline-block;
+}
+
+.genericButton:hover {
+	background-position:bottom left;
+	text-decoration:none;
+}
+.genericButton:hover button,
+.genericButton:hover span {
+	background-position:bottom right;
+}
+* html .genericButton button {
+	overflow:visible;
+}
+*+html .genericButton button {
+	overflow:visible;
+}
+/* Footer styles */
+#mainFooter {
+	min-height:234px;
+	_hegiht:234px;
+	width:100%;
+	clear:both;
+}
+#footerBottom {
+	color:#fff;
+	border-top:2px solid #104e88;
+	clear:both;
+	font-size:11px;
+	padding:10px 1px 0;
+	min-height:38px;
+	margin-top:11px;
+	float:left;
+	width:963px;
+}
+.digiFooterLogo {
+	float:right;
+}
+#footerBottom a {
+	color:#6dd7fe;
+}
+#footerBottom p {
+	line-height:16px;
+	margin:0 110px 0 38px;
+}
+#footerBottom .atpFooterLogo {
+	float:left;
+	margin-right:10px;
+}
+#mainFooterInner {
+	width:965px;
+	margin:0 auto 0;
+	padding:12px 10px;
+}
+.footerLinkList {
+	width:144px;
+	margin-right:10px;
+	float:left;
+}
+.footerLinkList h4 {
+	font-size:13px;
+	font-weight:bold;
+	color:white;
+	line-height:14px;
+	padding-bottom:4px;
+	border-bottom:2px solid #104e88;
+}
+.footerLinkList li {
+	line-height:21px;
+	font-size:11px;
+	border-bottom:1px solid #104e88;
+}
+.footerLinkList li a {
+	color:#6dd7fe;
+}
+#footerSignup {
+	background:url("footer_signup.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/footer_signup.png*/ no-repeat 0 0;
+	width:153px;
+	height:190px;
+	margin-left:18px;
+	float:left;
+	padding:11px 11px 13px 10px;
+}
+#footerSignup h4 {
+	color:white;
+	text-transform:uppercase;
+	font-size:16px;
+	line-height:20px;
+	margin-bottom:10px;
+}
+#footerSignup ul {
+	padding:9px 0 9px 16px;
+}
+#footerSignup ul li {
+	font-size:11px;
+	line-height:14px;
+	color:white;
+	list-style:square;
+}
+#footerSignup form input {
+	height:13px;
+	width:144px;
+	margin-top:12px;
+	border:1px solid #bbb;
+	background:white;
+	color:#666;
+	font-size:11px;
+	padding:3px;
+}
+#footerSignup .genericButton {
+	margin:9px 4px 5px 0;
+	float:right;
+}
+#footerSignup .genericButton,
+#footerSignup .genericButton button,
+.bbkForm .genericButton,
+.bbkForm .genericButton button {
+	background-image:url("generic_button.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_button.png*/;
+}
+.bbkForm .genericButton button,
+#footerSignup .genericButton button {
+	height:20px;
+}
+#mainFooter .adModule {
+	margin:5px auto;
+	width:728px;
+	text-align:right;
+	font-size:10px;
+}
+
+.genericPageTitle {
+	
+	font-size:32px;
+	font-weight:normal;
+	line-height:31px;
+	margin-bottom:8px;
+}
+/* Styles for Ad modules
+********************************************************************************************************/
+.adModule {
+	margin-bottom:10px;
+}
+.moduleAd p,
+.adModule p {
+	display:none;
+}
+.moduleAd {
+	float:right;
+	width:88px;
+	height:31px;
+}
+.ad300x250 {
+	padding-bottom:16px;
+	background:#bebebe;
+	position:relative;
+	z-index:20;
+	_height:1%;
+}
+.ad300x250 p {
+	display:block;
+	width:300px;
+	height:16px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	margin:0;
+	line-height:16px;
+	text-align:center;
+	color:#777;
+	font-size:8px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+}
+
+/* generic module styles */
+.moduleWrap {
+	margin-bottom:10px;
+	background:white;
+	padding:1px;
+	border:1px solid #bbb;
+}
+#wrapper .moduleWrap p {
+	padding:0;
+}
+.genericModuleHeader {
+	background:#00aff0 url("module_header_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/module_header_bg.gif*/ repeat-x bottom left;
+	min-height:31px;
+	_height:31px;
+	border:2px solid #00aff0;
+}
+.genericModuleHeader h4 {
+	padding:8px 5px 0;
+	margin:0;
+	text-transform:uppercase;
+	font-size:16px;
+	color:#fff;
+	line-height:18px;
+}
+.moduleContentInner {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#666;
+	margin:2px 3px;
+	background:url("module_inner_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/module_inner_bg.gif*/ no-repeat bottom right;
+}
+.moduleFooterAd p {
+	display:none;
+}
+/* generic styling for open content module */
+.openContentModule .moduleContentInner {
+	padding:5px;
+}
+/* image text module */
+.imageTextModule .moduleContentInner {
+	background:none;
+	padding:8px 7px;
+}
+/* image text links module */
+.imageTextLinksModule .moduleContentInner  {
+	background:none;
+	padding:8px 7px;
+	font-size:12px;
+}
+.imageTextLinksModule .mainImage {
+	float:left;
+	margin-right:10px;
+}
+.imageTextLinksModule .imageTextLinksContent {
+	display:inline;
+}
+.imageTextLinksModule .imageTextLinksContent p {
+	margin:0;
+}
+/* list module styles */
+.listModule li {
+	padding:4px 0;
+	border-bottom:1px solid #b9b9b9;
+	font-size:10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+.listModule ul {
+	margin-bottom:10px;
+}
+.listModule a {
+
+}
+.listModule .moduleContentInner {
+	padding:8px;
+}
+
+/* search results styles */
+#searchResults {
+	background:white;
+	border:1px solid #bebebe; 
+	/*background:white; */
+	padding:0 9px 9px;
+	margin-top:10px;
+} 
+
+#searchResultsTop {
+	height:34px;
+	width:635px;
+	background:#002763 url("profile_header_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/profile_header_bg.gif*/ repeat-x bottom left;
+	border-top:1px solid #0062A0;
+	border-bottom:1px solid black;
+	padding:5px 10px;
+}
+#searchResultsTop input {
+	background:transparent url("search_results_big_input.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/search_results_big_input.gif*/ no-repeat scroll 0 0;
+	border:0 none;
+	float:left;
+	height:24px;
+	padding:8px 0 0 36px;
+	width:470px;
+}
+#searchResultsTop button {
+	background:transparent url("search_results_big_button.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/search_results_big_button.gif*/ no-repeat scroll 0 0;
+	border:0 none;
+	cursor:pointer;
+	height:32px;
+	text-indent:-9999px;
+	width:39px;
+	float:left;
+}
+#searchResultsTop .moduleAd {
+	float:right;
+}
+#searchResultsMiddle {
+	background:url("searchResultInfo_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/searchResultInfo_bg.gif*/ repeat-x 0 0;
+	text-align:middle;
+	color:white;  
+	/*background:white; */
+	min-height:30px;
+	font-size:14px;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	border-bottom:1px solid black;
+	padding:0 0 0 10px;
+	_height:30px;
+}
+#searchResultsMiddle strong {
+	color:#00aff0;
+	line-height:30px;
+}
+#searchResultsMiddle p {
+	margin:0;
+}
+#searchResultsMiddle #didYouMean {
+	padding-left:6px;
+	font-size:12px;
+}
+#searchResultsMiddle #didYouMean img {
+	vertical-align:middle;
+}
+.actionLinks {
+	background:#002763 url("profile_header_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/profile_header_bg.gif*/ repeat-x bottom left; 
+	min-height:37px;
+	_height:37px;
+	border-top:1px solid #0062A0;
+	border-bottom:1px solid black;
+	position:relative;
+	padding-left:88px;
+	color:white;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	padding-top:4px;
+}
+.actionLinks strong {
+	display:block;
+	width:82px;
+	padding-right:6px;
+	position:absolute;
+	left:0;
+	top:4px;
+	text-align:right;
+}
+.actionLinks span {
+	float:left;
+	width:141px;
+	padding-bottom:3px;
+}
+#searchResults .articlePaginationWrap {
+	margin-top:9px;
+	background:#002763 url("profile_header_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/profile_header_bg.gif*/ repeat-x bottom left;
+}
+#searchResults .articlePagination li.pageLabel {
+	color:white;
+}
+.searchResult {
+	border-bottom:1px solid #bebebe;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#666;
+	font-size:11px;
+	padding:10px 0;
+	min-height:80px;
+	_height:80px;
+}
+.searchResultWithImage {
+	position:relative;
+	padding-left:89px;
+}
+.searchResultTournament {
+	padding-right:89px;
+}
+.searchResultWithImage img.previewImg {
+	position:absolute;
+	top:10px;
+	left:0px;
+}
+.searchResultTournament img.sponsorImg {
+	right:0px;
+	position:absolute;
+	top:10px;
+}
+.searchResult .resultType {
+	color:#999;
+	font-weight:bold;
+	margin-bottom:0;
+}
+.searchResultWithImage .resultType {
+	float:left;
+	margin-right:5px;
+}
+.searchResult .searchResultDate {
+	color:#999;
+}
+.searchResult h3,
+.searchResult h3 a {
+	font-wieght:bold;
+	font-size:14px;
+	margin:0;
+}
+.searchResult .resultRelatedTags {
+	margin:6px 0 0 0;
+	font-size:10px;
+}
+.searchResult .resultRelatedTags span {
+	font-weight:bold;
+}
+/* bottom margin for media modules */
+.mediaModule 
+{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+/* sub nav module styles */
+.subNavModule {
+	margin-bottom:10px;
+}
+.subNavModule a {
+	display:block;
+	padding:6px;
+	font-size:11px;
+	font-weight:bold;
+	min-height:1%;
+	color:#fff;
+	text-transform:uppercase;
+	border-top:1px solid #004376;
+	border-bottom:1px solid #000;
+	background:#001744 url("lef_nav_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/lef_nav_bg.gif*/ top left no-repeat;
+	/*background:url(/media/backgrounds/lef_nav_arrow.gif) no-repeat bottom right;*/
+}
+.subNavModule li {
+	_display:inline;
+}
+.subNavModule ul ul li {
+}
+.subNavModule ul ul li a {
+	text-transform:none;
+	background:none;
+	background:#1463a1 url("left_nav_bg_2.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/left_nav_bg_2.gif*/ top left repeat-x;
+	border-top:1px solid #1682c1;
+	border-bottom:1px solid black;
+}
+.subNavOpenened a,
+li.noSubActive a {
+	text-decoration:none;
+	background:#045794 url("left_nav_bg_hover.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/left_nav_bg_hover.gif*/ top left no-repeat;
+}
+.subNavModule a:hover,
+.subNavOpenened a.subNavActive {
+	text-decoration:none;
+	background:#045794 url("left_nav_bg_hover.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/left_nav_bg_hover.gif*/ top left no-repeat;
+}
+.subNavModule ul ul li a:hover {
+	background:#1463a1 url("left_nav_bg_2.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/left_nav_bg_2.gif*/ top left repeat-x;
+	text-decoration:underline;
+}
+.subNavOpenened ul li {
+	border:0;
+}
+/* share bar styles */
+.moduleSharebar {
+
+}
+.moduleSharebar a {
+
+}
+.moduleSharebar a:hover {
+
+}
+.moduleSharebar a.articlePrintLink {
+	padding-left:16px;
+	font-size:11px;
+	background:url("print_icon.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/print_icon.gif*/ no-repeat 0 0;
+}
+.moduleSharebar .shareBarSocial a {
+	padding-left:16px;
+	font-size:11px;
+	background:url("share_icon.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/share_icon.gif*/ no-repeat 0 2px;
+}
+.relatedTopics h4 {
+	color:#777;
+	font-size:14px;
+}
+.relatedTopics a {
+
+}
+.relatedTopics p {
+
+}
+/* tournament landing styles */
+.weatherModule {
+	height:45px;
+	width:300px;
+	margin-bottom:10px;
+	background:url("weather_module.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/weather_module.gif*/ no-repeat 0 0;
+}
+.weatherModule p {
+	font-size:12px;
+	font-weight:bold;
+	color:#001e4c;
+	line-height:45px;
+	padding-left:70px;
+	font-family:Arial, Helvetica, sans-serif;
+	margin-bottom:0;
+}
+.weatherModule p span {
+	color:#f4f3f3;
+	font-size:16px;
+}
+.timeModule {
+	height:45px;
+	width:300px;
+	margin-bottom:10px;
+	background:url("time_module.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/time_module.gif*/ no-repeat 0 0;
+}
+.timeModule p {
+	font-size:12px;
+	font-weight:bold;
+	color:#bfc7d6;
+	line-height:45px;
+	padding-left:51px;
+	font-family:Arial, Helvetica, sans-serif;
+	margin-bottom:0;
+}
+.timeModule p span {
+	color:white;
+}
+#tournLandMain {
+	background:black;
+	color:white;
+}
+#tournLandTitle {
+	font-size:16px;
+	font-weight:bold;
+	float:left;
+	width:354px;
+	padding-left:10px;
+	line-height:24px;
+}
+#tournLinks {
+	clear:both;
+	border-top:1px solid white;
+	margin:0 10px 10px;
+	padding-left:23px;
+	font-size:10px;
+	font-family:verdana;
+	background:url("tourn_landing_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/tourn_landing_bg.gif*/ no-repeat 0 200px;
+}
+#tournLandMore {
+	float:right;
+	line-height:24px;
+	font-size:11px;
+	font-weight:bold;
+	font-family:verdana;
+	padding-right:10px;
+	padding-left:14px;
+	background:url("link_chevrons_black.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_black.gif*/ no-repeat 0 8px;
+}
+#tournLandMore:hover {
+	background:url("link_chevrons_black_hover.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_black_hover.gif*/ no-repeat 0 8px;
+	color:white;
+	text-decoration:none;
+}
+.tournLinksRow {
+	background:url("tourn_land_row_clear.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/tourn_land_row_clear.png*/ bottom left no-repeat;
+	_background:url("tourn_land_row_flat.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/tourn_land_row_flat.gif*/ bottom left no-repeat;
+	color:#666;
+}
+.tournLinksCol1 {
+	float:left;
+	width:89px;
+	padding:10px 0;
+}
+.tournLinksCol2,
+.tournLinksCol3,
+.tournLinksCol4 {
+	float:left;
+	width:120px;
+	padding:10px 0;
+}
+.tournLinksCol4 {
+	width:110px;
+}
+/* deuce landing layout (layoutN) */
+.layoutN #navAdCol {
+	width:985px;
+	margin:-10px 0 10px -10px;
+}
+.layoutN #mainTripleColWrap,
+.tecnifibreColWrap #mainTripleColWrap {
+	width:655px;
+	float:left;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+.layoutN #mainContentCol1 {
+	float:left;
+	width:345px;
+	min-height:1%;
+	margin-right:10px;
+}
+.layoutN #mainContentCol2 {
+	width:300px;
+	float:left;
+	min-height:1%;
+}
+.layoutN #mainContentCol3,
+.layoutN #mainContentCol4 {
+	display:none;
+}
+.layoutN #mainContentColExtra,
+.tecnifibreColWrap #mainContentColExtra {
+	float:right;
+	width:300px;
+}
+/* tournament layout (layoutT) */
+/* Layout L */
+.layoutT #navAdCol {
+	width:985px;
+	margin:-10px 0 10px -10px;
+}
+.layoutT #mainTripleColWrap {
+	width:655px;
+	float:left;
+	margin-right:10px;
+}
+.layoutT #mainContentCol1 {
+	clear:both;
+	width:655px;
+	margin-bottom:10px;
+}
+.layoutT #mainContentCol2 {
+	width:322px;
+	float:left;
+	margin-right:11px;
+	min-height:1%;
+}
+.layoutT #mainContentCol3 {
+	width:322px;
+	float:right;
+	min-height:1%;
+}
+.layoutT #mainContentCol4 {
+	clear:both;
+	width:655px;
+}
+.layoutT #mainContentColExtra {
+	float:right;
+	width:300px;
+}
+/* news feature styles */
+#navAdCol .newsFeatureHead {
+	background:#002864 url("news_feature_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/news_feature_bg.gif*/ no-repeat 0 0;
+	min-height:355px;
+	height:auto;
+}
+#navAdCol .newsFeatureHead #tournDetailHeadCol2 {
+	height:365px;
+}
+.newsFeatureHead .imageRotatorCaption,
+.beauty-image-rotator .imageRotatorCaption {
+	padding:0;
+	border:0;
+	margin:10px 0;
+	background:none;
+	height:269px;
+	width:655px;
+	float:left;
+}
+#mainContentColExtra .beauty-image-rotator {
+    border-left: 1px solid #bebebe;
+    border-right: 1px solid #bebebe;
+  ]
+}
+.newsFeatureHead .ad300x250 {
+	background:#002255;
+}
+.newsFeatureHead #newsFeatureTitle {
+	float:left;
+	/*width:555px;*/
+	width:385px;
+	color:white;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:24px;
+}
+.newsFeaturedStoryTop {
+	clear:both;
+	float:left;
+	font-size:10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:white;
+	width:655px;
+}
+.newsFeaturedStoryTop p {
+	margin:0;
+}
+.newsFeaturedStoryTop h2 {
+	font-size:12px;
+}
+.newsFeatureTripleStory {
+	margin-bottom:10px;
+}
+.newsFeatureTripleStoryItem {
+	float:left;
+	width:189px;
+	margin-right:10px;
+	border:1px solid #bbb;
+	padding:10px;
+	font-size:11px;
+	background:white;
+}
+.newsFeatureTripleStoryItem p {
+	margin:0;
+}
+.newsFeatureTripleStoryItem .newsFeaturedStoryTopByline {
+	font-size:10px;
+}
+.newsFeatureTripleStoryItem h3 {
+	font-size:12px;
+	margin-top:5px;
+}
+.newsFeatureTripleStoryItemLast {
+	margin:0;
+}
+.newsFeatureArchiveModule .moduleContentInner {
+	background:none;
+	padding:4px 6px;
+}
+.newsFeatureArchiveModule .newsArchiveList {
+	margin:5px 0 10px 0;
+}
+.newsFeatureArchiveModule .newsArchiveList li {
+	border-bottom:1px solid #d2d2d2;
+	position:relative;
+	padding:4px 0 4px 75px;
+}
+.newsFeatureArchiveModule .newsArchiveList li span {
+	position:absolute;
+	left:0;
+	top:4px;
+}
+.newsFeatureArchiveModule .articlePaginationWrap .genericDropDown {
+	margin-top:-2px;
+	min-height:20px;
+}
+.newsFeatureArchiveModule .articlePaginationWrap .genericDropDown .dropTrigger {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	min-height:23px;
+}
+/* deuce landing styles */
+#navAdCol .deuceLandHead {
+	background:black;
+	height:355px;
+}
+#navAdCol .deuceLandHead #tournDetailHeadCol2 {
+	height:365px;
+}
+.deuceLandHead .imageRotatorCaption {
+	padding:0;
+	border:0;
+	margin:10px 0;
+	background:none;
+	height:269px;
+	width:655px;
+	float:left;
+}
+.imageRotatorCaption .imageRotatorControl .imageCaption a {
+	display:inline;
+	background:none;
+	float:none;
+	color:#00AFF0;
+	border:0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.imageRotatorCaption .imageCaption a:hover {
+	background:none;
+}
+.deuceLandHead .imageRotatorCaption .imageCaption a.deuceLandCaptionLink {
+	font-size:16px;
+}
+#deuceLandTitle {
+	float:left;
+	height:40px;
+}
+.deuceDropModule .tournDropSelect {
+	background:none;
+	padding:0;
+	margin-top:3px;
+	margin-bottom:0;
+}
+.deuceDropModule .tournDropSelect ul.dropContent {
+	top:24px;
+	left:1px;
+}
+.deuceLandHead .ad300x250 {
+	background:none;
+}
+#deuceLandSubTitle {
+	clear:both;
+	height:20px;
+	border-top:2px solid #333;
+	margin-top:10px;
+	line-height:30px;
+	color:#333;
+	float:left;
+	width:100%;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#deuceLandSubTitle h2 {
+	float:left;
+	font-size:16px;
+}
+#deuceLandSubTitle #imageCopyright {
+	float:right;
+	line-height:30px;
+	font-size:10px;
+}
+.deuceVideoModule .moduleContentInner,
+.deuceIssueModule .moduleContentInner {
+	background:none;
+}
+.deuceVideoModule .deuceVideoItem {
+	border-top:1px solid #bbb;
+	padding:10px 0;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	/*font-size:10px;*/
+	font-size:11px;
+	min-height:99px;
+	margin:0 6px;
+}
+.deuceVideoModule .deuceVideoItem h5,
+.deuceLandIssueSmall h5,
+.deuceLandIssueLarge h5 {
+	font-size:12px;
+	font-weight:bold;
+	line-height:15px;
+}
+.deuceVideoModule .deuceVideoItem p {
+	margin:0;
+	/*line-height:13px;*/
+	line-height:15px;
+}
+.deuceVideoItem .deuceVideoThumb {
+	position:relative;
+	float:left;
+	width:133px;
+	margin-right:10px;
+	height:99px;
+}
+.deuceVideoThumb .deuceVidThumbButton {
+	background:url("deuce_atp_play.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/deuce_atp_play.png*/ no-repeat 0 0;
+	height:43px;
+	width:42px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	display:block;
+}
+.deuceVideoThumb img {
+	border:1px solid #bdbdbd;
+}
+.deuceEditorModule {
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	border:1px solid #bbb;
+	background:#f8f8d3;
+	padding:10px 10px 0;
+	line-height:15px;
+}
+.deuceEditorModule img {
+	float:left;
+	margin:0 8px 0 0;
+}
+.deuceEditorModule h4 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:24px;
+	padding-bottom:10px;
+	border-bottom:1px solid #bbb;
+	width:179px;
+	font-weight:normal;
+	font-style:italic;
+	float:left;
+	line-height:24px;
+	margin-bottom:10px;
+}
+.deuceLandIssueLarge {
+	font-size:11px;
+	padding:10px 0;
+	margin:0 6px;
+}
+.deuceLandIssueLarge p {
+	margin:0;
+}
+.deuceLandIssueLargeImage {
+	position:relative;
+}
+.deuceLandIssueLargecopy {
+	position:absolute;
+	bottom:-15px;
+	right:0;
+	color:#999;
+	/*font-size:10px;*/
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.deuceLandIssueSmall {
+	border-top:1px solid #bbb;
+	padding:10px 0;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	min-height:60px;
+	margin:0 6px;
+}
+.deuceLandIssueSmall img {
+	float:left;
+	margin-right:8px;
+}
+.deuceLandIssueSmall p {
+	margin:0;
+}
+.deuceIssueDprtmnt {
+	font-size:10px;
+	color:#999;
+	font-weight:bold;
+	margin:0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+/* tourn detail styles */
+.tournDetailHead {
+	padding:10px;
+	background-repeat:no-repeat;
+	background-position:0 0;
+	width:965px;
+	_margin-left:10px;
+	background: -moz-linear-gradient(top, rgba(0,0,0,1) 1%, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(0,0,0,1)), color-stop(15%,rgba(0,0,0,1)), color-stop(22%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,1) 1%,rgba(0,0,0,1) 15%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(0,0,0,1) 1%,rgba(0,0,0,1) 15%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, rgba(0,0,0,1) 1%,rgba(0,0,0,1) 15%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, rgba(0,0,0,1) 1%,rgba(0,0,0,1) 15%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 100%); /* W3C */
+	height: 456px;
+}
+.tournDetailHead .moduleSharebar {
+	width:70px;
+	height:30px;
+	padding-left:10px;
+	float:right;
+}
+#tournDetailHeadCol1 {
+	float:left;
+	width:655px;
+	margin-right:10px;
+}
+.tournDetailHead .moduleSharebar a {
+	display:block;
+	border-bottom:1px solid #8b8d8f;
+	height:14px;
+}
+#tournDetailHeadTitle {
+	width:555px;
+	height:15px;
+	border:1px solid #bebebe;
+	color:white;
+	font-size:20px;
+	font-weight:bold;
+	float:left;
+	padding:8px;
+	line-height:15px;
+	_overflow:hidden;
+	background:url("black_transparent_60.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/black_transparent_60.png*/ 0 0;
+}
+#tournDetailHeadSumm {
+	width:631px;
+	height:106px;
+	border:1px solid #bebebe;
+	color:white;
+	float:left;
+	padding:13px 11px;
+	clear:both;
+	margin-top:10px;
+	_position:relative;
+	font-size:12px;
+	_overflow:hidden;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	background:url("black_transparent_60.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/black_transparent_60.png*/ 0 0;
+}
+#tournDetailHeadSumm a:hover {
+	color:white;
+}
+#tournDetailHeadSumm * {
+	_position:relative;
+}
+#tournDetailHeadSumm h2 {
+	font-size:14px;
+	font-family:arial;
+	margin:0 0 10px 0;
+}
+.tournamentDetailTabModule {
+	margin-bottom:10px;
+}
+.tournamentDetailTabModule .staticTabsList {
+	background:url("static_tabs_bg_1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/static_tabs_bg_1.gif*/ no-repeat bottom left;
+}
+.tournamentDetailTabModule .staticTabContent {
+	padding:12px 7px;
+	font-size:12px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#666;
+}
+.tournDetailTabCol {
+	margin:0 0 0 5px;
+}
+.tournDetailTabColHalf {
+	float:left;
+	margin:0 3px;
+}
+.tournDetailTabCol .tournDetailTitle {
+	font-size:16px;
+	font-weight:bold;
+	color:#002864;
+	line-height:18px;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	margin-bottom:6px;
+}
+.tournDetailTabCol table {
+	border-top:2px solid #e1e1e1;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	margin-bottom:10px;
+}
+.tournDetailTabCol table tr {
+	height:20px;
+	line-height:20px;
+}
+.tournDetailTabCol table th {
+	text-align:left;
+	font-weight:bold;
+}
+.tournDetailTabCol table tr td,
+.tournDetailTabCol table tr th {
+	border-bottom:1px solid #e1e1e1;
+}
+
+
+
+
+.imageRotatorCaption {
+	width:635px;
+	height:266px;
+	padding:9px;
+	background:white;
+	border:1px solid #bebebe;
+	margin-bottom:10px;
+	position:relative;
+}
+.imageRotatorCaption .imageRotatorControl {
+	position:absolute;
+	bottom:23px;
+	right:25px;
+	padding:11px 5px 11px 10px;
+	border:1px solid #bfbfc0;
+	width:auto;
+	height:30px;
+	background:url("black_transparent_60.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/black_transparent_60.png*/ 0 0;
+}
+.imageRotatorCaption .imageRotatorControl li {
+	float:left;
+	min-height:19px;
+}
+.imageRotatorCaption .imageRotatorControl li.imageCaption {
+	width:473px;
+	margin-right:42px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#dfdfdf;
+}
+.imageRotatorCaption .imageRotatorControl li a {
+	display: none;
+	float:left;
+	height:17px;
+	width:17px;
+	text-align:center;
+	margin-top:6px;
+	margin-right:5px;
+	border:1px solid #333;
+	font-family:verdana;
+	font-weight:bold;
+	color:#002864;
+	background:url("image_rotate_inactive.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/image_rotate_inactive.gif*/ repeat-x 0 0;
+}
+.imageRotatorCaption .imageRotatorControl li a:hover,
+.imageRotatorCaption .imageRotatorControl li a.active {
+	color:white;
+	background:#002762;
+	text-decoration:none;
+}
+.imageRotator {
+	height:269px;
+	width:655px;
+	position:relative;
+	margin-top:10px;
+	clear:both;
+	float:left;
+}
+.imageRotatorCaption .rotatorCopy,
+.imageRotator .rotatorCopy {
+	position:absolute;
+	color:#bababa;
+	font-size:10px;
+	top:12px;
+	right:27px;
+}
+.imageRotator .imageRotatorControl {
+	position:absolute;
+	top:219px;
+	right:10px;
+	padding:11px 5px 11px 10px;
+	background:url("black_transparent_60.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/black_transparent_60.png*/ 0 0;
+}
+.imageRotator .imageRotatorControl li {
+	display:inline;
+}
+.imageRotator .imageRotatorControl li a {
+	float:left;
+	height:17px;
+	width:17px;
+	text-align:center;
+	margin-right:5px;
+	border:1px solid #333;
+	font-family:verdana;
+	font-weight:bold;
+	color:#002864;
+	background:url("image_rotate_inactive.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/image_rotate_inactive.gif*/ repeat-x 0 0;
+}
+.imageRotator .imageRotatorControl li a:hover,
+.imageRotator .imageRotatorControl li a.active {
+	color:white;
+	background:#002762;
+	text-decoration:none;
+}
+#tournDetailHeadCol2 {
+	float:right;
+	width:300px;
+	height:456px;
+}
+.tournDropSelect {
+	padding: 0;
+	background:#001e5b url("tourn_drop_select_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/tourn_drop_select_bg.gif*/ repeat-x 0 0;
+	position:relative;
+	margin-bottom:10px;
+	z-index:8888;
+	_height:1%;
+}
+.tournDropSelect .tournDropTrigger {
+	display:block;
+	height:17px;
+	width:262px;
+	border:1px solid #00487f;
+	color:white;
+	font-size:12px;
+	font-weight:bold;
+	font-family:arial;
+	line-height:17px;
+	padding:2px 8px;
+	background:#026399 url("tourn_drop_trigger_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/tourn_drop_trigger_bg.gif*/ no-repeat 0 0;
+}
+.tournDropSelect .tournDropTrigger:hover {
+	text-decoration:none;
+}
+.tournDropSelect ul {
+	display:none;
+}
+.tournDropSelect  ul.dropContent li a {
+	border:0;
+	display:block;
+	height:20px;
+	width:inherit;
+	overflow:hidden;
+	background:#00050d url("generic_drop_item_static.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_drop_item_static.gif*/ repeat-x 0 0;
+	padding:0 6px;
+	line-height:20px;
+	border-bottom:1px solid #333f45;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:white;
+	font-size:10px;
+}
+.tournDropSelect  ul.dropContent li a:hover {
+	background:#33373e url("generic_drop_item.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_drop_item.gif*/ repeat-x 0 0;
+	border-bottom:1px solid #000e17;
+	text-decoration:none;
+}
+.tournDropSelect  ul.dropContent {
+	width:278px;
+	border:1px solid #00487f;
+	display:none;
+	position:absolute;
+	top:75px;
+	left:10px;
+	min-height:21px;
+	max-height:126px;
+	padding:0;
+	background:#01050d;
+	overflow:auto;
+	_overflow-x:hidden;
+	_overflow-y:scroll;
+	*overflow-x:hidden;
+	*overflow-y:scroll;	
+}
+
+/* ################################################# */
+
+#news-charity-wrap 
+{
+    background-repeat:no-repeat;
+	background-position:0 0;
+	background: -moz-linear-gradient(top, rgba(0,0,0,1) 1%, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(0,0,0,1)), color-stop(15%,rgba(0,0,0,1)), color-stop(22%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,1) 1%,rgba(0,0,0,1) 15%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(0,0,0,1) 1%,rgba(0,0,0,1) 15%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, rgba(0,0,0,1) 1%,rgba(0,0,0,1) 15%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, rgba(0,0,0,1) 1%,rgba(0,0,0,1) 15%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 100%); /* W3C */
+	background: url("news_feature_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/news_feature_bg.gif*/ no-repeat scroll 0 0 #002864;
+    margin: -10px 0 10px -10px;
+    padding: 10px 0 10px 10px;
+} 
+
+#news-charity-wrap .imageRotatorCaption {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    float: left;
+    height: 269px;
+    margin: 10px 0;
+    padding: 0;
+    width: 655px;
+}
+#news-charity-wrap   #newsFeatureTitle {
+    color: white;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 24px;
+    width: 385px;
+}
+#news-charity-wrap  #news-feature-rotator {
+    float: left;
+    margin-right: 10px;
+    width: 655px;
+
+    height: auto;
+    min-height: 355px;
+}
+#news-charity-wrap .moduleSharebar {
+    float: right;
+    height: 30px;
+    padding-left: 10px;
+    width: 70px;
+}
+#news-charity-wrap .moduleSharebar a {
+    border-bottom: 1px solid #8B8D8F;
+    display: block;
+    height: 14px;
+}
+
+.imageRotatorCaption .imageRotatorControl li.imageCaption {
+    color: #DFDFDF;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    margin-right: 42px;
+    width: 473px;
+}
+
+.find-a-feature-module .moduleContentInner {
+    border-bottom: 1px solid #034a7d;
+    padding-bottom: 0;
+}
+.find-a-feature-module .moduleContentInner {
+    padding-bottom: 0!important;
+}
+.find-a-feature-module .atp-aces-logo {
+float: left;
+margin: 3px 0 1px 4px;
+}
+.find-a-feature-module h4, .find-a-feature-tagline {
+float: right;
+} 
+.find-a-feature-tagline {
+    font-weight: bold;
+    font-size: 10px;
+    color: #fff;
+}
+.find-a-feature-module .genericModuleHeader  { 
+background-color: #002864!important;
+padding: 0 10px 5px 10px;
+}
+.find-a-feature-module .tournDropSelect  ul.dropContent {
+	top:24px;
+	left:0;
+	z-index: 10000;
+}
+.moduleWrap.feature-promo-module {
+    margin-bottom: 0;
+}
+.feature-promo-module .tournDropSelect  ul.dropContent {
+	top:31px;
+	left:14px;
+	z-index: 10000;
+}
+.find-a-feature-module .tournDropSelect, .feature-promo-module .tournDropSelect {
+    z-index: auto;
+}
+.feature-promo-module img {
+    float: left;
+    margin-right: 8px;
+    max-height: 60px;
+}
+.feature-promo-module .genericModuleHeader {margin-bottom: 5px;}
+.feature-promo-module h5 {font-size: 12px;}
+.feature-promo-module p {margin-bottom: 0;}
+.feature-promo-module .tournDropSelect {margin: 5px auto 0 auto; padding: 7px 5px 7px 14px;}
+
+#mainContentColExtra .moduleWrap.feature-promo-module {
+    margin-bottom: 10px;
+}
+
+#mainContentColExtra .moduleWrap.feature-promo-module .tournDropSelect .tournDropTrigger {
+    width: 252px;
+    background-position: -10px 0;
+}
+
+#mainContentColExtra .feature-promo-module .tournDropSelect {
+    padding: 11px 10px 10px;
+}
+
+#mainContentColExtra .feature-promo-module .tournDropSelect  ul.dropContent {
+    top:35px;
+	left:10px;
+    width: 268px;
+}
+
+.get-closer-module {
+background: transparent url("get-closer-back.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/get-closer-back.jpg*/ no-repeat;
+}
+.get-closer-module .moduleContentInner {
+    background: none;
+}
+.get-closer-module ul li {
+float: left;
+padding:1px;
+}
+.get-closer-module ul li img, .get-closer-module ul li  {width: 56px; height: 51px;}
+
+
+/* ################################################# */
+
+
+
+
+
+
+
+
+.tournDropSelect div
+{
+	background: url("2011_en_9x42_SAA_.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/2011_en_9x42_SAA_.jpg*/ repeat-x scroll left bottom #001E5B;
+	padding: 7px 10px;
+	border-top: 1px solid #0062a0;
+}
+
+.tournDropSelect div#travelthetour
+{
+	border-bottom: 1px solid #000;
+	border-top: none;
+}
+.tournDropSelect div div
+{
+	padding: 0;
+	background: none;
+}
+div.saa
+{
+	color:white;
+	float:right;
+	width: 180px;
+	border-top: none;
+	border-bottom: none;
+}
+.saa span
+{
+	float: right;
+	display: inline-block;
+	
+}
+.saa span.big
+{
+	font-size: 1.4em;
+	line-height: 18px;
+	font-weight: 600;
+}
+.saa span.little
+{
+	font-size: 0.8em;
+}
+
+div#travelthetour a
+{
+	float: left;
+}
+#tournDetailHeadInfo {
+	width:278px;
+	height:340px;
+	border:1px solid #bebebe;
+	color:white;
+	float:left;
+	padding:10px;
+	clear:both;
+	_position:relative;
+	font-size:12px;
+	_overflow:hidden;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	background:url("black_transparent_60.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/black_transparent_60.png*/ 0 0;
+}
+#tournDetailHeadInfoLogo1 {
+	float:left;
+	width:221px;
+	height:120px;
+}
+#tournDetailHeadInfoLogo2 {
+	float:right;
+	height:120px;
+	width:47px;
+}
+#tournDetailHeadInfo ul {
+	border-top:1px solid white;
+	clear:both;
+	display:block;
+	padding-top:5px;
+}
+#tournDetailHeadInfo ul li {
+	clear:both;
+	display:block;
+	min-height:18px;
+	_height:18px;
+	width:278px;
+	line-height:18px;
+}
+.moreLinkChevronBlack {
+	padding-left:13px;
+	background:url("link_chevrons_black.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_black.gif*/ no-repeat 0 2px;
+}
+#tournDetailHeadInfo .moreLinkChevronBlack {
+	line-height:20px;
+	font-weight:bold;
+	margin-top:4px;
+	float:left;
+	clear:both;
+	background-position:0 6px;
+}
+#tournDetailHeadInfo .moreLinkChevronBlack:hover {
+	background:url("link_chevrons_black_hover.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_black_hover.gif*/ no-repeat 0 6px;
+	text-decoration:none;
+	color:white;
+}
+.whoisPlayingModule .moduleContentInner {
+	background:none;
+	margin:9px 10px;
+}
+.whoisPlayingModule ul {
+	margin-bottom:9px;
+}
+.whoisPlayingModule ul li {
+	float:left;
+	width:60px;
+	margin:0 9px;
+	text-align:center;
+	line-height:15px;
+	_margin:0 8px;
+}
+.whoisPlayingModule ul li a:hover {
+	text-decoration:none;
+}
+.whoisPlayingModule ul li a:hover span {
+	text-decoration:underline;
+}
+/* head 2 head module styles */
+.head2headModule .moduleContentInner {
+	background:none;
+}
+.head2headEntryFields {
+	padding-left:6px;
+}
+#wrapper .head2headModule .moduleContentInner p {
+	padding: 7px 6px 0px;
+}
+#wrapper .head2headModule .head2headEntryFields p {
+	color:#002864;
+	font-size:22px;
+	width:74px;
+	float:left;
+	height:31px;
+	text-align:center;
+	margin:0;
+	padding:0;
+	line-height:28px;
+	background:url("head2head_module_vs.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/head2head_module_vs.gif*/ no-repeat top center;
+	text-indent:-9999px;
+}
+.head2headEntryField2,
+.head2headEntryField1 {
+	background:url("autoComp_1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/autoComp_1.gif*/ no-repeat 0 0;
+	height:21px;
+	width:183px;
+	padding:5px 10px 5px 39px;
+	float:left;
+}
+.head2headEntryField2 {
+	background-image:url("autoComp_2.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/autoComp_2.gif*/;
+}
+.head2headEntryField2 input,
+.head2headEntryField1 input {
+	border:0;
+	height:14px;
+	font-size:11px;
+	color:#666;
+	padding:5px 0 0;
+	width:180px;
+}
+.miniHead2headModule .head2headEntryField2 {
+	background-image:url("autoComp_3.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/autoComp_3.gif*/;
+	width:151px;
+}
+.miniHead2headModule .head2headEntryField2 input {
+	width:145px;
+}
+.miniHead2headModule p {
+	margin:5px 5px 10px;
+}
+.head2headEntryFields {
+	padding-left:6px;
+}
+.head2headEntryFields .genericButton {
+	float:left;
+	clear:none;
+	margin:6px 0 0 10px;
+}
+.head2headEntryFields .genericButton button {
+	height:20px;
+	_overflow-y:hidden;
+}
+.head2headPremade {
+	background:url("head2head_space_bg.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/head2head_space_bg.jpg*/ no-repeat 0 0;
+	height:177px;
+	width:633px;
+	clear:both;
+	float:left;
+	margin:6px 5px 6px 6px;
+	_margin:6px 3px 6px 3px;
+}
+.head2headPremade .actionShot {
+	background:url("head2head_player_photo.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/head2head_player_photo.png*/ no-repeat 0 0;
+	padding:12px;
+	margin:16px 21px 15px;
+	_margin:16px 21px 15px 9px;
+	float:left;
+}
+.head2headPreStats {
+	background:url("head2head_data_bg.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/head2head_data_bg.png*/ no-repeat 0 0;
+	height:101px;
+	width:317px;
+	float:left;
+	margin-top:25px;
+	padding:2px;
+}
+.head2headPreStats a:hover {
+	color:white;
+	text-decoration:none;
+}
+.head2headPreStats h4 {
+	background:url("head2head_data_title.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/head2head_data_title.gif*/ repeat-x 0 0;
+	height:25px;
+	font-size:12px;
+	color:#002864;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:25px;
+	text-align:center;
+}
+.head2headPreName1 {
+	margin-right:22px;
+}
+.head2headPreName1,
+.head2headPreName2 {
+	color:#00aff0;
+	font-size:13px;
+	font-weight:bold;
+	float:left;
+	width:147px;
+	height:33px;
+	text-align:center;
+	padding-top:10px;
+}
+#wrapper .head2headModule .moduleContentInner p.head2headPreScore {
+	clear:both;
+	float:left;
+	width:100%;
+	text-align:center;
+	color:white;
+	font-size:15px;
+	padding:5px 0 16px;
+	_padding-bottom:0;
+	font-weight:bold;
+	_position:relative;
+	margin:0;
+}
+#wrapper .head2headModule .moduleContentInner p.head2headPreLinks {
+	text-align:center;
+	clear:both;
+	padding-top:12px;
+}
+.head2headPreLinks a.genericButton {
+	float:none;
+	clear:none;
+	/*background:url(/media/backgrounds/generic_button.png) no-repeat top left;*/
+	background-image:url("generic_button.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_button.png*/;
+	padding-top:4px;
+	padding-bottom:2px;
+
+	_padding-top:0;
+	_padding-bottom:0;
+	*padding-top:0;
+	*padding-bottom:0;
+	text-align:left;
+	margin-right:10px;
+	font-family:arial;
+}
+.head2headPreLinks a.genericButton span {
+	/*background:url(/media/backgrounds/generic_button.png) no-repeat top right;*/
+	background-image:url("generic_button.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_button.png*/;
+	margin-top:-4px;
+	padding-top:5px;
+	/*padding-bottom:3px;*/
+	padding-bottom:2px;
+	margin-right:-4px;
+	display:inline;
+	
+	*padding:4px 25px 4px 0;
+	_padding:0 25px 0 0;
+}
+.head2headPreLinks a.genericButton:hover {
+	background-position:left -20px;
+	_background-position:left bottom;
+}
+.head2headPreLinks a.genericButton:hover span {
+	background-position:right -20px;
+	_background:url("generic_button.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_button.png*/ no-repeat bottom right;
+}
+.ac_results {
+	padding: 0px;
+	border: 1px solid WindowFrame;
+	background-color: Window;
+	overflow: hidden;
+	width:183px !important;
+	z-index:9998;
+}
+
+.ac_results ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ac_results iframe {
+	display:none;/*sorry for IE5*/
+	display/**/:block;/*sorry for IE5*/
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:-1;
+	filter:mask();
+	width:3000px;
+	height:3000px;
+}
+
+.ac_results li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	font: menu;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+.ac_loading {
+	background : Window url("indicator.gif")/*tpa=http://www.atpworldtour.com/includes/cssbin/indicator.gif*/ right center no-repeat;
+}
+
+.ac_over {
+	background-color: Highlight;
+	color: HighlightText;
+}
+/* news landing styles */
+.newsFeatureModule .moduleContentInner {
+	background:none;
+	padding:10px 9px;
+}
+.newsFeatureModule h5 {
+	font-size:10px;
+	color:#666;
+	line-height:18px;
+}
+.newsFeatureModule h6 {
+	font-size:14px;
+	color:#666;
+	line-height:18px;
+}
+.newsFeatureModule h6 a {
+	color:#00aff0;
+}
+.newsFeatureModule .featuredStoryImage {
+	float:left;
+	margin-right:9px;
+}
+.newsFeatureModule .featuredStoryImage span {
+	display:block;
+	font-size:10px;
+	font-style:italic;
+}
+.newsFeatureModule .featuredStoryImage span.captionSource {
+	font-style:normal;
+	line-height:18px;
+}
+.newsFeatureModule .byLine {
+	font-size:10px;
+	color:#666;
+	font-style:italic;
+}
+.newsFeatureModule p {
+	margin:0 0 0.5em 0;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+.newsFeatureModule .moreLink {
+	font-size:12px;
+	font-weight:bold;
+	background:url("link_chevrons_white-1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_white.gif*/ no-repeat 0 3px;
+	padding-left:13px;
+}
+.newsFilterArchive {
+	margin-bottom:10px;
+}
+.newsFilterArchive .ajaxTabsList {
+	background:url("ajax_tabs_bg_1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/ajax_tabs_bg_1.gif*/ no-repeat bottom left;
+}
+.newsFilterArchive .ajaxTabsList li {
+	background:none;
+	float:left;
+	height:36px;
+	line-height:36px;
+	padding:0;
+	margin-left:5px;
+}
+.newsFilterArchive .ajaxTabsList li a {
+	background:transparent url("generic_tab_bg_1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_tab_bg_1.gif*/ no-repeat scroll right top;
+	color:#fff;
+	display:block;
+	font-weight:bold;
+	height:36px;
+	line-height:36px;
+	padding-right:11px;
+	font-size:14px;
+	_width:1%;
+	_white-space:nowrap
+}
+.newsFilterArchive .ajaxTabsList li a span {
+	background:transparent url("generic_tab_bg_1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_tab_bg_1.gif*/ no-repeat scroll left top;
+	cursor:pointer;
+	float:left;
+	height:36px;
+	padding-left:11px;
+}
+.newsFilterArchive  .ajaxTabsList li a:hover {
+	text-decoration:none;
+	background-position:right -42px;
+}
+.newsFilterArchive  .ajaxTabsList li.active a:hover,
+.newsFilterArchive  .ajaxTabsList li.active a {
+	background-position:bottom right;
+	text-decoration:none;
+}
+.newsFilterArchive  .ajaxTabsList li a:hover span {
+	text-decoration:none;
+	background-position:left -42px;
+}
+.newsFilterArchive  .ajaxTabsList li.active a:hover span,
+.newsFilterArchive  .ajaxTabsList li.active a span {
+	background-position:bottom left;
+	text-decoration:none;
+}
+
+/*.newsFilterArchive .ajaxTabsList li.active a,
+.newsFilterArchive .ajaxTabsList li a:hover {
+	background-position:bottom right;
+}
+.newsFilterArchive .ajaxTabsList li.active a span,
+.newsFilterArchive .ajaxTabsList li a:hover span {
+	background-position:bottom left;
+}*/
+.newsFilterArchive .ajaxTabContent {
+	border:1px solid #bbb;
+	border-top:0;
+	padding:0 1px 1px;
+	background:white;
+}
+.newsFilterArchive .ajaxTabContent .loading {
+	height:24px;
+	margin:0 auto;
+	background:;
+	width:24px;
+	background:url("loader_white.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/loader_white.gif*/ no-repeat center center;
+	padding:16px;
+}
+.newsFilterArchive #newsArchiveList {
+	padding:19px 8px;
+}
+.newsFilterArchive #newsArchiveList li {
+	border-bottom:1px solid #d2d2d2;
+	line-height:20px;
+	padding:3px 0;
+}
+.newsFilterArchive #newsArchiveList li {
+	color:#666;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+.newsFilterArchive #newsArchiveList li span {
+	float:left;
+	width:75px;
+}
+.newsFilterArchive #newsArchiveList li a {
+	float:right;
+	width:390px;
+}
+#newsArchiveFilter {
+	background:#00AFF0 url("module_header_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/module_header_bg.gif*/ repeat-x scroll left bottom;
+	border:2px solid #00AFF0;
+	height:31px;
+	overflow:hidden;
+}
+#newsArchiveFilter label {
+	height:18px;
+	padding:7px 20px 6px 15px;
+	line-height:18px;
+	float:left;
+	font-size:12px;
+	color:white;
+	font-weight:bold;
+	background:url("blue_header_divider.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/blue_header_divider.gif*/ no-repeat bottom right;
+}
+#newsArchiveFilter label input {
+	margin-right:5px;
+}
+/* news article detail styles */
+#articleDetailContent .featuredStoryImage {
+	float:left;
+	margin-right:9px;
+	background:#dfdfdf;
+}
+.newsImage250 .featuredStoryImage {
+	width:250px;
+}
+.newsImage180 .featuredStoryImage {
+	width:180px;
+}
+.newsImageFull .featuredStoryImage,
+.newsImageNone .featuredStoryImage {
+	width:0;
+	margin:0;
+	float:none;
+}
+.newsImageFull .featuredStoryImage {
+	width:464px;
+	margin-bottom:10px;
+}
+#articleDetailContent blockquote {
+	float:right;
+	font-size:16px;
+	font-style:italic;
+	color:#002864;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	line-height:18px;
+	margin:0 0 10px 10px;
+	width:205px;
+}
+.deuceArticle blockquote {
+	font-size:20px !important;	
+	line-height:22px !important;
+	*position:relative;
+	_position:relative;
+}
+#articleDetailContent .floatLeft {
+	float:left;
+	margin-right:10px;
+}
+#articleDetailContent .floatRight {
+	float:right;
+	margin-left:10px;
+}
+#articleDetailContent .relatedTopics {
+	background:#dfdfdf;
+	border:1px solid #bebebe;
+	padding:9px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+#articleDetailContent .relatedTopics h4 {
+	display:inline;
+	font-size:12px;
+}
+#articleDetailContent .relatedTopics p {
+	display:inline;
+	margin:0;
+}
+#articleDetailContent .featuredStoryImage span {
+	display:block;
+	font-size:10px;
+	font-style:italic;
+	padding:0 10px;
+}
+#articleDetailContent .featuredStoryImage span.captionSource {
+	font-style:normal;
+	line-height:18px;
+	display:block;
+}
+#articleDetailContent .moduleSharebar,
+#playerBioInfoCard .moduleSharebar {
+	width:70px;
+	height:30px;
+	padding-left:10px;
+	float:right;
+}
+#articleDetailContent .moduleSharebar a,
+#playerBioInfoCard .moduleSharebar a {
+	display:block;
+	border-bottom:1px solid #bebebe;
+	height:14px;
+}
+
+#articleDetailContent {
+	background:white;
+	padding:15px 9px;
+	min-height:1%;
+	border:1px solid #bebebe;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#666;
+}
+#articleDetailContent.feature-copy {
+    border-top: none;
+}
+#articleDetailContent #articleContentHead {
+	font-family:Arial, Helvetica, sans-serif;
+	padding-bottom:3px;
+	border-bottom:1px solid #bebebe;
+	margin-bottom:10px;
+}
+#articleDetailContent #articleContentHead p {
+	margin:0;
+	font-size:11px;
+	line-height:18px;
+}
+#articleDetailContent #articleContentHead p strong {
+	font-size:10px;
+}
+#articleDetailContent h1 {
+	color:#002864;
+	font-size:16px;
+	text-transform:uppercase;
+}
+#articleDetailContent h2 {
+	font-size:12px;
+	font-weight:normal;
+	line-height:18px;
+}
+#articleDetailContent .articleBeautyImage {
+	margin-bottom:10px;
+	padding:4px;
+	clear:both;
+}
+#articleDetailContent ul,
+#articleDetailContent ol {
+	margin:0 0 10px 30px;
+}
+#articleDetailContent ul li {
+	list-style:disc;
+}
+#articleDetailContent .articleInfo {
+	display:block;
+	min-height:22px;
+}
+#articleDetailContent .articleInfo .articleByLine {
+	display:inline;
+}
+#articleDetailContent .articleInfo .articleDate {
+	display:inline;
+}
+/* generic drop down styles */
+.genericDropDown {
+	float:left;
+	min-height:26px;
+}
+.genericDropDown .dropTrigger {
+	position:relative;
+	min-height:26px;
+	z-index:888;
+}
+.genericDropDown .dropTrigger a {
+	border-top:1px solid #00487f;
+	border-bottom:1px solid #00487f;
+	border-left:1px solid #0e5286;
+	border-right:1px solid #15578a;
+	padding:3px 50px 3px 6px;
+	width:143px;
+	display:block;
+	background:#0172ae url("drop_arrow.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/drop_arrow.gif*/ no-repeat right center;
+	line-height:21px;
+	color:#fff;
+	font-size:12px;
+	font-weight:bold;
+}
+.matchesContainer .genericDropDown .dropTrigger a {
+	display: block;
+	width: auto;
+}
+.genericDropDown .dropTrigger a:hover {
+	border-color:#171717;
+}
+/*.genericDropDown ul.dropContent li a {
+	border:0;
+	display:block;
+	height:16px;
+	width:inherit;
+	overflow:hidden;
+	background:white;
+	padding:0 8px;
+	line-height:16px;
+}*/
+/*.genericDropDown ul.dropContent li a:hover {
+	background:#737373;
+	color:#fff;
+}
+.genericDropDown ul.dropContent {
+	width:160px;
+	border:1px solid #b0b0b0;
+	display:none;
+	position:absolute;
+	top:20px;
+	min-height:20px;
+	max-height:140px;
+	padding:0;
+	background:white;
+	overflow:auto;
+	_overflow-x:hidden;
+	_overflow-y:scroll;
+	*overflow-x:hidden;
+	*overflow-y:scroll;
+	left:0;
+}*/
+
+* html .genericDropDown ul {
+	width:185px;
+}
+*+ html .genericDropDown .dropTrigger ul {
+	width:200px;
+}
+.genericDropDown ul.dropContent {
+	display:none;
+}
+.genericDropDown ul.dropContent li a {
+	border:0;
+	display:block;
+	height:20px;
+	width:inherit;
+	overflow:hidden;
+	background:#00050d url("generic_drop_item_static.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_drop_item_static.gif*/ repeat-x 0 0;
+	padding:0 6px;
+	line-height:20px;
+	border-bottom:1px solid #333f45;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:white;
+	font-size:10px;
+	*width:200px;
+}
+.genericDropDown ul.dropContent li a:hover {
+	background:#33373e url("generic_drop_item.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_drop_item.gif*/ repeat-x 0 0;
+	border-bottom:1px solid #000e17;
+	text-decoration:none;
+}
+.genericDropDown ul.dropContent {
+	width:200px;
+	border:1px solid #00487f;
+	display:none;
+	position:absolute;
+	top:26px;
+	left:0px;
+	min-height:21px;
+	max-height:126px;
+	padding:0;
+	background:#01050d;
+	overflow:auto;
+	_overflow-x:hidden;
+	_overflow-y:scroll;
+	*overflow-x:hidden;
+	*overflow-y:scroll;
+}
+
+
+
+/* drop down on general archive page */
+.calendarDrops .genericDropDown {
+	margin-left:7px;
+}
+.calendarDrops .genericDropDown ul.dropContent {
+	width:250px;	
+}
+.calendarDrops .genericDropDown .dropTrigger a {
+	width:auto;
+}
+.calendarDrops .genericDropDown .dropContent li a {
+	*width:auto;
+	_width:auto;
+	min-height:20px;
+	height:auto;
+}
+/* generic paginations style */
+.articlePaginationWrap {
+	background:#dfdfdf;
+	border:1px solid #f2f2f2;
+	padding:7px;
+}
+.articlePagination {
+	font-size:12px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#666;
+	float:right;
+}
+.articlePagination li {
+	float:left;
+	margin:0 1px 0 0;
+	color:white;
+}
+.articlePagination li.pageLabel {
+	background:none;
+	color:#666;
+	padding-right:7px;
+}
+.articlePagination li a {
+	color:white;
+	background:#008dc2 url("pagination_bg_1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/pagination_bg_1.gif*/ repeat-x 0 0;
+	padding:3px 8px;
+}
+.articlePagination li.currentPagination a,
+.articlePagination li a:hover {
+	background:#525252 url("pagination_bg_2.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/pagination_bg_2.gif*/ repeat-x 0 0;
+}
+
+/* photo / video styles */
+#mediaMainBox {
+	background:white;
+	border:1px solid #bebebe;
+	padding:9px;
+	margin-bottom:10px;
+}
+#mediaMainBox .mediaDrops .genericDropDown {
+	margin-right:10px;
+}
+#mediaMainBox #mediaTitle {
+	font-size:16px;
+	font-weight:bold;
+	color:#002864;
+	text-transform:uppercase;
+	padding:6px 5px 0;
+	height:20px;
+}
+#mediaMainTitle .moduleSharebar {
+	float:right;
+	width:51px;
+	padding-left:10px;
+	height:30px;
+}
+#mediaMainTitle .moduleSharebar a {
+	height:14px;
+	margin-top:8px;
+	display:block;
+	border-bottom:1px solid #bebebe;
+}
+.mediaThumbModule {
+	background:#131414;
+	border:1px solid #bbb;
+}
+.mediaThumbModule ul li {
+	float:left;
+	height:120px;
+	width:123px;
+	margin:5px 6px 2px 28px;
+	overflow:hidden;
+	_display:inline;
+}
+.mediaThumbModule ul li img {
+	border:1px solid #333;
+}
+.mediaThumbModule ul li span {
+	font-size:12px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#00aff0;
+	font-weight:bold;
+	line-height:28px;
+}
+.mediaThumbModule .moduleContentInner {
+	background:none;
+}
+#videoContent {
+	background:white;
+	padding:10px 0px 10px 9px;
+	border:1px solid #bbb;
+}
+#videoContent .videoLandDrops {
+	height:33px;
+}
+.videoLandDrops .genericDropDown {
+	margin-right:11px;
+}
+#videoContent .videoThumbList li.videoLandThumb {
+	background:url("video_thumb_list_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/video_thumb_list_bg.gif*/ no-repeat bottom right;
+	float:left;
+	height:148px;
+	margin-right:9px;
+	margin-bottom:9px;
+	width:135px;
+	border:1px solid #bebebe;
+	padding:6px 7px;
+	font-size:10px;
+	color:#6e6f6f;
+	line-height:10px;
+}
+#videoContent .videoThumbList li.videoLandThumb .videoLandThumbTitle	 span {
+	color:#00aff0;
+	font-weight:bold;
+}
+#videoContent .videoThumbList li.videoLandThumb img {
+	margin-bottom:4px;
+}
+#videoContent .articlePaginationWrap {
+	margin-right:12px;
+	margin-top:10px;
+}
+/* player bio styles */
+#playerBioInfoCardHeader {
+	min-height:36px;
+	padding:4px 5px 0;
+	border:1px solid #bbb;
+	border-bottom:0;
+	background:white url("player_bio_title.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/player_bio_title.gif*/ no-repeat 4px 4px;
+}
+#playerBioInfoCardHeader h1 {
+	color:#002864;
+	font-size:20px;
+	padding:6px 5px 0;
+	text-transform:uppercase;
+}
+#playerBioInfoCard .moduleSharebar {
+	width:51px;
+}
+#playerBioInfoCardMain {
+	height:218px;
+	width:655px;
+	border-top:1px solid #305b7d;
+	border-bottom:1px solid #122138;
+	background:#01122b url("player_bio_info_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/player_bio_info_bg.gif*/ no-repeat top left;
+}
+#playerBioHeadShot {
+	height:200px;
+	width:150px;
+	padding:8px 10px 9px 10px;
+	float:left;
+	position:relative;
+}
+#playerBioHeadShot img {
+	border:1px solid white;
+}
+#playerBioHeadShotCopy {
+	height:15px;
+	width:140px;
+	background:url("headshot_copy_bg.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/headshot_copy_bg.png*/;
+	padding:0 4px;
+	font-size:10px;
+	color:white;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	line-height:15px;
+	position:absolute;
+	bottom:0;
+	left:11px;
+}
+#playerBioInfoList {
+	width:312px;
+	float:left;
+	padding: 4px 0;
+}
+#playerBioInfoList li {
+	border-bottom:1px solid #1a4675;
+	min-height:20px;
+	line-height:20px;
+	font-size:12px;
+	color:white;
+	font-weight:normal;
+}
+#playerBioInfoList li span {
+	float:left;
+	width:99px;
+	padding:0 10px;
+	font-weight:bold;
+}
+#playerBioInfoExtra {
+	width:151px;
+	padding:9px 10px 5px;
+	float:left;
+}
+#playerBioInfoExtra #playerBioInfoRank {
+	background:#395b82 url("player_bio_info_flag_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/player_bio_info_flag_bg.gif*/ repeat-x bottom left;
+	border:1px solid #334c73;
+	height:43px;
+	padding:0 5px 5px;
+	text-align:center;
+	font-size:10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:white;
+	margin-bottom:10px;
+}
+#playerBioInfoExtra #playerBioInfoRank span {
+	font-size:30px;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	display:block;
+	line-height:30px;
+}
+.legendsBioInfoCardMain #playerBioInfoExtra #playerBioInfoRank span {
+	font-size:16px;
+}
+#playerBioInfoExtra #playerBioInfoFlag {
+	padding:3px 5px;
+	height:70px;
+	background:#395b82 url("player_bio_info_flag_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/player_bio_info_flag_bg.gif*/ repeat-x bottom left;
+	border:1px solid #334c73;
+	font-size:10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:white;
+	text-align:center;
+	margin-bottom:10px;
+}
+#playerBioInfoExtra #playerBioInfoFlag img {
+	margin-bottom:5px;
+}
+#playerBioInfoExtra #playerBioInfoFlag p {
+	margin:0;
+}
+#playerBioInfoAd {
+	background:#00040b;
+	height:31px;
+	width:88px;
+	padding:6px 32px 6px 30px;
+}
+#playerBioNav {
+	margin-bottom:10px;
+	height:33px;
+	width:655px;
+	background:#00173d;
+}
+#playerBioNav li {
+	float:left;
+	height:33px;
+}
+#playerBioNav li a {
+	display:block;
+	height:24px;
+	font-size:11px;
+	font-weight:bold;
+	text-align:center;
+	padding:9px 0 0 0;
+	line-height:12px;
+	background-position:0 0;
+	background-repeat: no-repeat;
+}
+#playerBioNav li a:hover,
+#playerBioNav li.active a {
+	background-position:0 -33px;
+	color:#002864;
+	text-decoration:none;
+}
+.normalBioNav li#playerBionav_profile a {
+	width:93px;
+	background-image:url("player_bio_nav_93.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/player_bio_nav_93.gif*/;
+	
+}
+.normalBioNav li#playerBionav_matchfacts a 
+{
+    width:83px;
+	background-image:url("player_bio_nav_93.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/player_bio_nav_93.gif*/;
+    height:30px;
+	padding:3px 5px 0;
+}
+.normalBioNav li#playerBionav_history a {
+	width:83px;
+	padding:3px 5px 0;
+	height:30px;
+	background-image:url("player_bio_nav_93.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/player_bio_nav_93.gif*/;
+}
+.normalBioNav li#playerBionav_record a,
+.normalBioNav li#playerBionav_finals a,
+.normalBioNav li#playerBionav_breakdown a {
+	width:94px;
+	background-image:url("player_bio_nav_94.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/player_bio_nav_94.gif*/;
+}
+.normalBioNav li#playerBionav_activity a {
+	width:80px;
+	padding:3px 7px 0;
+	height:30px;
+	background-image:url("player_bio_nav_94.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/player_bio_nav_94.gif*/;
+}
+.normalBioNav li#playerBionav_breakdown a {
+	padding:3px 0 0;
+	height:30px;
+	background-image:url("player_bio_nav_94.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/player_bio_nav_94.gif*/;
+}
+.legendsBioNav li#playerBionav_profile a,
+.legendsBioNav li#playerBionav_activity a,
+.legendsBioNav li#playerBionav_record a,
+.legendsBioNav li#playerBionav_finals a,
+.legendsBioNav li#playerBionav_history a {
+	width:131px;
+	background-image:url("player_bio_nav_131.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/player_bio_nav_131.gif*/;
+}
+
+.commonProfileContainer,
+#playerBioProfileGraphs {
+	background:white;
+	border:1px solid #bbb;
+	padding: 10px 11px;
+}
+.commonProfileContainer {
+	margin-bottom:10px;
+	font-size:13px;
+	color:#666;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.flashGraph {
+	float:left;
+	height:160px;
+	width:309px;
+	border:1px solid #bbb;
+}
+#playerBioGraphsGrid {
+	float:left;
+	width:319px;
+	height:160px;
+	border:1px solid #bbb;
+	border-right:0;
+}
+#playerBioGraphsGrid #bioGridHeader {
+	color:#666;
+	font-style:italic;
+	font-size:12px;
+	padding:8px 5px;
+	height:12px;
+	line-height:12px;
+	background:url("profile_grid_header_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/profile_grid_header_bg.gif*/ repeat-x 0 0;
+}
+#bioGridTabs {
+	width:57px;
+	height:21px;
+}
+#bioGridHeadTabs {
+	height:34px;
+	font-size:10px;
+	color:#666;
+	font-weight:bold;
+	font-style:italic;
+	border-bottom:1px solid #bbb;
+}
+#bioGridHeadTabs a {
+	display:block;
+	margin-left:2px;
+	height:21px;
+	width:23px;
+	float:left;
+	line-height:21px;
+	font-weight:bold;
+	text-align:center;
+	color:white;
+	font-size:14px;
+	font-style:normal;
+	background:url("bio_grid_tab_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/bio_grid_tab_bg.gif*/ no-repeat top left;
+}
+#bioGridHeadTabs a:hover,
+#bioGridHeadTabs a.active {
+	background-position:bottom left;
+	text-decoration:none;
+}
+#bioGridHeadTabs td {
+	vertical-align:bottom;
+	padding:3px 0;
+	text-align:center;
+	overflow:hidden;
+}
+#bioGridHeadTabs td.bioGridTabsCell {
+	padding-bottom:0;
+}
+#bioGridTabContent table {
+	height:97px;
+	width:319px;
+	clear:both;
+}
+#bioGridTabContent table tr td {
+	height:48px;
+	border-right:1px solid white;
+	border-left:1px solid #eaeaea;
+	background:url("bio_grid_table_cell_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/bio_grid_table_cell_bg.gif*/ repeat-x bottom left;
+	font-size:;
+	color:#666;
+	text-align:center;
+	vertical-align:middle;
+	font-size:12px;
+	font-weight:bold;
+	line-height:12px;
+}
+#bioGridTabContent table.bioGridTableLegends tr td {
+	height:96px;
+}
+#bioGridTabContent table tr td.bioGridRowTitle {
+	text-align:left;
+	text-indent:5px;
+}
+#bioGridTabContent table tr td p {
+	font-size:10px;
+	font-weight:normal;
+	margin:0;
+}
+.bioGridTable {
+	display:none;
+}
+#bioGridTabContent table tr td span.playerGridWeekUp {
+	background:url("bio_grid_weekchange_up.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/bio_grid_weekchange_up.gif*/ no-repeat 0 2px;
+	padding-left:13px;
+}
+#bioGridTabContent table tr td span.playerGridWeekDown {
+	background:url("bio_grid_weekchange_down.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/bio_grid_weekchange_down.gif*/ no-repeat 0 2px;
+	padding-left:13px;
+}
+#bioGridTabContent table tr td span.bioGridRank {
+	font-size:18px;
+	line-height:18px;
+}
+#bioGridTabContent table tr td p.bioGridTablePrizeDesc {
+	font-style:italic;
+	font-size:9px;
+	line-height:9px;
+	padding-top:2px;
+}
+#playerBioContentMain .staticTabsList {
+	background:url("static_tabs_bg_1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/static_tabs_bg_1.gif*/ no-repeat bottom left;
+	margin-top:10px;
+}
+#playerBioContentMain  .staticTabContent {
+	padding:12px;
+	font-size:12px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#666;
+}
+.playerBioFilterWrap {
+	background:url("profile_filter_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/profile_filter_bg.gif*/ repeat-x top left;
+	min-height:37px;
+	_height:37px;
+}
+.rankingsPages .playerBioFilterWrap {
+	background-color:#00205f;
+	margin-bottom:10px;
+	padding-bottom:3px;
+}
+.playerBioFilterWrap .playerBioFilterItem {
+	float:left;
+	height:31px;
+	padding:6px 10px;
+	color:white;
+	font-size:12px;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	background:url("profile_filter_divide.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/profile_filter_divide.gif*/ no-repeat top right;
+}
+.playerBioFilterWrap .playerBioFilterItem .playerBioTournamentSelect {
+	width:270px;
+}
+.playerBioFilterWrap .playerBioFilterItem .playerBioYearSelect {
+	width:83px;
+}
+.playerBioFilterWrap .genericButton {
+	float:right;
+	clear:none;
+	margin:7px 10px 0 0;
+	padding-bottom:1px;
+	background-image:url("generic_button.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_button.png*/;
+}
+.playerBioFilterWrap .genericButton button {
+	background-image:url("generic_button.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_button.png*/;
+	height:19px;
+}
+.genericProfileTitle {
+	background:url("profile_header_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/profile_header_bg.gif*/ repeat-x top left;
+	min-height:32px;
+	_height:32px;
+	border-top:1px solid #0062a0;
+	border-botttom:1px solid #6679a0;
+	padding-right:1px;
+}
+.genericProfileTitle h4 {
+	padding:5px;
+	text-transform:uppercase;
+	font-size:16px;
+	color:#fff;
+}
+.profileSecondaryTitle {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	color:#080f3c;
+	border-bottom:2px solid #dbdbdb;
+	text-transform:uppercase;
+	line-height:13px;
+	padding-bottom:6px;
+	margin-bottom:10px;
+}
+.profileSecondaryTitleAlt {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#666;
+	line-height:14px;
+	margin-bottom:10px;
+}
+.profileSecondaryTitleAlt2 {
+	font-size:16px;
+	font-weight:bold;
+	color:#080f3c;
+	line-height:18px;
+	margin:4px 0;
+}
+.profileSecondaryTitleAlt3 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#666;
+	line-height:14px;
+	margin-top:16px;
+	margin-bottom:3px;
+}
+.profileCareerStats {
+	position:relative;
+	padding-left:43px;
+	_height:1%;
+}
+.profileCareerStats .profileCareerStatsYear {
+	position:absolute;
+	left:0;
+	top:0;
+	font-weight:bold;
+}
+.bioTableKey {
+	padding-left:4px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	margin:0;
+	font-size:11px;
+}
+.bioTableWrap {
+	border:1px solid #bbb;
+	width:628px;
+	margin-bottom:20px;
+}
+.bioTableWrapAlt {
+	margin:0;
+}
+.extraSpace {
+	margin:10px 0 0 0;
+}
+.bioTable,
+.bioTableAlt {
+	border:1px solid #fff;
+	width:628px;
+}
+.centerCells {
+	text-align:center;
+}
+.bioTableOuterHead {
+	border:0;
+	font-weight:bold;
+	margin:0;
+}
+.bioTableAlt tr.oddRow {
+	background:#dfdfdf;
+}
+.bioTable tr.bioTableHead,
+.bioTableAlt tr.bioTableHead {
+	color:white;
+	background:#002864;
+	font-weight:bold;
+}
+.bioTableAlt tr.bioTableHead td,
+.bioTable tr.bioTableHead td {
+	border:0;
+}
+.bioTableAlt tr,
+.bioTable tr {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	height:20px;
+}
+.bioTableAlt tr.tableDivide,
+.bioTable tr.tableDivide {
+	height:37px;
+	vertical-align:bottom;
+	font-weight:bold;
+	color:#002864;
+}
+.bioTable tr.tableDivide td {
+	border-bottom-width:2px;
+}
+.bioTableAlt tr td {
+	padding:0 0 0 7px;
+}
+.bioTable tr td {
+	padding:0 0 0 7px;
+	border-bottom:1px solid #ddd;
+}
+.bioTableAlt tr td .careerWon {
+	color:#006666;
+}
+.bioTable tr.blankRow {
+	height:20px;
+}
+.bioTable tr.blankRow td {
+	border:0;
+}
+.bioMatchfactsCol {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	line-height:23px;
+	float:left;
+	width:308px;
+}
+.bioMatchfactsCol2 {
+	margin-left:10px;
+	_margin-left:5px;
+}
+.bioMatchfactsCol h6 {
+	font-size:12px;
+	font-weight:bold;
+	color:#080f3c;
+	line-height:23px;
+	border-bottom:2px solid #d5d5d5;
+}
+.bioMatchfactsCol ul li {
+	min-height:23px;
+	_height:23px;
+	line-height:23px;
+	border-bottom:1px solid #d5d5d5;
+}
+.bioMatchfactsCol ul li span {
+	float:left;
+	font-weight:bold;
+	width:45px;
+	padding-right:10px;
+	text-align:right;
+}
+.bioMatchFactsMoreLink {
+	padding-left:13px;
+	background:url("link_chevrons_white-1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_white.gif*/ no-repeat 0 3px;
+	font-size:13px;
+	font-weight:bold;
+	clear:both;
+	float:left;
+	margin:10px 0 5px;
+	width:100%;
+}
+.bioHistoryTable {
+	border-top:2px solid #b4b4b4;
+}
+.bioHistoryTable tr {
+	height:30px;
+	line-height:30px;
+}
+.bioHistoryTable tr.oddRow {
+	background:#dfdfdf;
+	line-height:18px;
+	height:18px;
+}
+.bioHistoryTable tr.bioHistoryTableHead {
+	color:#080f3c;
+	font-weight:bold;
+	height:23px;
+	vertical-align:bottom;
+	background:none;
+}
+.bioHistoryTable td {
+	border-left:1px solid #dfdfdf;
+	padding-left:10px;
+	text-align:center;
+}
+.bioHistoryTable tr.oddRow td,
+.bioHistoryTable td.firstCell {
+	border:0;
+}
+.bioHistoryTable td.firstCell {
+	text-align:left;
+}
+.bioHistoryTable tr.bioHistoryTableHead td {
+	border-left:1px solid #dfdfdf;
+	border-bottom:1px solid #ddd;
+}
+.bioHistoryTable tr.bioHistoryTableHead td.firstCell {
+	border-left:0;
+}
+.bioPlayActivityInfo {
+	margin:0 0 6px 0;
+}
+.bioPlayActivityInfo span {
+	font-size:12px;
+}
+.bioChevronLinks {
+	padding:8px 0 0;
+}
+.bioChevronLinks a {
+	font-size:13px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	background:url("link_chevrons_white-1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_white.gif*/ no-repeat 0 4px;
+	padding-left:13px;
+	margin-right:10px;
+}
+.searchModule,
+.playerSearchModule {
+	padding:0;
+	border:0;
+}
+.searchModule .genericModuleHeader,
+.playerSearchModule .genericModuleHeader {
+	background:url("find_player_header.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/find_player_header.gif*/ repeat-x bottom left;
+	border:0;
+	min-height:34px;
+	border-top:1px solid #0062a0;
+}
+.searchModule .genericModuleHeader h4,
+.playerSearchModule .genericModuleHeader h4 {
+	padding-left:12px;
+}
+.searchModule .moduleContentInner,
+.playerSearchModule .moduleContentInner {
+	background:#001e53 url("find_player_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/find_player_bg.gif*/ repeat-x bottom left;
+	margin:0;
+	min-height:32px;
+	padding:11px 10px 10px 10px;
+}
+.playerSearchModule #autoCompSearch,
+#newsSearch {
+	background:url("find_player_field_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/find_player_field_bg.gif*/ no-repeat 0 0;
+	height:21px;
+	width:206px;
+	padding:7px 5px 4px 30px;
+	border:0;
+	font-size:14px;
+	float:left;
+}
+.searchModule button,
+.playerSearchModule  button {
+	background:url("find_player_button.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/find_player_button.gif*/ no-repeat 0 0;
+	height:32px;
+	width:39px;
+	text-indent:-9999px;
+	border:0;
+	float:left;
+	cursor:pointer;
+}
+.playerEquipmentModule {
+	padding-bottom:0;
+}
+.playerEquipmentModule .moduleContentInner {
+	margin-bottom:0;
+	background:none;
+}
+.playerEquipmentModule .equipmentScrollHide {
+	height:155px;
+	overflow:hidden;
+	position:relative;
+	width:282px;
+	margin-left:4px;
+}
+.playerEquipmentModule .equipmentScrollContent {
+	height:155px;
+	left:0;
+	position:absolute;
+	top:0;
+}
+.playerEquipmentModule .equipmentScrollContent li {
+	float:left;
+	height:155px;
+	/*width:290px;*/
+	width:90px;
+	margin-right:4px;
+}
+.playerEquipmentModule .equipmentScrollContent li img {
+	border:1px solid #dfdfdf;
+}
+.playerEquipmentModule .equipmentScrollContent li span {
+	display:block;
+	margin:3px 0 8px 0;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:13px;
+	font-size:10px;
+	height:26px;
+}
+#wrapper .playerEquipmentModule p.playerEquipmentName {
+	margin:0 0 5px 0;
+	padding:5px 4px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:14px;
+}
+.playerEquipmentModule .equipmentScrollContent li .genericButton {
+	width:80px;
+	background:url("equipment_button_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/equipment_button_bg.gif*/ no-repeat 0 0;
+}
+.playerEquipmentModule .equipmentScrollContent li .genericButton span {
+	background:none;
+}
+.playerEquipmentModule .equipScrollNav {
+	width:262px;
+	margin-left:-4px;
+	height:14px;
+	background:url("equip_module_nav_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/equip_module_nav_bg.gif*/ no-repeat 0 0;
+	padding:5px 26px 5px 10px;
+	text-align:right;
+	margin-top:4px;
+	border-top:1px solid #d1d1d1;
+	position:relative;
+	_overflow:hidden;
+}
+
+.playerEquipmentModule .equipScrollLeft {
+	height:16px;
+	width:16px;
+	float:right;
+	background:url("equip_module_nav_prev.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/equip_module_nav_prev.gif*/ no-repeat 0 0;
+}
+.playerEquipmentModule .equipScrollRight {
+	height:16px;
+	width:16px;
+	display:block;
+	position:absolute;
+	top:5px;
+	right:10px;
+	overflow:hidden;
+	background:url("equip_module_nav_next.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/equip_module_nav_next.gif*/ no-repeat 0 0;
+}
+.playerEquipmentModule .equipmentScrollIndicators {
+	height:16px;
+	float:right;
+	margin-left:4px;
+}
+.playerEquipmentModule .equipmentScrollIndicators span {
+	background:url("equip_module_indicators.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/equip_module_indicators.gif*/ no-repeat 0 0;
+	height:16px;
+	width:13px;
+	overflow:hidden;
+	float:left;
+	margin:0 4px 0 0;
+}
+.playerEquipmentModule .equipmentScrollIndicators span.activeIndicator {
+	background-position:0 -16px;
+}
+/* static tab module styles */
+.staticTabsList {
+	background:url("ajax_tabs_bg_1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/ajax_tabs_bg_1.gif*/ no-repeat bottom left;
+}
+.staticTabsList li {
+	background:none;
+	float:left;
+	height:36px;
+	line-height:36px;
+	padding:0;
+	margin-left:5px;
+}
+.staticTabsList li a {
+	background:transparent url("generic_tab_bg_1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_tab_bg_1.gif*/ no-repeat scroll right top;
+	color:#fff;
+	display:block;
+	font-weight:bold;
+	height:36px;
+	line-height:36px;
+	padding-right:11px;
+	font-size:14px;
+	_width:1%;
+	_white-space:nowrap
+}
+.staticTabsList li a span {
+	background:transparent url("generic_tab_bg_1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_tab_bg_1.gif*/ no-repeat scroll left top;
+	cursor:pointer;
+	float:left;
+	height:36px;
+	padding-left:11px;
+}
+.staticTabSingle {
+	display:none;
+}
+.staticTabsList li a:hover {
+	text-decoration:none;
+	background-position:right -42px;
+}
+.staticTabsList li.active a:hover,
+.staticTabsList li.active a {
+	background-position:bottom right;
+	text-decoration:none;
+}
+.staticTabsList li a:hover span {
+	background-position:left -42px;
+}
+.staticTabsList li.active a:hover span,
+.staticTabsList li.active a span {
+	background-position:bottom left;
+}
+.staticTabContent {
+	border:1px solid #bbb;
+	border-top:0;
+	background:white;
+}
+
+.imagePromoModule {
+	margin-bottom:10px;
+}
+/* calendar template styles */
+#calendarContentWrap {
+	min-height:36px;
+	padding:0;
+	border:1px solid #bbb;
+	background:white;
+}
+#calendarHeader {
+	border:5px solid white;
+	border-top:4px solid white;
+	border-bottom:0;
+	background:white url("calendar_header.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/calendar_header.gif*/ repeat-x 0 0;
+	min-height:42px;
+}
+#calendarHeader .moduleSharebar {
+	width:70px;
+	height:30px;
+	padding-top:3px;
+	padding-left:10px;
+	float:right;
+}
+#calendarHeader .moduleSharebar a {
+	display:block;
+	border-bottom:1px solid #bebebe;
+	height:14px;
+}
+#calendarHeader .moduleSharebar div {
+	padding:2px 0;
+}
+#calendarHeader h1 {
+	font-size:24px;
+	color:#002864;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	/*padding:10px 5px 4px;*/
+    padding:5px 5px 4px;
+	text-transform:uppercase;
+}
+#calendarHeader .moduleSocialbarTwitter,
+#calendarHeader .moduleSocialbarFB 
+{
+    padding-top:7px;
+}
+#calendarPDFlinks {
+	min-height:14px;
+	padding:8px 15px 10px;
+	background:url("profile_header_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/profile_header_bg.gif*/ repeat-x 0 0;
+	line-height:14px;
+	text-align:right;
+	margin-bottom:0;
+}
+#calendarPDFlinks a {
+	line-height:14px;
+	font-size:12px;
+	font-weight:bold;
+	font-family:verdana;
+	padding-right:10px;
+	padding-left:14px;
+	background:url("link_chevrons_black.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_black.gif*/ no-repeat 0 3px;
+}
+#calendarPDFlinks a:hover {
+	color:white;
+	text-decoration:none;
+	background:url("link_chevrons_black_hover.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_black_hover.gif*/ no-repeat 0 3px;;
+}
+#calendarTableHeadWrap {
+	height:39px;
+	width:767px;
+	margin:0 12px 7px 12px;
+	background:url("calendar_table_header_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/calendar_table_header_bg.gif*/ no-repeat 0 0;
+}
+#wrapper .calendarTableHeadWrapArchive {
+	background:url("calendar_table_header_archive.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/calendar_table_header_archive.gif*/ no-repeat 0 0;
+}
+#calendarTableHeadWrap table tr {
+	height:39px;
+	vertical-align:bottom;
+}
+#calendarTableHeadWrap table tr th {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+	font-style:italic;
+	vertical-align:bottom;
+	padding-bottom:5px;
+	height:24px;
+}
+#calendarTableHeadWrap table tr th span {
+	font-weight:normal;
+}
+#calendarTableWrap {
+	margin:0 12px 10px;
+}
+.calendarTable {
+	margin-bottom:7px;
+}
+.calendarTable h4 {
+	height:10px;
+	padding:10px;
+	margin-bottom:7px;
+	color:white;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	line-height:12px;
+	text-transform:uppercase;
+	background:url("profile_header_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/profile_header_bg.gif*/ repeat-x 0 0;
+}
+.calendarTable table tr td {
+	padding:10px 9px 8px 9px;
+	text-align:left;
+	vertical-align:top;
+	background:#f2f1f1 url("calendar_cell.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/calendar_cell.gif*/ no-repeat bottom right;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	border-bottom:1px solid white;
+}
+.calendarTable table tr td.firstCell {
+	background:#f2f1f1 url("calendar_cell_first.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/calendar_cell_first.gif*/ no-repeat bottom left;
+}
+.calendarTable table tr td.lastCell {
+	background:#f2f1f1 url("calendar_cell_last.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/calendar_cell_last.gif*/ no-repeat bottom right;
+}
+.calendarTable table tr td.centerCell {
+	text-align:center;
+}
+.calendarTable table tr td.liveMatch {
+	background:#f2eb91 url("calendar_cell_highlighted.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/calendar_cell_highlighted.gif*/ no-repeat bottom right;
+}
+.calLiveMatch {
+	font-family:Arial, Helvetica, sans-serif;
+	color:#00aff0;
+	display:block;
+	padding-right:23px;
+	padding-left:4px;
+	margin-top:6px;
+	width:37px;
+	line-height:16px;
+	background:url("calendar_cell_live_icon.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/calendar_cell_live_icon.gif*/ no-repeat top right;
+	font-size:15px;
+	font-weight:bold;
+	
+}
+.divIsLoaded
+{
+	display:none;	
+}
+/* live score module styles */
+.liveScoresModule .moduleContentInner {
+	background:none;
+	padding:8px 7px;
+}
+
+
+.tabsAndLinksStats {
+	height:30px;
+}
+.tabsAndLinksStats ul {
+	margin:0 0 0 0;
+	height:30px;
+	float:left;
+}
+.tabsAndLinksStats ul li {
+	margin-right:2px;
+	float:left;
+}
+.tabsAndLinksStats ul li a {
+	display:block;
+	height:28px;
+	margin-bottom:2px;
+	background:#666;
+	color:white;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:12px;
+	padding:0 10px;
+	line-height:28px;
+	width: auto !important;
+	width: 10px;
+}
+
+.tabsAndLinksStats ul li.statsMatchTab a {
+	width: auto !important;
+	width: 130px;
+}
+
+.tabsAndLinksStats ul li.active a,
+.tabsAndLinksStats ul li a:hover {
+	height:30px;
+	text-decoration:none;
+	line-height:30px;
+	background:#dddddd;
+	color:#333333;
+}
+#liveScoreContainer 
+{
+    display:none;
+}
+.liveScoresModule .tabsAndLinks {
+	border-bottom:1px solid #00aff0;
+	height:25px;
+}
+.liveScoresModule .tabsAndLinks ul {
+	margin:0 0 0 10px;
+	width:500px;
+	height:25px;
+	float:left;
+}
+.liveScoresModule .tabsAndLinks ul li {
+	display: inline;
+	margin-right:2px;
+	float:left;
+}
+.liveScoresModule .tabsAndLinks ul li a {
+	display:block;
+	height:23px;
+	margin-bottom:2px;
+	background:#666;
+	color:white;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:12px;
+	padding:0 10px;
+	line-height:23px;
+	text-align: center;
+	width: auto !important;
+	width: 100px;
+}
+.liveScoresModule .tabsAndLinks ul li.active a,
+.liveScoresModule .tabsAndLinks ul li a:hover {
+	height:25px;
+	text-decoration:none;
+	line-height:25px;
+	background:#00aff0;
+}
+.liveScoresModule .liveScoreButtonLinks {
+	float:right;
+}	
+.liveScoresModule .liveScoreButtonLinks .genericButton {
+	clear:none;
+	margin-left:5px;
+}
+.liveScoresMain div.tabActive {
+	display:inline;
+}
+.liveScoresMain div {
+	display:none;
+}
+.liveScoresMain .navbuttons {
+	display:inline;
+}
+.liveScoresMain {
+	background:url("live_scores_grad_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/live_scores_grad_bg.gif*/ repeat-x 0 0;
+	border-bottom:1px solid #00aff0;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	position:relative;
+	min-height:150px;
+}
+.liveScoresMain .navbuttons {
+	position:absolute;
+	height:20px;
+	width:20px;
+	top:100px;
+	display:block;
+}
+.liveScoresMain .navbuttons a {
+	display:block;
+	height:20px;
+	width:20px;
+	text-indent:-9999px;
+}
+.liveScoresMain .showleft a {
+	background:url("live_score_show_left.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/live_score_show_left.gif*/ no-repeat 0 0;
+}
+.liveScoresMain .showright a {
+	background:url("live_score_show_right.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/live_score_show_right.gif*/ no-repeat 0 0;
+}
+.liveScoresMain .navbuttons a:hover {
+	background-position:0 -20px;
+}
+.liveScoresMain #matchContainer .showright a {
+	background:none;
+}
+.liveScoresMain .showleft {
+	left:0;
+}
+.liveScoresMain .showright {
+	right:0;
+}
+.liveScoresMain .liveScoreMainLoading {
+	height:32px;
+	width:32px;
+	background:url("live_scores_loader.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/live_scores_loader.gif*/ no-repeat 0 0;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-16px 0 0 -16px;
+}
+.matchTickerAndTime {
+	font-size:12px;
+	padding:10px;
+	margin-bottom:10px;
+}
+.matchTicker {
+	float:left;
+}
+.matchTime {
+	float:right;
+	text-align:right;
+}
+/* Live Score styles */
+.tabActive div {
+	display:block;
+}
+.tabActive div#tournamenttitle {
+	clear:left;	
+}
+.showleft {
+	float:left;
+}
+.showright {
+	float:right;
+}
+.statsTableFontLarge a:hover
+{
+	text-decoration:none;
+}
+.statsTableFontLarge
+{
+	color:#39c1f3;
+	font-weight:bold;
+	font-size:12px;	
+}
+.marginspacer {
+	margin:2px 0 2px 0;	
+}
+.mainMatch
+{
+	padding:10px;
+	border-bottom:1px solid #aae5fa;
+}
+.singlesPlayerContainer, .doublesPlayerContainer {
+	padding:10px 0 0 28px;
+}
+.statsDisplayContainer, .h2hDisplayContainer {
+	padding:10px 28px 10px 28px;
+}
+.matchTable {
+	border:2px solid #aaaaaa;
+	width:267px;
+	height:127px;
+}
+.matchTable .matchTopRow {
+	height:25px;
+	border-bottom:1px solid #999999;
+	background:url("matchTblTopBg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/matchTblTopBg.gif*/ repeat-x;
+}
+.matchTopRowPad {
+	padding:5px 5px 5px 7px;
+	color:#339;
+	font-weight:bold;
+}
+.matchPlayerRow {
+	height:41px;
+	background:url("matchTblNameCellBg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/matchTblNameCellBg.gif*/;
+	padding-left:10px;
+}
+.matchPlayerServeRow {
+	height:41px;
+	background:url("matchTblNameCellServeBg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/matchTblNameCellServeBg.gif*/;
+	padding-left:10px;
+}
+.matchPlayerWinRow {
+	height:41px;
+	background:url("matchTblNameCellWinBg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/matchTblNameCellWinBg.gif*/;
+	padding-left:10px;
+}
+.matchTblMiddleRow {
+	height:19px;
+	background-color:#aaaaaa;
+	color:#ffffff;
+	font-style:italic;
+	padding:0 0 0 10px;
+	font-size:10px;
+	font-weight:bold;
+}
+.matchTblMiddleRow div {
+	padding-top:3px;
+}
+.matchPlayerCell {
+	background:url("matchTblCellBg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/matchTblCellBg.gif*/;
+	border-left:1px solid #aaaaaa;
+	border-right:1px solid #ffffff;
+	font-size:13px;
+	font-weight:bold;
+}
+.matchPlayerCell .nameCell {
+	width:38px;	
+}
+.matchPlayerName {
+	color:#39c1f3;
+	font-weight:bold;
+}
+.matchDoublesName {
+	margin:5px 0 5px 0;
+}
+.matchPlayerName span {
+	color:#666666;
+	font-weight:normal;
+}
+.matchTeamName {
+	width:140px;
+	text-align:center;
+	margin-bottom:10px;
+}
+.matchPlayerCC {
+	font-size:12px;
+	padding-top:5px;
+}
+.modularTable {
+	width:100%;
+	background-color:#FFFFFF;
+	border:5px solid #dddddd;
+}
+.h2hTopRow {
+	height:45px;
+	background-color:#333333;
+}
+.h2hResult {
+	color:#ffffff;
+	font-weight:bold;
+	font-size:35px;
+	font-family:Arial;
+}
+.h2hRankingRow {
+	height:25px;
+	background-color:#dddddd;
+	color:#333333;
+	font-weight:bold;
+	font-size:12px;
+}
+.h2hRankingRow .h2hRankingLbl {
+	font-size:14px;	
+}
+.h2hDarkRow {
+	height:18px;
+	background-color:#bbbbbb;
+	color:#333333;
+	font-size:10px;
+}
+.h2hLightRow {
+	height:18px;
+	background-color:#dddddd;
+	color:#333333;
+	font-size:10px;
+}
+.h2hLastMeetingRow {
+	color:#ffffff;
+	height:18px;
+	background-color:#333333;
+	font-size:10px;
+	font-weight:bold;
+}
+#h2hLastMeetingLbl, #h2hLastMeeting, #h2hLastMeetingPlayer {
+	padding:0 0 0 10px;
+	font-size:10px;
+}
+
+#h2hLastMeetingPlayer div {
+	color:#39c1f3;
+	display:inline;
+}
+.statsHeaderRow {
+	height:20px;
+	background-color:#333333;
+	color:#ffffff;
+	font-weight:bold;
+	font-size:12px;
+}
+.statsSpanLbls span {
+	padding-left:4px;	
+}
+.supPadSafari {
+	height:16px;
+}
+.supPad {
+	height:23px;
+	*height:16px;
+	_height:16px;
+}
+#adImg {
+	display:none;	
+}
+a.linksUnderline:hover
+{
+    text-decoration:underline;
+}
+/* head 2 head landing styles */
+#head2HeadLandingWrap {
+	margin-bottom:10px;
+}
+#head2HeadLandingTitle {
+	min-height:36px;
+	padding:4px 5px 0;
+	border:1px solid #bbb;
+	border-bottom:0;
+	background:white url("player_bio_title.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/player_bio_title.gif*/ no-repeat 4px 4px;
+}
+#head2HeadLandingTitle .moduleAd 
+{
+    margin-right:20px;
+}
+#head2HeadLandingTitle h1 {
+	color:#002864;
+	font-size:20px;
+	padding:6px 5px 0;
+	text-transform:uppercase;
+}
+#head2HeadLandingTitle .moduleSharebar {
+	width:70px;
+	height:30px;
+	padding-left:10px;
+	float:right;
+}
+#head2HeadLandingTitle .moduleSharebar a {
+	display:block;
+	border-bottom:1px solid #bebebe;
+	height:14px;
+}
+#head2HeadMain {
+	clear: both;
+	padding:10px 0;
+	background:#00255d;
+}
+#head2HeadMain #head2HeadMainTable {
+	border:1px solid #ececec;
+	width:312px;
+	background:#ececec;
+	float:left;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+}
+#head2HeadMain #head2HeadMainTable table {
+	width:312px;
+}
+#head2HeadMain #head2HeadMainTable table tr th {
+	background:#002864;
+	height:26px;
+	color:white;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+}
+#head2HeadMain #head2HeadMainTable table tr th.player1Rank {
+	text-align:right;
+}
+#head2HeadMain #head2HeadMainTable table tr th.player2Rank {
+	text-align:left;
+}
+#head2HeadMain #head2HeadMainTable tr td {
+	text-align:center;	
+}
+#head2HeadMain #head2HeadMainTable tr.labelRow td {
+	background:#cbcbcb;
+	height:16px;
+	text-align:center;
+	color:#333;
+	font-weight:bold;
+}
+#head2HeadMain #head2HeadMainTable tr.infoRow td {
+	background:#ececec;
+	height:20px;
+	color:#333;
+	padding-left:10px;
+	width:155px;
+	text-align:left;
+}
+#head2HeadMain #head2HeadMainTable tr.infoRow td.firstCell {
+	text-align:right;
+	padding-right:10px;
+	padding-left:0;
+	border-right:1px solid #cbcbcb;
+}
+#head2HeadMain #head2HeadMainTable tr.infoRow td.doubleCell {
+	text-align:center;
+	*width:292px;
+	_width:292px;
+}
+#head2HeadMain #head2HeadMainTable tr td .genericButton {
+	clear:none;
+	margin:8px 0 6px;
+	font-family:Arial, Helvetica, sans-serif;
+	display:inline;
+	float:none;
+	min-height:1%;
+	padding:4px 0 3px 3px;
+	*padding-top:0;
+	*padding-bottom:1px;
+	_padding-top:0;
+	_padding-bottom:1px;
+}
+#head2HeadMain #head2HeadMainTable tr td .genericButton:hover span {
+	background-position:right -20px;
+}
+#head2HeadMain #head2HeadMainTable tr td .genericButton span {
+	display:inline;	
+	padding:4px 25px 3px 2px;
+	*padding-top:5px;
+	_padding:0 25px 0 0;
+}
+#head2HeadMain .playerColumn {
+	float:left;
+	width:170px;
+}
+#head2HeadMain .playerColumn .playerName {
+	margin:6px 0 12px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	display:block;
+	text-align:center;
+}
+
+#head2HeadMain .playerColumn .playerInfoRank {
+	background:#395b82 url("player_bio_info_flag_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/player_bio_info_flag_bg.gif*/ repeat-x bottom left;
+	border:1px solid #33517d;
+	display: inline;
+	height:43px;
+	padding:0 5px 5px;
+	text-align:center;
+	font-size:10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:white;
+	margin-bottom:10px;
+	margin-left:10px;
+	clear:both;
+	float:left;
+	width:138px;
+}
+#head2HeadMain .playerColumn .playerInfoRank span {
+	font-size:30px;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	display:block;
+	line-height:30px;
+}
+#head2HeadMain .playerColumn .playerInfoRank span {
+	font-size:16px;
+}
+#head2HeadMain .playerColumn .playerInfoFlag {
+	padding:3px 5px;
+	height:70px;
+	display: inline;
+	background:#395b82 url("player_bio_info_flag_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/player_bio_info_flag_bg.gif*/ repeat-x bottom left;
+	border:1px solid #33517d;
+	font-size:10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:white;
+	text-align:center;
+	margin-bottom:10px;
+	margin-left:10px;
+	clear:both;
+	float:left;
+	width:138px;
+}
+#head2HeadMain .playerColumn .playerInfoFlag img {
+	margin-bottom:5px;
+}
+#head2HeadMain .playerColumn .playerInfoFlag p {
+	margin:0;
+}
+#head2HeadTables .commonProfileContainer h4 {
+	text-transform:none;
+}
+#head2HeadTables .commonProfileContainer table tr td {
+	text-align:left;
+}
+#head2HeadTables .whoLeads {
+	margin:6px 0;
+	font-weight:bold;
+}
+.homeRotator {
+	height:312px;
+}
+/* home shop module styles */
+.homeShopModule .moduleContentInner {
+	position:relative;
+	padding:10px 8px 10px 108px;
+	height:88px;
+}
+.homeShopModule .moduleContentInner p {
+	padding-bottom:30px;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.homeShopModule .moduleContentInner p a {
+	font-weight:bold;
+	font-size:14px;
+	display:block;
+}
+.homeShopModule .moduleContentInner img {
+	position:absolute;
+	top:10px;
+	left:8px;
+	border:1px solid #dfdfdf;
+}
+.homeShopModule .moduleContentInner .genericButton {
+	position:absolute;
+	bottom:10px;
+	right:8px;
+}
+/* tournament events module styles */
+.tournEventModule ul {
+	padding:0 8px;
+	margin-bottom:10px;
+}
+.tournEventModule ul li {
+	position:relative;
+	border-bottom:1px solid #d2d2d2;
+	padding:7px 95px 7px 36px;
+	min-height:1em;
+	display:none;
+	_height:1em;
+}
+.tournEventModule ul li.confirmedTourn {
+	display:block;
+}
+.tournEventModule ul li .tournEventDate {
+	position:absolute;
+	display:block;
+	width:28px;
+	top:7px;
+	padding-right:8px;
+	left:0;
+	text-align:right;
+	margin:0;
+}
+.tournEventModule ul li a {
+	display:block;
+}
+.tournEventModule ul li a.tournEventWatchLink {
+	background:url("link_chevrons_white-1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_white.gif*/ no-repeat scroll 0 4px;
+	padding-left:14px;
+	font-weight:bold;
+}
+.tournEventModule ul li .genericButton {
+	position:absolute;
+	top:7px;
+	right:0;
+}
+.tournEventFilters {
+	font-size:10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	padding:7px 0;
+	margin:0 8px;
+	border-bottom:2px solid #d2d2d2;
+}
+.tournEventFilters label {
+	padding-right:3px;
+	_padding-right:1px;
+}
+.tournEventFilters label input {
+	margin-right:4px;
+	_margin-right:2px;
+}
+/* upcoming tournaments module styles */
+.upcomingTournModule {
+	height:262px;
+	overflow:hidden;
+}
+.upcomingTournModule ul {
+	padding:0 8px;
+	font-size:10px;
+}
+.upcomingTournModule ul li {
+	position:relative;
+	border-bottom:1px solid #d2d2d2;
+	padding:4px 90px 4px 43px;
+	height:23px;
+}
+.upcomingTournModule ul li.confirmedTourn {
+	display:block;
+}
+.upcomingTournModule ul li .tournEventDate {
+	position:absolute;
+	display:block;
+	width:28px;
+	top:4px;
+	padding-right:8px;
+	left:0;
+	text-align:right;
+	margin:0;
+}
+.upcomingTournModule ul li a {
+	display:block;
+	top:10px;
+}
+.upcomingTournModule ul li a.tournEventWatchLink {
+	background:url("link_chevrons_white-1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_white.gif*/ no-repeat scroll 0 1px;
+	padding-left:14px;
+	font-weight:bold;
+}
+.upcomingTournModule ul li .genericButton {
+	position:absolute;
+	top:7px;
+	right:0;
+}
+.upcomingTournModule .moreLink {
+	height:30px;
+	line-height:30px;
+	*line-height:25px;
+	padding:0 8px 0 22px;
+	font-size:11px;
+	font-weight:bold;
+	background:url("link_chevrons_white-1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_white.gif*/ no-repeat scroll 8px 2px;
+}
+
+/* challenger styles */
+.challengerHead #tournDetailHeadInfo {
+	height:399px;
+}
+.challengerHead #tournDetailHeadInfo #tournDetailHeadInfoLogo1 {
+	height:79px;
+	width:auto;
+	float:none;
+	margin-bottom:8px;
+}
+.challengerHead #tournDetailHeadInfo .moreLinkChevronBlack {
+	display:block;
+	width:100%;
+	float:none;
+	margin:5px 0;
+}
+.challengerHead #tournDetailHeadInfo h3 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:16px;
+	color:white;
+	line-height:24px;
+	border-bottom:1px solid #f1f1f1;
+}
+#upcomingChallengerEvents {
+	margin:10px 0 0 -7px;
+	display:block;
+}
+#pastChallengerResults {
+	display:block;
+	margin-top:10px;
+}
+.challengerHead #tournDetailHeadSumm h2 {
+	margin-bottom:0;
+}
+.challengerTabsHeader {
+	font-size:16px;
+	font=weight:bold;
+	color:#002864;
+	font-family:Arial, Helvetica, sans-serif;
+	margin:8px 0 8px 6px;
+}
+.challengerTabModule .bioTableAlt {
+	width:auto;
+	margin-bottom:8px;
+}
+.challengerTabModule .bioTableAlt tr td {
+	padding-left:18px;
+}
+
+/* doubles ranking */
+.doublesRankingLogo {
+	margin:0 auto 10px auto;
+	display:block;
+}
+.challengerHead #tournDetailHeadSumm {
+               height: 80px;
+        padding: 8px;
+}
+.challengerHead
+{
+height: 421px;
+}
+
+/* Scores and Stats area */
+/* the overlayed element */
+div.overlay 
+{          
+    /* growing background image */     
+    background-image:url("white.png")/*tpa=http://www.atpworldtour.com/media/white.png*/;          
+    /* dimensions after the growing animation finishes  */     
+    width:656px;
+    height:450px;  
+    /* initially overlay is hidden */     
+    display:none;          
+    /* some padding to layout nested elements nicely  */     
+    padding:35px; 
+}
+
+/* default close button positioned on upper right corner */ 
+div.overlay div.close 
+{     
+    background-image:url("close.png")/*tpa=http://www.atpworldtour.com/media/close.png*/;     
+    position:absolute;     
+    right:5px;     
+    top:5px;     
+    cursor:pointer;     
+    height:35px;     
+    width:35px; 
+}
+.popupStatsAndH2H
+{
+    width:655px;
+    border:1px solid:#000000;
+    height:397px;
+}
+#lStatsContainer, #lH2HContainer {
+	display:none;
+}
+.scoresAndStatsMain {
+	background:url("live_scores_grad_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/live_scores_grad_bg.gif*/ repeat-x 0 0;
+	border-bottom:1px solid #00aff0;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	position:relative;
+	min-height:150px;
+	width:632px;
+}
+
+.miniSup div
+{
+    display:inline;
+}
+.miniSup .miniSupSup .miniSupOpera
+{
+    position:absolute;
+    font-size:xx-small;
+    top:-1px;
+}
+.miniSup .miniSupSup .miniSupSafari
+{
+    position:absolute;
+    font-size:8px;
+    top:-2px;
+}
+.miniSup .miniSupSup .miniSupSmall
+{
+    position:absolute;
+    font-size:8px;
+    top:-3px;
+    left:6px;
+}
+.miniSup .miniSupSup
+{
+    position:relative;
+}
+#liveMatches, #completedMatches
+{
+    text-transform:uppercase;   
+}
+.liveMatchEmptyCell
+{
+    width:244px;   
+}
+.liveMatchItemsTbl .liveMatchItemsTd
+{
+    width:244px;   
+}
+.liveMatchItemMatchLbl
+{
+    width:156px;
+    font-weight:bold;
+    font-size:10px;
+}
+.liveMatchItemMatchLbl span
+{
+    font-weight:normal;
+}
+.featureItButton
+{
+    width:85px;
+}
+.hideContainer
+{
+    display:none;   
+}
+.showContainer
+{
+    display:block;   
+}
+.completedMatchesTable {
+	width: 100%;
+}
+.completedMatchesTable .completedPlayernames
+{
+	font-weight:bold;
+}
+.completedMatchesTable td
+{
+	padding:0 3px 0 3px;
+}
+.liveMatchDetailsContainer .liveMatchDetailsPl
+{
+    width:152px;
+    padding-left:8px;
+    color:#39c1f3;
+	font-size:11px;
+}
+.noSetsSpacer
+{
+    width:10px   
+}
+.messageSm
+{
+    font-size:10px;   
+}
+
+.matchesContainer .loadingBox 
+{
+    position:absolute;
+	top:100px;
+	left:370px;
+	background:url("scoreboard_loader.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/scoreboard_loader.gif*/ no-repeat 0 0;
+	height:24px;
+	width:24px;
+	display:block;
+}
+.featuredMatchContainer
+{
+    width:655px;
+    padding-left:70px;   
+}
+.matchesContainer
+{
+    position:relative;
+    padding:8px 8px 15px 8px;
+}
+.matchesContainer .matchContainer
+{
+    display:none;
+}
+.matchesContainer div.active
+{
+   display:block;  
+}
+.tournamentBar
+{
+    background:url("tournamentBarBg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/tournamentBarBg.gif*/ repeat-x;
+    border-bottom:1px solid #bbbbbb;
+    width:100%;
+    margin-bottom:10px;
+}
+.tournamentContents
+{
+    padding:8px;   
+}
+.tournamentContents table
+{
+    width:100%;
+}
+.tournamentBarTitle
+{
+    width:100%;
+    border-bottom:1px solid #bbbbbb;
+    font-family:Verdana, Arial, Helvetica, sans-serif; 
+    
+}
+.tournamentBarTitle span a
+{
+    color:#00254a;
+    font-size:14px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+.tournamentBarDetails
+{
+    margin-top:4px;
+    font-size:11px;
+    font-weight:bold;
+}
+.tournamentBarDetails div
+{
+    display:inline;  
+}
+.tournamentBarDetailsBlue
+{
+    margin-left:10px;
+    color:#39c1f3;
+}
+.filterPaddingCell
+{
+    padding-right:10px;   
+}
+.matchItemMatchLbl
+{
+    font-family:Verdana, Arial, Helvetica, sans-serif; 
+    font-size:11px;
+    font-weight:bold;  
+}
+.matchItemMatchLbl span
+{
+    font-weight:normal;  
+}
+.matchItemScores
+{
+    border:2px solid #aaaaaa;
+    height:88px;   
+}
+.liveMatchItems
+{
+    margin-bottom:8px;
+}
+.liveMatchItems .liveMatchItemsTbl
+{
+    width:775px;
+}
+.liveMatchItemsTbl
+{
+   font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+.liveMatchItemsTbl a.genericButton {
+	float:none;
+	clear:none;
+	display:block;
+	margin-right:6px;
+}
+.liveMatchDetailsContainer
+{
+    height:88px;
+    border:2px solid #aaaaaa;
+    width:244px;
+    margin-top:4px;
+}
+.liveMatchDetailsContainer table
+{
+    height:88px;
+    width:100%;
+    font-size:10px;
+    font-weight:bold;
+}
+.liveMatchDetailsPl
+{
+    width:162px;
+    padding-left:8px;
+    color:#39c1f3;
+	font-size:11px;
+}
+.liveMatchDetailsPl span
+{
+    color:#777777;
+    font-weight:normal;
+}
+.liveMatchDetailsContainer table td
+{
+    width:24px;
+    height:30px;
+    background:url("liveMatchPl.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/liveMatchPl.gif*/ no-repeat;         
+}
+.liveMatchDetailsContainer .liveMatchPl
+{
+    background:url("liveMatchPl.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/liveMatchPl.gif*/ no-repeat;           
+}
+.liveMatchDetailsContainer .liveMatchPlWin
+{
+    background:url("liveMatchPlWin.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/liveMatchPlWin.gif*/ no-repeat;            
+}
+.liveMatchDetailsContainer .liveMatchPlServe
+{
+    background:url("liveMatchPlServe.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/liveMatchPlServe.gif*/ no-repeat;            
+}
+.liveMatchMatchInfo
+{
+    width:250px;
+    height:26px;
+    margin-top:3px;   
+}
+.completedMatchesTableHeader
+{
+    height:20px;
+    width:765px;
+    color:#ffffff;
+    background-color:#00254a;
+    padding:4px 0 0 6px;
+    font-weight:bold;
+    font-size:12px;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+.completedMatchDetailContainer moduleWarp
+{
+    margin-bottom:8px;   
+}
+.completedMatchesRows div
+{
+   height:20px;
+   width:100%;
+}
+.completedRows
+{
+    height:20px;
+    font-size:12px;   
+}
+.completedMatchesRows .completedMatchesRowColor
+{
+   background-color:#dddddd;
+}
+.statsH2HPopUp
+{
+    position:absolute;
+    height:350px;
+    width:600px;
+    border:1px solid #000000;
+    background-color:#FFFFFF;
+    top:100px;
+    left:90px;
+}
+
+/* matchfacts landing styles */
+.matchFactsLandingDate {
+	margin:10px 0 0;
+}
+.matchFactsTableWrap {
+	float:left;
+	width:226px;
+	height:238px;
+	margin-left:10px;
+	margin-top:10px;
+}
+.matchFactsTableWrap .profileSecondaryTitleAlt {
+
+}
+.matchFactsTableHead {
+	line-height:18px;
+	color:#080F3C;
+	font-weight:bold;
+	border-bottom:2px solid #DDDDDD;
+	font-size:11px;
+}
+.matchFactsTableScroll {
+	height:180px;
+	width:226px;
+	overflow:auto;
+	font-size:11px;
+	border-bottom:2px solid #DDDDDD;
+}
+.matchFactsTable {
+	width:206px;
+}
+.matchFactsTable tr {
+	
+}
+.matchFactsTable tr td {
+	padding:4px 0;
+	border-bottom:1px solid #ddd;
+}
+
+
+/* SandS tab styles */
+.scoreStatsTabs{
+	display:block;
+	clear:both;
+}
+.scoreStatsTabs li {
+	float:left;
+}
+.scoreStatsTabs li a {
+	background:transparent url("generic_tab_bg_1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_tab_bg_1.gif*/ no-repeat scroll right top;
+	color:#fff;
+	display:block;
+	font-weight:bold;
+	height:36px;
+	line-height:36px;
+	padding-right:11px;
+	font-size:14px;
+	_width:1%;
+	_white-space:nowrap;
+	margin-left:10px;
+}
+.scoreStatsTabs li a span {
+	background:transparent url("generic_tab_bg_1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_tab_bg_1.gif*/ no-repeat scroll left top;
+	cursor:pointer;
+	float:left;
+	height:36px;
+	padding-left:11px;
+}
+.scoreStatsTabs li.active a {
+	background-position:bottom right;
+	text-decoration:none;
+}
+.scoreStatsTabs li a:hover {
+	text-decoration:none;
+	background-position:right -42px;
+}
+.scoreStatsTabs li.active a span {
+	background-position:bottom left;
+}
+.scoreStatsTabs li a:hover span {
+	background-position:left -42px;
+}
+/* matchfacts subpage module */
+#layoutHome .matchFactsModule {
+	height:266px;
+	_overflow-y:hidden;
+}
+.matchFactsModule {
+	min-height:256px;
+	_height:266px;
+	width:300px;
+	padding:0 0 10px 0;
+	_padding:0 0 10px;
+	border-top:1px solid #0062a0;
+	background:#002060 url("sub_matchfacts_module_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/sub_matchfacts_module_bg.gif*/ repeat-x 0 0;
+	margin-bottom:10px;
+}
+.matchFactsModule .matchfactsHeader {
+	height:31px;
+	border-bottom:1px solid black;
+	padding: 5px 10px;
+}
+.matchFactsModule .matchfactsHeader h2 {
+	line-height:31px;
+	float:left;
+	/*font-size:16px;*/
+	font-size:14px;
+	color:white;
+	text-transform:uppercase;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.matchFactsModule .matchfactsContent {
+	color:white;
+	padding:5px 10px 0;
+	border-top:1px solid #004f8b;
+}
+.matchFactsModule .matchfactsContent a {
+	color:#6dd7fe;
+	font-weight:bold;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:12px;
+}
+.matchFactsModule .matchfactsContent .genericButton {
+	float:right;
+	background-image:url("generic_button.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_button.png*/;
+}
+.matchFactsModule .matchfactsContent .genericButton span {
+	background-image:url("generic_button.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_button.png*/;
+}
+.matchFactsModule .matchfactsContent table {
+	margin:5px 0 10px;
+}
+.matchFactsModule .matchfactsContent table,
+.matchFactsModule .matchfactsContent table a {
+	font-weight:normal;
+	font-size:11px;
+}
+.matchFactsModule .matchfactsContent table tbody tr {
+	height:21px;
+}
+.matchFactsModule .matchfactsContent table th {
+	border-bottom:2px solid #334468;
+	font-size:10px;
+	text-align:left;
+	font-weight:bold;
+}
+.matchFactsModule .matchfactsContent table td {
+	border-bottom:1px solid #334468;
+}
+/* generic form styles */
+.genericFormWrap,
+.genericFormWrap .moduleContentInner {
+	background:white;
+}
+.genericForm fieldset {
+	border:0;
+	width:465px;
+	padding:10px 0 10px 10px;
+}
+.genericFormWrap p {
+	marign:0 10px 10px;
+}
+.genericFormError {
+	padding:10px;
+	background:#fdf8e3;
+	border:1px solid #cfc69a;
+	color:#333;
+	display:none;
+}
+.formRow {
+	width:435px;
+	clear:both;
+	margin-bottom:8px;
+	height:auto;
+	overflow:hidden;
+}
+.formRowHalf {
+	width:225px;
+	float:left;
+	clear:none;
+}
+.genericForm label {
+	padding-right:10px;
+	display:block;
+	font-size:11px;
+	line-height:16px;
+}
+.formSubTitle {
+	font-size:14px;
+	margin:20px 0 10px;
+	font-weight:bold;
+}
+label .reqFld {
+	padding-left:10px;
+	color:#ff0000;
+	font-size:10px;
+}
+.genericForm input,
+.genericForm textarea,
+.genericForm select {
+	width:200px;
+	height:16px;
+	padding:1px 0;
+	margin:0 10px 0 0;
+}
+.genericForm select {
+	height:auto;
+}
+.genericForm .formRowCheckbox input,
+.genericForm .formRowRadio input {
+	width:auto;
+	height:auto;
+	float:left;
+}
+.genericForm .formRowCheckbox label,
+.genericForm .formRowRadio label {
+	*line-height:20px;
+}
+.genericForm .formRowRadio {
+	width:445px;
+	padding-left:20px;
+}
+.genericForm .formRowRadio label {
+	margin-bottom:6px;
+}
+.genericForm textarea {
+	height:80px;
+	width:425px;
+}
+.genericForm .genericButton button {
+	height:20px;
+}
+/* styles for poll module */
+.pollModule .moduleContentInner {
+	padding:8px 11px;
+	margin:2px 3px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+.modPollQuestion {
+	font-size:11px;
+	font-weight:normal;
+	margin-bottom:10px;
+}
+.jcorePoll label {
+	clear:both;
+	padding:0 0 8px 0px;
+	display:block;
+}
+.jcorePoll label input {
+	margin-right:5px;
+}
+.jcorePoll button {
+	height:20px;
+}
+.pollResultRow p {
+	clear:both;
+}
+.pollResultBar {
+	height:19px;
+	float:left;
+	margin-right:3px;
+	background:#b1e6fa;
+}
+.pollResultRow {
+	position:relative;
+	padding-left:10px;
+	margin-bottom:8px;
+}
+.pollResultBar {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:2;
+}
+.pollResultRow span,
+.pollResultRow p {
+	position:relative;
+	z-index:10;
+	display:inline;
+}
+.pollModule p.pollTotalClicks {
+	font-size:11px;
+}
+/* styles for poll module */
+.quizModule .moduleContentInner {
+	padding:8px 11px;
+	margin:2px 3px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+.quizResultRow {
+	position:relative;
+	padding-left:10px;
+	margin-bottom:8px;
+}
+.quizResultRow p {
+	position:relative;
+	z-index:5; 
+}
+.quizResultBar {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:2;
+}
+.quizResultRowPercentage {
+	float:left;
+	margin-right:3px;
+	margin:0;
+	width:60px;
+	text-align:right;
+}
+.modQuizQuestion {
+	font-size:12px;
+	font-weight:normal;
+	margin-bottom:10px;
+}
+.correctAnswer {
+	
+}
+
+/* Miniscroreboard modifications */
+#headerTopScoreboards .miniPlayername
+{
+    color:#ffffff;   
+}
+
+/* Draws */
+div.draws_page {
+	background-color: white;
+	padding:10px;
+}
+
+div.draws_page .draws_title dl {
+	margin: 10px 0;
+}
+
+div.draws_page .draws_title dt {
+	display: inline;
+	font-weight: bold;
+	list-style: none;
+	margin: 0 3px 0 0;
+}
+
+div.draws_page .draws_title dd {
+	display: inline;
+	list-style: none;
+	margin: 0 10px 0 0;
+}
+
+div.draws_container {
+	font-size: 11px;
+	position: relative;
+}
+
+div.draws_container ol {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+
+div.draws_container li {
+	background-position: right center;
+	background-repeat: no-repeat;
+	display: block;
+	height: 60px;
+	left: 0;
+	list-style: none;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+}
+
+div.draws_container li.odd {
+	background-image: url("rank_odd.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/rank_odd.gif*/;
+}
+
+div.draws_container li.even {
+	background-image: url("rank_even.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/rank_even.gif*/;
+}
+
+div.draws_container li.winner {
+	background-image: url("rank_winner.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/rank_winner.gif*/;
+	background-repeat: repeat-x;
+}
+
+div.draws_container li div {
+	overflow: hidden;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+div.draws_container li div .initial_pos {
+	clear: none;
+	display: block;
+	float: left;
+	overflow: hidden;
+	width: 20px;
+}
+
+div.draws_container li div .highest_round {
+	clear: none;
+	display: block;
+	float: left;
+	overflow: hidden;
+	width: 30px;
+}
+
+div.draws_container li div img {
+	clear: none;
+	float: left;
+	padding-right: 3px;
+}
+
+div.draws_container li div.name a {
+	clear: none;
+	display: block;
+	float: left;
+}
+
+div.draws_container ol.r1 li div.name img.partner {
+	padding-left: 50px;
+}
+
+div.draws_container li div img {
+	vertical-align: baseline;
+}
+
+div.draws_container li div.winner {
+	font-weight: bold;
+}
+
+div.draws_container h2 {
+	display: none;
+}
+.videoErrorMessage {
+	padding:5px 0;
+	display:block;
+	color:red;
+}
+.videoMessage {
+	padding:5px 0;
+	display:block;
+}
+.moduleSocialbar 
+{
+    float:right;
+    width:181px;
+}
+.moduleSocialbarFB 
+{
+    float:right;
+    padding-top:4px;
+    
+}
+.moduleSocialbarTwitter 
+{
+    float:right;
+    padding-top:4px;
+    
+}
+#articleContentHead 
+{
+    position:relative;
+    z-index:50;
+}
+#articleContentHead .moduleSocialbarFB 
+{
+    position:absolute;
+    bottom:5px;
+    right:0;
+}
+#articleContentHead .moduleSocialbarTwitter 
+{
+    position:absolute;
+    bottom:4px;
+    right:81px;
+}
+#articleContentHead .moduleSocialbarTwitter 
+{
+    z-index:41;
+}
+#articleContentHead .moduleSocialbarFB 
+{
+    z-index:42;
+}
+#mediaMainBox .moduleSocialbar
+{
+    width: 200px;
+}
+
+/*
+ * -----------------------------------------------
+ * Reliability
+ * -----------------------------------------------
+ */
+
+.reliabilityRotatorModule {
+	border: none;
+	padding: 0;
+}
+
+.reliabilityRotatorModule .genericModuleHeader {
+	background: none;
+	border: none;
+	margin: 0;
+	min-height: 0;
+	padding: 0;
+}
+
+.reliabilityRotatorModule .genericModuleHeader h4, .reliabilityRotatorModule .genericModuleHeader h4 a {
+	background-position: top left;
+	background-repeat: none;
+	display: block;
+	height: 66px;
+	margin: 0;
+	outline: none;
+	overflow: hidden;
+	padding: 0;
+	text-indent: -9999px;
+}
+
+.reliabilityRotatorModule .moduleContentInner {
+	background: none;
+	margin: 0;
+	padding: 0;
+}
+.reliabilityRotatorModuleNoRotator .moduleContentInner 
+{
+    display:none;
+}
+.reliabilityRotatorModule .imageRotatorCaption {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.reliabilityMenuModule .moduleContentInner {
+	min-height: 30px;
+	line-height: 30px;
+}
+
+.reliabilityMenuModule .title {
+	clear: left;
+	float: left;
+}
+
+.reliabilityMenuModule .title h4 {
+	color: #002c64;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.reliabilityMenuModule .controls {
+	float: right;
+}
+
+.reliabilityMenuModule .controls form {
+	height: 30px;
+	line-height: 30px;
+	margin: 0;
+	overflow: hidden;
+	padding-right: 65px;
+	position: relative;
+}
+
+.reliabilityMenuModule .genericButton {
+	height: 20px;
+	line-height: 20px;
+	position: absolute;
+	right: 8px;
+	top: 5px;	
+}
+
+.reliabilityMenuModule .genericButton button {
+	height: 20px;
+}
+
+.reliabilityTableModule {
+}
+
+.reliabilityTableModule .reliabilityTableModuleInner {
+	background-image: url("reliability_default.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/reliability_default.gif*/;
+	background-position: top left;
+	background-repeat: repeat-x;
+	position: relative;
+}
+
+.reliabilityTableModule .title {
+	height: 39px;
+	left: 0;
+	line-height: 39px;
+	position: absolute;
+	top: 0;
+}
+
+.reliabilityTableModule .title h4 {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0 6px;
+}
+
+.reliabilityTableModule table {
+	width: 100%;
+}
+
+.reliabilityTableModuleAdditional table {
+	margin-left: 137px;
+	width: 508px;
+}
+
+.reliabilityTableModule table thead th {
+	color: white;
+	font-size: 10px;
+	height: 39px;
+	overflow: hidden;
+	padding: 0 1px;
+}
+
+.reliabilityTableModule table tbody {
+	border-bottom: 1px solid #a9a9a9;
+}
+
+.reliabilityTableModule table tbody td {
+	border-left: 1px solid #a9a9a9;
+	font-size: 10px;
+	padding: 5px 5px;
+	text-align: center;
+	width: 45px;
+}
+
+.reliabilityTableModule table tbody td.careerWinLoss {
+	border-right: 1px solid #a9a9a9;
+	width: 60px;
+}
+
+.reliabilityTableModule table tbody tr.odd td {
+	background-color: #e4e4e4;
+}
+
+.reliabilityTableModule table tbody tr.odd td.currentIndex,
+.reliabilityTableModule table tbody tr.odd td.careerIndex {
+	background-color: #abd5e6;
+}
+
+.reliabilityTableModule table tbody tr.even td.currentIndex,
+.reliabilityTableModule table tbody tr.even td.careerIndex {
+	background-color: #bfe9f9;
+}
+
+.reliabilityTableModule table tbody td.rank {
+	text-align: right;
+	width: 25px;
+}
+
+.reliabilityTableModule table tbody td.player {
+	border-left: none;
+	text-align: left;
+	width: auto;
+}
+
+.reliabilityTableModule .additionalInfo {
+	display: none;
+}
+
+.reliabilityTableModule .reliabilityFooterLinks {
+	border-top: 1px solid #a9a9a9;
+	height: 20px;
+	line-height: 17px;
+	padding: 5px 8px 5px 5px;
+}
+
+p.reliabilityNote {
+	border-top: 1px solid #a9a9a9;
+	font-size: 10px;
+	margin: 0;
+}
+
+.reliabilityTableModule .reliabilityFooterLinks .reliabilityFAQ {
+}
+
+.reliabilityTableModule .reliabilityFooterLinks .genericButton {
+	float: right;
+}
+
+.reliabilityTableModuleAdditional .additionalInfo {
+	display: block;
+	left: 0;
+	position: absolute;
+	text-align: center;
+	top: 39px;
+	width: 137px;
+}
+
+.reliabilityTableModuleAdditional .additionalInfo img {
+	height: 88px;
+}
+
+.reliabilityTableModuleAdditional .additionalInfo .completeLink {
+	background:url("generic_button.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_button.gif*/ no-repeat top left;
+	display: block;
+	padding:0 0 0 3px;
+	display:block;
+	height: 20px;
+	line-height: 18px;
+	margin-top: 2px;
+	overflow: hidden;
+	width: 130px;
+}
+
+.reliabilityTableModuleAdditional .additionalInfo .completeLink:hover {
+	background-position: 0 -20px;
+}
+
+.reliabilityTableModuleAdditional .additionalInfo .completeLink a {
+	border:0;
+	height:20px;
+	padding:0 25px 3px 2px;
+	display: block;
+	_padding-bottom:0;
+	_height:20px;
+	line-height:18px;
+	font-size:9px;
+	font-weight:bold;
+	color:#fff;
+	background:url("generic_button.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_button.gif*/ no-repeat top right;
+	cursor:pointer;
+	margin-right:-3px;
+	width:103px;
+	text-decoration: none;
+	_overflow:hidden;
+}
+
+.reliabilityTableModuleAdditional .additionalInfo .completeLink a:hover {
+	background-position: right -20px;
+}
+
+.head2headModule .head2headPreStats {
+	position: relative;
+}
+
+.head2headPreName1, .head2headPreName2  {
+	padding-top: 6px;
+}
+
+#wrapper .head2headModule .moduleContentInner p.head2headPreScore {
+	padding: 0 0 2px 0;
+}
+
+.head2headModule .reliabilityLink {
+	background-color: #003777;
+	clear: both;
+	color: #6dd7fe;
+	display: block;
+	font-size: 11px;
+	font-weight: bold;
+	height: 26px;
+	left: 0;
+	line-height: 26px;
+	margin-left: -2px;
+	text-align: center;
+	width: 321px;
+}
+
+.head2headModule .reliabilityLink span {
+	background: url("reliability_racquo.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/reliability_racquo.gif*/ left center no-repeat;
+	display: inline-block;
+	padding-left: 12px;
+}
+
+.reliabilityTableFooterLink {
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	margin: -1em 0 1em 0;
+}
+
+/*
+ * -----------------------------------------------
+ * Player Bio Table v2
+ * -----------------------------------------------
+ */
+.bioTable2 {
+	border-bottom: 1px solid #cccccc;
+	margin-bottom: 1em;
+	width: 100%;
+}
+
+.bioTable2 th,
+.bioTable2 td {
+	padding: 3px 5px;
+	text-align: center;
+}
+
+.bioTable2 th.matchRecord,
+.bioTable2 td.matchRecord {
+	text-align: left;
+}
+
+.bioTable2 thead tr.groupings th {
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.bioTable2 thead tr.headings th {
+	background-color: #002665;
+	color: white;
+	vertical-align: bottom;
+}
+
+.bioTable2 tbody td {
+	border-right: 1px solid #cccccc;
+	width: 35px;
+}
+
+.bioTable2 tbody td.matchRecord {
+	border-left: 1px solid #cccccc;
+	font-weight: bold;
+	width: auto;
+}
+
+.bioTable2 tbody tr.spacer td {
+	height: 1.5em;
+}
+
+.bioTable2 tbody tr.title td {
+	color: #002665;
+}
+
+.bioTable2 tbody tr.odd td {
+	background-color: #e4e4e4;
+}
+
+.bioTable2 tbody tr.odd td.currentReliability,
+.bioTable2 tbody tr.odd td.careerReliability {
+	background-color: #abd5e6;
+}
+
+.bioTable2 tbody tr.even td.currentReliability,
+.bioTable2 tbody tr.even td.careerReliability {
+	background-color: #bfe9f9;
+}
+
+.bioTable2NoReliability tr.odd td {
+	background-color: #e4e4e4 !important;
+}
+
+.bioTable2NoReliability tr.even td {
+	background-color: #ffffff !important;
+}
+
+.bioTable2NoReliability th.groupingCurrent span,
+.bioTable2NoReliability th.currentReliability span,
+.bioTable2NoReliability th.careerReliability span {
+	display: none;
+}
+
+.bioTable2NoReliability td.spacer,
+.bioTable2NoReliability td.currentReliability {	
+	border-right: none;
+}
+
+.bioTable2NoReliability td.careerWon {
+	border-left: 1px solid #ccc;
+}table.articleTable
+{
+	border: 1px solid #dddddd;
+	border-collapse: collapse;
+	background-color: #fdfdfd;
+}
+table.articleTable td, table.articleTable th
+{
+	border: 1px solid #dddddd;
+	padding: 4px 2px 4px 5px;
+}
+table.articleTable tr:nth-child(even)
+{
+	background: #efefef;
+}
+table.articleTable th
+{
+	text-align: left;
+	color: #333;
+	font-weight: bold;
+	background-image: url("thbg.jpg")/*tpa=http://www.atpworldtour.com/media/montecarlo/backgrounds/thbg.jpg*/;
+}
+/* head 2 head module new styles */
+.head2headModuleNew .moduleContentInner
+{
+    background:#03080f url("new_h2h_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/new_h2h_bg.gif*/ repeat-x bottom left;
+    margin:1px 0 0 0;
+}
+.head2headModuleNew .head2headPremade 
+{
+    background:none;
+    margin:0;
+    width:648px;
+    height:172px;
+}
+.head2headModuleNew .head2headPremade .actionShot 
+{
+    margin:0;
+    padding:12px 10px;
+    background:none;
+}
+.head2headModuleNew .head2headPremade .actionShot img 
+{
+    border:1px solid #8a8a8a;
+}
+.head2headModuleNew .head2headPreStats 
+{
+    margin-top:12px;
+    height:150px;
+    width:378px;
+    background:#01224d url("h2h_new_vs.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/h2h_new_vs.gif*/ no-repeat center 28px;
+    padding:1px;
+}
+.head2headModuleNew .head2headBlurb 
+{
+    float:left;
+}
+.head2headModuleNew h4 a 
+{
+    float:right;
+    background:url("link_chevrons_white-1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_white.gif*/ no-repeat scroll left center transparent;
+    padding-left:14px;
+    font-size:12px;
+    color:#00bdd9;
+}
+.head2headModuleNew .reliabilityLink 
+{
+    width:380px;
+    margin-left:-1px;
+} 
+.head2headModuleNew h4 a:hover 
+{
+    color:#00bdd9;
+    text-decoration:underline;
+}
+.head2headModuleNew .head2headPreName1,
+.head2headModuleNew .head2headPreName2 
+{
+    width:169px;
+    text-align:left;
+}
+#wrapper .head2headModuleNew .moduleContentInner p.head2headPreScore 
+{
+    width:auto;
+    float:none;
+    position:relative;
+    top:-6px;
+    font-size:30px;
+}
+.head2headModuleNew .head2headPreName1 
+{
+    margin-right:36px;
+    text-align:right;
+}
+.head2headModuleNew .head2headPreStats h4 
+{
+    text-align:left;
+    color:#666;
+    font-size:13px;
+    font-weight:bold;
+    padding:0 9px;
+    height:28px;
+    line-height:28px;
+}
+.head2headModuleNew .genericButton,
+.head2headModuleNew .genericButton button,
+.head2headModuleNew a.genericButton span 
+{
+    background-image:url("generic_button_h2h_new.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_button_h2h_new.gif*/;
+}
+.head2headModuleNew .head2headEntryField1 
+{
+    background-image:url("h2h_new_input_1.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/h2h_new_input_1.png*/;
+    height:22px;
+}
+.head2headModuleNew .head2headEntryField2 
+{
+    background-image:url("h2h_new_input_2.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/h2h_new_input_2.png*/;
+    height:22px;
+}
+#wrapper .head2headModuleNew .moduleContentInner p 
+{
+    color:White;
+    font-size:11px;
+    padding-left:17px;
+}
+#wrapper .head2headModuleNew .head2headEntryFields p 
+{
+    background:none;
+    text-indent:0;
+    font-size:11px;
+    color:white;
+    padding-left:0;
+}
+#wrapper .head2headModuleNew .moduleContentInner p.head2headPreLinks 
+{
+    padding-left:0;
+}
+.head2headModuleNew .head2headEntryFields 
+{
+    /*height:50px;*/
+    padding-bottom:10px;
+    float:left;
+    clear:both;
+}
+.head2headModuleNew .head2headPreStats h4 
+{
+    background-color:#c8c8c8;
+}
+/* Singles Rankings new styles */
+.rankingsPages h1 {
+	color:#002864;
+	font-size:18px;
+}
+.rankingsPages h2 {
+	font-size:12px;
+	font-weight:bold;
+	line-height:20px;
+}
+.rankingsPagesAlt .commonProfileContainer {
+	position:relative;
+}
+.rankingsPagesAlt .rankingsHeader {
+	position:absolute;
+	top: 11px; left: 11px;
+}
+.rankingsPagesAlt img.rankingsLogo {
+	position:absolute;
+	top: 11px; right: 11px;
+}
+.rankingsPagesAlt .rankingsContent {
+	padding-top:80px;
+}
+.rankingsPagesAlt .playerBioFilterWrap {
+	clear: both;
+	background: none;
+	margin-bottom:0;
+	min-height:32px;
+}
+.rankingsPagesAlt .playerBioFilterWrap .playerBioFilterItem {
+	background: none;
+	height: auto;
+	padding: 6px;
+}
+select#singlesStandings {
+	width: 78px;
+}
+select#singlesCountries {
+	width: 200px;
+}
+.rankingsPagesAlt .bioTableWrap {
+	width: 100%;
+}
+.rankingsPagesAlt .bioTable,
+.rankingsPagesAlt .bioTableAlt {
+	border: none;
+	width: 100%;
+}
+.rankingsPagesAlt table td {
+	padding: 5px;
+	*padding: 3px 5px;
+	_padding: 3px 5px;
+	text-align: center;
+	border-right: 1px solid #BBBBBB;
+}
+.rankingsPagesAlt table td.first {
+	text-align: left;
+	width: 100%;
+}
+.rankingsPagesAlt table td.first .rank {
+	padding-right: 5px;
+}
+.rankingsPagesAlt table td.last {
+	border-right: none;
+}
+.rankingsPagesAlt .playerBioFilterWrap .genericButton button {
+	height: 20px;
+    line-height: 20px;
+	margin-right: -3px;
+}
+.rankingsPagesAlt .playerBioFilterWrap .genericButton {
+	margin: 5px 3px 0 0;
+	height: 20px;
+    line-height: 20px;
+    padding: 0 0 0 3px;
+}
+/* Rankings Breakdown new styles */
+select#breakdownType {
+	width: 110px;
+}
+select#breakdownRanking {
+	width: 380px;
+}
+/* MatchFacts new styles */
+select#matchFactsYear {
+	width: 90px;
+}
+select#matchFactsSurface {
+	width: 160px;
+}
+/* MatchFacts Dropdown */
+.matchfactsDropdown .moduleContentInner {
+	background: none;
+}
+.matchfactsDropdown.reliabilityMenuModule .controls form {
+	width: auto;
+}
+.matchfactsDropdown.reliabilityMenuModule .controls {
+	float: left;
+}
+#selectCategory {
+	width: 210px;
+}
+#selectSurface {
+	width: 100px;
+}
+#selectYear {
+	width: 80px;
+}
+/* MatchFacts List */
+.matchfactsList.reliabilityTableModule .title h4 {
+	font-size: 18px;
+}
+.reliabilityTableModule table tbody td.matches {
+	border-right: 1px solid #A9A9A9;
+}
+.matchfactsList .noData {
+	background-color:#fff;
+	line-height: 30px;
+	padding: 0 5px 1px;
+}
+/* Top MatchFacts */
+.topMatchfacts h1 {
+	color: #666666;
+	font-size: 12px;
+}
+.topMatchfacts .rankingsContent {
+	padding-top: 80px;
+}
+.topMatchfacts .controls {
+    width: 262px;
+}
+.topMatchfacts table thead th {
+	background-color: #002B64;
+	padding: 5px;
+	vertical-align: bottom;
+}
+.topMatchfacts table thead th.col1,
+.topMatchfacts table tbody td.col1 {
+	text-align: left;
+	white-space: nowrap;
+	width: 155px;
+}
+.topMatchfacts.reliabilityTableModule table tbody td {
+	border-right: none;
+	width: auto;
+}
+.topMatchfacts table tbody td.col3,
+.topMatchfacts table tbody td.col4,
+.topMatchfacts table tbody td.col15 {
+	width: 50px;
+}
+.topMatchfacts.reliabilityTableModule table tbody td.col16 {
+	border-right: 1px solid #A9A9A9;
+}
+.topMatchfacts td.col1 a {
+	padding-left: 5px;
+}
+.topMatchfacts.reliabilityTableModule table tbody tr.even:hover td {
+	background-color: #BFE9F9;
+}
+.topMatchfacts.reliabilityTableModule table tbody tr.odd:hover td {
+	background-color: #ABD5E6;
+}
+
+/* Live draws and order of play */
+#drawDetailContainer {
+	position: relative;
+	width: 945px;
+	min-height: 830px;
+	background: #FFF;
+	padding: 10px;
+}
+
+.tournamentDetail {
+	position: relative;
+}
+
+#drawDetailContainer h3 {
+	margin-right: 405px;
+}
+
+.tournamentDetail p {
+	margin: 0;
+}
+
+.tournamentDetail p span {
+	font-weight: bold;
+}
+
+.tournamentDetail .tournamentLogo {
+	display: block;
+	float: left;
+	margin: 2px 10px 12px 2px;
+}
+
+.tournamentDetail .tournamentTitle {
+	font-size: 16px;
+}
+
+.tournamentDetail .tournamentSubTitle {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.tournamentDetail .inlineWrapper {
+	display: inline;
+}
+
+.tournamentDetail .inlineWrapper p {
+	display: inline;
+	margin: 0 10px 0 0;
+}
+
+.tournamentDetail .tournamentTime {
+	font-weight: bold;
+	margin: 10px 0;
+	visibility: hidden;
+}
+
+.tournamentDetail #tournamentSectionsList li {
+	float: left;
+	margin: 0 12px 0 0;
+}
+
+.tournamentDetail #tournamentSectionsList li a {
+	display: block;
+	padding: 0 0 0 12px;
+	font-weight: bold;
+	background: url("link_chevrons_white-1.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_white.gif*/ no-repeat left center;
+}
+
+.tournamentDetail #tournamentSectionsList  li a.active {
+	color: #666;
+	background: none;
+	padding: 0 6px;
+}
+
+#drawDetailContainer .topRightFloater {
+	position: absolute;
+	top: 5px;
+	right: 12px;
+	width: 400px;
+	z-index: 1;
+}
+
+#drawDetailContainer .topRightFloater .floaterPanel {
+	position: relative;
+	width: 146px;
+	padding-top: 10px;
+}
+
+#drawDetailContainer .topRightFloater .floaterPanel .panelTitle {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	color: #999;
+	font-size: 14px;
+	font-weight: normal;
+	text-transform: uppercase;
+	background: #FFF;
+	padding: 0 7px;
+}
+
+#drawDetailContainer .topRightFloater .floaterPanel .panelContent {
+	position: relative;
+	width: 145px;
+	border: solid 1px #CCC;
+	background: #FFF;
+}
+
+#drawDetailContainer .topRightFloater #moreDrawsContainer {
+	float: right;
+	clear: both;
+}
+
+#drawDetailContainer .topRightFloater #moreDrawsContainer .panelTitle {
+	top: 3px;
+	left: 18px;
+}
+#drawDetailContainer .topRightFloater #moreDrawsContainer .panelContent {
+	padding-bottom: 35px;
+}
+
+#drawDetailContainer .topRightFloater #moreDrawsContainer .panelContent select{
+	width: 125px;
+	margin: 14px 10px 0 10px;
+}
+
+#drawDetailContainer .topRightFloater #moreDrawsContainer .panelContent #drawYearSelect {
+	width: 125px;
+	margin: 20px 10px 0 10px;
+}
+
+#drawDetailContainer .topRightFloater #moreDrawsContainer .panelContent .genericButton {
+	position: absolute;
+	bottom: 7px;
+	right: 10px;
+}
+
+#drawDetailContainer .topRightFloater #moreDrawsContainer .panelContent .genericButton button {
+	height: 20px;
+}
+
+#drawDetailContainer .topRightFloater #shareThisContainer {
+	position: absolute;
+	z-index: 1;
+	left: 0px;
+	top: 5px;
+}
+
+#drawDetailContainer .topRightFloater #printableDrawLink {
+	display: block;
+	float: right;
+	clear: both;
+	width: 135px;
+	height: 22px;
+	margin: 8px 0 8px 0;
+	padding: 8px 0 0 10px;
+	border: solid 1px #CCC;
+	font-size: 11px;
+	text-transform: uppercase;
+	background: #FFF url("pdf_icon.gif")/*tpa=http://www.atpworldtour.com/media/icons/pdf_icon.gif*/ no-repeat 120px 5px;
+}
+
+#drawDetailContainer #shareThisContainer .moduleSocialbar {
+	float: none;
+	width: 250px;
+}
+
+#drawDetailContainer #shareThisContainer .moduleSocialbarFB,
+#drawDetailContainer #shareThisContainer .moduleSocialbarTwitter {
+	float: right;
+	padding-top: 10px;
+	padding-left: 8px;
+}
+
+#drawDetailContainer #shareThisContainer .moduleSocialbarTwitter {
+	width: 100px;
+}
+
+#shareThisContainer .emailLink {
+	float: right;
+	display: block;
+	width: 40px;
+	padding: 12px 0 0 10px;
+}
+
+#drawDetailContainer .drawBracketContainer {
+	width: 945px;
+	padding-bottom: 50px;
+}
+
+#drawDetailContainer .drawBracketContainer table {
+	width: 945px;
+}
+
+#drawDetailContainer .drawBracketContainer table thead {
+	display: none;
+}
+
+#drawDetailContainer .drawBracketContainer table tbody tr {
+	width: 945px;
+}
+
+#drawDetailContainer .drawBracketContainer table tbody tr td {
+	vertical-align: top;
+}
+
+#drawDetailContainer .drawBracketContainer table .drawItem {
+	display: block;
+	position: relative;
+	border-bottom: solid 2px #CCC;
+}
+
+#drawDetailContainer .drawBracketContainer table .even {
+	border-right: solid 2px #CCC;
+}
+
+#drawDetailContainer .drawBracketContainer table .drawItem p {
+	position: absolute;
+	font-size: 11px;
+}
+
+#drawDetailContainer .drawBracketContainer table .drawItem a {
+	position: absolute;
+	font-size: 11px;
+	z-index: 1;
+}
+
+#drawDetailContainer .drawBracketContainer table .drawItem .winner {
+	font-weight: bold;
+}
+
+#drawDetailContainer .drawBracketContainer table .drawItem .seedNumber {
+	position: absolute;
+	bottom: 0px;
+	left: 4px;
+}
+
+#drawDetailContainer .drawBracketContainer table .drawItem .highestRound {
+	position: absolute;
+	bottom: 0px;
+	left: 23px;
+}
+
+#drawDetailContainer .drawBracketContainer table .drawItem .bye {
+	position: absolute;
+	bottom: 1px;
+	left: 4px;
+	line-height: 12px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_1 .drawItem .bye {
+	position: absolute;
+	bottom: 1px;
+	left: 50px;
+}
+
+#drawDetailContainer .drawBracketContainer table .drawItem .player {
+	position: absolute;
+	bottom: 1px;
+	left: 4px;
+	line-height: 12px;
+	padding-right: 12px;
+	clear: left;
+}
+
+#drawDetailContainer .drawBracketContainer table .drawItem .playerWrap {
+	position: absolute;
+	bottom: 1px;
+	left: 0px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_1 .drawItem .playerWrap {
+	position: absolute;
+	bottom: 1px;
+	left: 50px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_1 .drawItem .playerWrap .player {
+	position: relative;
+	display: block;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_1 .drawItem .playerWrap .flag {
+	float: left;
+	display: inline;
+	margin-right: 5px;
+}
+
+#drawDetailContainer .drawBracketContainer table .drawItem .player a {
+	position: relative;
+	display: block;
+	line-height: 12px;
+}
+
+#drawDetailContainer .drawBracketContainer table .drawItem .playerWrap a {
+	display: block;
+	position: relative;
+	line-height: 12px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_1 .drawItem .playerWrap a {
+	display: inline;
+	position: relative;
+	line-height: 12px;
+}
+
+#drawDetailContainer .drawBracketContainer table .drawItem .playerWrap p {
+	display: block;
+	position: relative;
+	color: #666;
+	line-height: 12px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_1 .drawItem .playerWrap p {
+	display: inline;
+	position: relative;
+	color: #666;
+	line-height: 12px;
+}
+
+#drawDetailContainer .drawBracketContainer table .drawItem .scores {
+	position: absolute;
+	bottom: -34px;
+	left: 4px;
+	line-height: 14px;
+	height: 32px;
+}
+
+#drawDetailContainer .drawBracketContainer table .drawItem .scores a,
+#drawDetailContainer .drawBracketContainer table .drawItem .scores p {
+	position: relative;
+	display: block;
+	margin: 0 15px 0 0;
+}
+
+#drawDetailContainer .drawBracketContainer table .drawItem .h2hLink {
+	position: absolute;
+	display: block;
+	bottom: 0px;
+	right: 0px;
+	width: 12px;
+	height: 100%;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url("draws_h2h_link.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/draws_h2h_link.png*/ no-repeat center #CCC;
+}
+
+#drawDetailContainer .drawBracketContainer table .drawItem .h2hLink:hover {
+	background-color: #00aff0;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_1 {
+	padding-top: 16px;
+}
+
+#drawDetailContainer .doubles table .col_1 {
+	padding-top: 28px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_1 .drawItem {
+	height: 28px;
+}
+
+#drawDetailContainer .doubles table .col_1 .drawItem {
+	height: 52px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_2 .drawItem {
+	height: 58px;
+}
+
+#drawDetailContainer .doubles table .col_2 .drawItem {
+	height: 106px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_3 .drawItem {
+	height: 118px;
+}
+
+#drawDetailContainer .doubles table .col_3 .drawItem {
+	height: 214px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_3 .first {
+	height: 87px;
+}
+
+#drawDetailContainer .doubles table .col_3 .first {
+	height: 160px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_4 .drawItem {
+	height: 238px;
+}
+
+#drawDetailContainer .doubles table .col_4 .drawItem {
+	height: 430px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_4 .first {
+	height: 145px;
+}
+
+#drawDetailContainer .doubles table .col_4 .first {
+	height: 260px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_5 .drawItem {
+	height: 478px;
+}
+
+#drawDetailContainer .doubles table .col_5 .drawItem {
+	height: 862px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_5 .first {
+	height: 260px;
+}
+
+#drawDetailContainer .doubles table .col_5 .first {
+	height: 470px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_6 .drawItem {
+	height: 958px;
+}
+
+#drawDetailContainer .doubles table .col_6 .drawItem {
+	height: 1726px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_6 .first {
+	height: 490px;
+}
+
+#drawDetailContainer .doubles table .col_6 .first {
+	height: 905px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_7 .drawItem {
+	height: 1918px;
+}
+
+#drawDetailContainer .doubles table .col_7 .drawItem {
+	height: 3454px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_7 .first {
+	height: 975px;
+}
+
+#drawDetailContainer .doubles table .col_7 .first {
+	height: 1790px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_8 .drawItem {
+	height: 3838px;
+}
+
+#drawDetailContainer .doubles table .col_8 .drawItem {
+	height: 3515px;
+}
+
+#drawDetailContainer .drawBracketContainer table .col_8 .first {
+	height: 1950px;
+}
+
+#drawDetailContainer .doubles table .col_8 .first {
+	height: 3515px;
+}
+
+.h2hPanel {
+	width: 270px;
+	height: 145px;
+	background: #FFF;
+	position: absolute;
+	border: solid 1px #CCC;
+	z-index: 100;
+	top: 0px;
+	overflow: hidden;
+	left: -9999px;
+	-moz-box-shadow: 3px 3px 10px rgba(0,0,0,.2);
+	-webkit-box-shadow: 3px 3px 10px rgba(0,0,0,.2);
+	box-shadow: 3px 3px 10px rgba(0,0,0,.2);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=.1, Direction=135, Color='#000000')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=.1, Direction=135, Color='#000000');
+}
+
+.h2hPanel iframe {
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	width: 272px;
+}
+
+.miniH2HDisplayContainer {
+	width: 270px;
+	height: 144px;
+	background: #FFF;
+	position: absolute;
+	top: -10px;
+	left: -10px;
+}
+
+#miniH2HContainer {
+	width: 270px;
+	height: 135px;
+	position: relative;
+}
+
+
+.miniH2HDisplayContainer .playerLeft {
+	top: 10px;
+	left: 10px;
+	width: 120px;
+	position: absolute;
+	text-align: left;
+}
+
+.miniH2HDisplayContainer .playerRight {
+	top: 10px;
+	right: 10px;
+	width: 120px;
+	position: absolute;
+	text-align: right;
+}
+
+.miniH2HDisplayContainer .playerLeft p, 
+.miniH2HDisplayContainer .playerRight p {
+	padding: 5px 0;
+	line-height: 12px;
+}
+
+.miniH2HDisplayContainer .player img {
+	width: 60px;
+	height: 80px;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.miniH2HDisplayContainer .versus {
+	font-size: 34px;
+	color: #DDD;
+	padding-top: 5px;
+	text-align: center;
+	line-height: 36px;
+	margin: 0;
+}
+
+.miniH2HDisplayContainer .score {
+	text-align: center;
+	background: #EEE;
+}
+
+.miniH2HDisplayContainer .score p {
+	font-size: 30px;
+	line-height: 32px;
+	color: #666;
+	padding: 3px 0;
+	margin: 0;
+}
+
+.miniH2HDisplayContainer a {
+	position: absolute;
+	bottom: 10px;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+}
+
+.floaterShare
+{
+	width: 125px;
+    float: none;
+}
+.floaterShare .moduleSocialbarFB 
+{
+	float: none;
+    padding: 15px 0 0 15px;
+    
+}
+.floaterShare .moduleSocialbarTwitter 
+{
+	float: none;
+    padding: 8px 0 0 15px; 
+}
+
+.floaterShare .moduleSocialbarFB 
+{
+    position: relative;
+    bottom: 0;
+    right: 0;
+}
+.floaterShare .moduleSocialbarTwitter 
+{
+    position: relative;
+    bottom: 0;
+    right: 0;
+}
+.floaterShare .moduleSocialbarTwitter 
+{
+    z-index:41;
+}
+.floaterShare .moduleSocialbarFB 
+{
+    z-index:42;
+}
+
+#scheduleDetailContainer {
+	background: #FFF;
+	border: solid 1px #BBB;
+	padding: 10px;
+}
+
+#scheduleDetailContainer #printableScheduleLink {
+	display: block;
+	float: left;
+	height: 22px;
+	margin: 10px 5px 10px 0;
+	padding: 8px 27px 0 8px;
+	border: solid 1px #CCC;
+	font-size: 11px;
+	text-transform: uppercase;
+	background: #FFF url("pdf_icon.gif")/*tpa=http://www.atpworldtour.com/media/icons/pdf_icon.gif*/ no-repeat 97% 5px;
+}
+
+#scheduleDetailContainer #shareThisContainer {
+	position: relative;
+	float: left;
+	padding-top: 8px;
+	margin-bottom: 10px;
+}
+
+#scheduleDetailContainer #shareThisContainer .panelTitle {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	color: #999;
+	font-size: 14px;
+	font-weight: normal;
+	text-transform: uppercase;
+	background: #FFF;
+	padding: 0 7px;
+}
+
+#scheduleDetailContainer #shareThisContainer .panelContent {
+	position: relative;
+	width: 297px;
+	height: 35px;
+	border: solid 1px #CCC;
+	background: #FFF;
+}
+
+#scheduleDetailContainer #shareThisContainer .panelTitle {
+	top: 3px;
+	left: 20px;
+}
+
+#scheduleDetailContainer #shareThisContainer .moduleSocialbar {
+	float: none;
+	width: auto;
+}
+
+#scheduleDetailContainer #shareThisContainer .moduleSocialbarFB,
+#scheduleDetailContainer #shareThisContainer .moduleSocialbarTwitter {
+	float: left;
+	padding-top: 10px;
+	padding-left: 8px;
+}
+
+#scheduleDetailContainer #shareThisContainer .moduleSocialbarTwitter {
+	width: 100px;
+	float: left;
+}
+
+#shareThisContainer .emailLink {
+	float: left;
+	display: block;
+	width: 40px;
+	padding: 12px 0 0 10px;
+}
+
+#scheduleDetailContainer #scheduleTableContainer {
+	clear: left;
+}
+
+#scheduleDetailContainer #scheduleTableContainer .dayTitleBar {
+	height: 29px;
+	position: relative;
+	margin: 8px 0 2px 0;
+	text-align: center;
+	background: url("module_header_bg.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/module_header_bg.gif*/ repeat-x;
+}
+
+#scheduleDetailContainer #scheduleTableContainer .dayTitleBar h4 {
+	color: #FFF;
+	padding-top: 6px;
+}
+
+#scheduleDetailContainer #scheduleTableContainer .dayTitleBar .arrow {
+	width: 12px;
+	height: 14px;
+	display: block;
+	position: absolute;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url("left_right_arrows_wht.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/left_right_arrows_wht.png*/ no-repeat;
+}
+
+#scheduleDetailContainer #scheduleTableContainer .dayTitleBar .arrow:hover {
+	text-decoration: none;
+}
+
+#scheduleDetailContainer #scheduleTableContainer .dayTitleBar #previousDay {
+	top: 7px;
+	left: 5px;
+	background-position: bottom;
+}
+
+#scheduleDetailContainer #scheduleTableContainer .dayTitleBar #nextDay {
+	top: 7px;
+	right: 5px;
+	background: url("left_right_arrows_wht.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/left_right_arrows_wht.png*/ no-repeat;
+	background-position: top;
+}
+
+#scheduleDetailContainer #scheduleTableContainer .dayTitleBar .inactive {
+	display: none;
+}
+
+#scheduleTableContainer .scheduleTable {
+	width: 100%;
+	border: solid 1px #CCC;
+	position: relative;
+}
+
+#scheduleTableContainer li {
+	margin-bottom: 15px;
+}
+
+#scheduleTableContainer .scheduleTable td {
+	border-top: solid 1px #CCC;
+	width: 50%;
+}
+
+#scheduleTableContainer .scheduleTable td div {
+	position: relative;
+	padding: 3px 25px 3px 5px;
+}
+
+#scheduleTableContainer .scheduleTable td div a,
+#scheduleTableContainer .scheduleTable td div p {
+	display: block;
+}
+
+#scheduleTableContainer .scheduleTable td div p a {
+	display: inline;
+}
+
+#scheduleTableContainer .scheduleTable .inactive,
+#scheduleTableContainer .scheduleTable .inactive p,
+#scheduleTableContainer .scheduleTable .inactive a,
+#scheduleTableContainer .scheduleTable .inactive span {
+	color: #AAA;
+}
+
+#scheduleTableContainer .scheduleTable .mainHead {
+	border-top: none;
+	background: #59B1D9;
+	color: #FFF;
+	font-weight: bold;
+}
+
+#scheduleTableContainer .scheduleTable .subHead {
+	border-top: none;
+	background: #9BD1EB;
+	color: #FFF;
+	font-weight: bold;
+}
+
+#scheduleTableContainer .scheduleTable .mainHead span,
+#scheduleTableContainer .scheduleTable .subHead span {
+	text-transform: uppercase;
+}
+
+#scheduleTableContainer .scheduleTable .versus {
+	display: block;
+	width: 22px;
+	height: 100%;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 0px;
+	right: 0px;
+	color: #666;
+	font-weight: bold;
+	text-align: center;
+	font-size: 13px;
+	border-left: solid 1px #DDD;
+	border-right: solid 1px #DDD;
+}
+
+#scheduleTableContainer .scheduleTable .versus span {
+	display: block;
+	padding: 3px 0;
+}
+
+#scheduleTableContainer .scheduleTable .h2hLink,
+#scheduleTableContainer .scheduleTable .wtaAtp {
+	display: block;
+	width: 35px;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	text-align: center;
+	font-weight: bold;
+	border-left: solid 1px #DDD;
+}
+
+#scheduleTableContainer .scheduleTable .h2hLink span,
+#scheduleTableContainer .scheduleTable .wtaAtp span {
+	display: block;
+	padding: 3px 0;
+	height: 100%;
+}
+
+#relatedMediaFallback {
+	background-color: #191919;
+	border: solid 1px #000;
+}
+
+#relatedMediaFallback .mediaContent {
+	background: url("related_media_bg.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/related_media_bg.jpg*/ no-repeat;
+	border-bottom: solid 1px #222;
+	position: relative;
+	height: 167px;
+	overflow: hidden;
+}
+
+#relatedMediaFallback .mediaContent a {
+	display: block;
+	text-align: center;
+}
+
+#relatedMediaFallback .mediaInfo {
+	height: 30px;
+	padding: 0 10px;
+}
+
+#relatedMediaFallback .mediaInfo .copyrightRelated {
+	font-size: 10px;
+	color: #666;
+	text-align: right;
+	line-height: 30px;
+}
+
+#relatedMediaFallback .mediaInfo .copyrightRelated {
+	font-size: 10px;
+	color: #666;
+	text-align: right;
+	line-height: 30px;
+}
+
+.relatedVideo .mediaInfo {
+	border-top: solid 4px #484848;
+}
+
+.relatedPhoto .mediaContent .playButton {
+	display: none;
+}
+
+.relatedVideo .mediaContent .playButton {
+	position: absolute;
+	display: block;
+	z-index: 1;
+	background: url("related_media_play.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/related_media_play.png*/ no-repeat;
+	width: 64px;
+	height: 64px;
+	top: 58px;
+	left: 118px;
+}
+
+/* photo/video media */
+
+#mediaFallback {
+	background-color: #191919;
+}
+
+.photoMedia .mediaContent,
+.videoMedia .mediaContent {
+	background: #04090E url("media_content_bg.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/media_content_bg.jpg*/ top no-repeat;
+	position: relative;
+	height: 315px;
+	width: 635px;
+	padding: 10px 0;
+	overflow: hidden;
+	text-align: center;
+}
+
+.videoMedia .mediaContent {
+	height: 342px;
+}
+
+.videoMedia .mediaContent video {
+	width: 608px;
+	height: 342px;
+}
+
+#mediaFallback .mediaInfo {
+	height: 35px;
+	padding: 0 10px;
+	border-top: solid 1px #404040;
+}
+
+.videoMedia .mediaInfo {
+	display: none;
+}
+
+.videoMedia .thumbLabel {
+	display: none;
+}
+
+#mediaFallback .nextButton,
+#mediaFallback .prevButton {
+	background: url("media_next_prev.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/media_next_prev.png*/ no-repeat;
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	margin: 2px 4px 0 4px;
+	*zoom: 1;
+}
+
+#mediaFallback .nextButton {
+	background-position: right top;
+}
+
+#mediaFallback .nextButton:hover {
+	background-position: right bottom;
+}
+
+#mediaFallback .prevButton {
+	background-position: left top;
+}
+
+#mediaFallback .prevButton:hover {
+	background-position: left bottom;
+}
+
+#mediaFallback .mediaInfo .copyright {
+	font-size: 11px;
+	color: #666;
+	line-height: 35px;
+	margin-left: 50px;
+	display: inline;
+}
+
+#mediaFallback .mediaDetail {
+	background: #FFF;
+	color: #444;
+	padding: 8px 0;
+	margin: 0;
+	position: relative;
+}
+
+#mediaFallback .mediaDetail p {
+	margin: 6px 0 0 0;
+}
+
+.videoMedia .mediaDetail p {
+
+	width: 380px;
+}
+
+#mediaFallback .mediaDetail .pubDate {
+	font-style: italic;
+	font-size: 13px;
+}
+
+#mediaFallback .mediaDetail .mediaTitle {
+	font-weight: bold;
+	font-size: 13px;
+}
+
+#mediaFallback .mediaDetail .relatedTags span {
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.videoMedia .titleOverlay {
+	width: 100%;
+	height: 80px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.videoMedia .titleOverlay p {
+	background-color: #32AEEB;
+	background-color: rgba(50, 174, 235, .8);
+	color: #FFF;
+	font-size: 9px;
+	line-height: 10px;
+	padding: 5px;
+	height: 70px;
+	visibility: hidden;
+}
+
+.videoMedia li:hover .titleOverlay {
+	background: none;
+}
+
+.videoMedia li:hover .titleOverlay p {
+	visibility: visible;
+}
+
+.videoMedia .titleOverlay .videoIcon {
+	background: url("thumb_playbutton.png")/*tpa=http://www.atpworldtour.com/media/thumb_playbutton.png*/ no-repeat left bottom;
+	width: 100%;
+	height: 80px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.videoMedia .thumbContainer .active .titleOverlay {
+	background: none;
+}
+
+.videoMedia .thumbContainer .active .titleOverlay p {
+	visibility: hidden;
+}
+
+.embedBox {
+	display: none;
+}
+
+.videoMedia .embedBox {
+	position: absolute;
+	width: 250px;
+	height: 60px;
+	top: 10px;
+	right: 5px;
+	text-align: right;
+	display: block;
+}
+
+.videoMedia .embedBox input {
+	background: #000;
+	color: #A5A5A5;
+	border: solid 1px #191A1A;
+	font-size: 11px;
+	width: 175px;
+	height: 18px;
+	margin: 7px 0 0 0;
+}
+
+.videoMedia .embedBox span {
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.thumbContainer {
+	width: 582px;
+	padding: 8px 26px 8px 26px;
+	border-bottom: solid 1px #666;
+}
+
+.thumbContainer p {
+	text-transform: uppercase;
+	color: #FFF;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+}
+
+.thumbContainer li {
+	width: 120px;
+	display: block;
+	float: left;
+	margin: 0 8px 0 0;
+	height: 80px;
+	background-color: #CCC;
+	border: solid 1px #666;
+	overflow: hidden;
+	list-style: none;
+	position: relative;
+}
+
+.thumbContainer li a {
+	width: 100%;
+	display: block;
+	height: 80px;
+	list-style: none;
+	position: relative;
+}
+
+.thumbContainer li:hover {
+	border: solid 1px #32AEEB;
+}
+
+.thumbContainer li a:hover {
+	text-decoration: none;
+}
+
+.thumbContainer .active {
+	border: solid 1px #32AEEB;
+}
+
+.thumbContainer .last {
+	margin: 0;
+}
+
+.thumbContainer .viewport {
+	width: 582px;
+	height: 90px;
+	overflow: hidden;
+	position: relative;
+}
+
+.thumbContainer .overview {
+	list-style: none; 
+	position: absolute; 
+	left: 0; 
+	top: 0;
+}
+
+.thumbContainer .thumb .end,
+.thumbContainer .thumb {
+	background: #32AEEB url("media_scroll_thumb.png")/*tpa=http://www.atpworldtour.com/media/backgrounds/media_scroll_thumb.png*/ no-repeat;
+}
+
+.thumbContainer .scrollbar {
+	position: relative; 
+	width: 15px; 
+	height: 8px;
+
+}
+
+.thumbContainer .track {
+	background-color: #636363; 
+	height: 100%; 
+	width: 582px; 
+	position: relative; 
+	padding: 0 1px;
+
+}
+
+.thumbContainer .thumb {
+	height: 8px; 
+	width: 50px; 
+	cursor: pointer; 
+	overflow: hidden; 
+	position: absolute; 
+	top: 0;
+}
+
+.thumbContainer .thumb .end {
+	overflow: hidden; 
+	height: 5px; 
+	width: 13px;
+}
+
+.thumbContainer .disable {
+	display: none;
+}
+
+/* homepage rotator */
+
+.featureMedia {
+	width: 983px;
+	height: 312px;
+	border: solid 1px #FFF;
+}
+
+.featureMedia .featureContent {
+	width: 663px;
+	height: 312px;
+	float: left;
+	position: relative;
+}
+
+.featureMedia .featureContent .featureStory {
+	height: 312px;
+	width: 663px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	overflow: hidden;
+}
+
+.featureMedia .featureContent .featureStory h3 {
+	color: #FFF;
+	margin-bottom: 6px;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.featureMedia .featureContent .featureStory p {
+	color: #FFF;
+	margin-bottom: 5px;
+	line-height: 14px;
+}
+
+.featureMedia .featureContent .featureStory a {
+	font-weight: bold;
+	margin: 0;
+}
+
+.featureMedia .featureContent .featureStory .calloutLink {
+	background: url("link_chevrons_black.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_black.gif*/ no-repeat 0 3px;
+	padding-left: 14px;
+	margin-right: 5px;
+}
+
+.featureMedia .featureContent .featureStory .calloutLink:hover {
+	background: url("link_chevrons_black_hover.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_black_hover.gif*/ no-repeat 0 3px;
+	color: white;
+	text-decoration: none;
+}
+
+.featureMedia .featureContent .featureStory .copyright {
+	color: #666;
+	position: absolute;
+	font-size: 11px;
+	bottom: 0;
+	right: 5px;
+}
+
+.featureMedia .featureContent .photoLarge .mediaDetail {
+	height: auto;
+	width: 623px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 15px 20px;
+	background: #000;
+	background: rgba(0, 0, 0, .75);
+}
+
+.featureMedia .featureContent .photoLarge .imageLink {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 663px;
+	height: 312px;
+}
+
+.featureMedia .featureContent .photoSmall .imageLink {
+	display: block;
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	overflow: hidden;
+	width: 400px;
+	height: 300px;
+}
+
+.featureMedia .featureContent .photoSmall .mediaDetail {
+	height: 292px;
+	width: 232px;
+	position: absolute;
+	left: 410px;
+	top: 0;
+	padding: 20px 10px 0 10px;
+}
+
+.featureMedia .featureContent .photoSmall .mediaDetail .calloutLink {
+	display: block;
+	margin-top: 10px;
+}
+
+.featureMedia .featureContent .videoLarge .videoContainer {
+	position: absolute;
+	left: 70px;
+	top: 6px;
+	width: 525px;
+	height: 300px;
+}
+
+.featureMedia .featureContent .videoLarge .videoContainer .splashPoster {
+	background: rgba(0,0,0,.4) url("playbtn.png")/*tpa=http://www.atpworldtour.com/media/playbtn.png*/ center center no-repeat;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	z-index: 5;
+}
+
+.featureMedia .featureContent .videoLarge .mediaDetail {
+	height: auto;
+	width: 505px;
+	position: absolute;
+	left: 70px;
+	top: 0;
+	padding: 5px 10px;
+	background: #000;
+	background: rgba(0, 0, 0, .75);
+	z-index: 10;
+}
+
+.featureMedia .featureContent .videoLarge .mediaDetail h3 {
+	margin-bottom: 2px;
+}
+
+.featureMedia .featureList {
+	width: 320px;
+	height: 312px;
+	background: #000;
+	position: relative;
+	float: left;
+	overflow: hidden;
+}
+
+.featureMedia .featureList .featureItem {
+	width: 320px;
+	height: 75px;
+	background: #000;
+	position: absolute;
+	cursor: pointer;
+	background: url("feature_list_bg.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/feature_list_bg.jpg*/ no-repeat 100px top;
+}
+
+.featureMedia .featureList .featureItem:hover {
+	background-position: 100px bottom;
+}
+
+.featureMedia .featureList .featureItem img {
+	float: left;
+	margin: 13px 10px 0 12px;
+	border: solid 1px #666;
+}
+
+.featureMedia .featureList .featureItem.videoIcon:after {
+	background: url("thumb_playbutton.png")/*tpa=http://www.atpworldtour.com/media/thumb_playbutton.png*/ no-repeat;
+	content: '';
+	left: 37px;
+	height: 40px;
+	position: absolute;
+	top: 25px;
+	width: 40px;
+	z-index: 100;
+}
+
+.featureMedia .featureList .featureItem:hover img {
+	border: solid 1px #00AFF0;
+}
+
+.featureMedia .featureList .featureItem .titleWrap {
+	margin: 30px 10px 0 0;
+	float: left;
+	width: 195px;
+}
+
+.featureMedia .featureList .featureItem .title {
+	color: #00AFF0;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.featureMedia .featureList .featureItem:hover .title {
+	color: #FFF;
+	padding-left: 16px;
+	background: url("link_chevrons_black_hover.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/link_chevrons_black_hover.gif*/ no-repeat 0 3px;
+}
+
+.featureMedia .featureList .featureItem .subTitle {
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0;
+	font-size: 11px;
+	line-height: 11px;
+}
+
+.adCol
+{
+	width: 945px;
+	padding: 10px;
+	background: #FFF;
+}
+
+.adCol .adWrapper
+{
+	position: relative;
+	border-bottom: solid 1px #CCC;
+	text-align: center;
+}
+
+.adCol .adWrapper .adContent
+{
+	display: block;
+	margin: 0 auto 10px auto;
+}
+
+.noAd {
+	display: none;
+}
+
+/* Feature Header */
+.feature-header {
+    background: url("player_bio_title.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/player_bio_title.gif*/ no-repeat scroll 4px 4px white;
+    background-color: #fff;
+    padding: 4px 6px 0;
+    clear: both;
+    border-top: 1px solid #BEBEBE;
+    border-left: 1px solid #BEBEBE;
+    border-right: 1px solid #BEBEBE;
+    min-height: 36px;
+}
+.feature-header h1 {
+    color: #002864;
+    font-size: 20px;
+    padding: 6px 5px 0;
+    text-transform: uppercase;
+}
+.feature-header .moduleSharebar {
+    float: right;
+    height: 30px;
+    padding-left: 10px;
+    width: 70px;
+}
+.feature-header .moduleSharebar a {
+    border-bottom: 1px solid #8B8D8F;
+    display: block;
+    height: 14px;
+}
+.feature-header .moduleSocialbar {
+    width: 215px;
+    padding-top: 5px;
+}
+
+/* Feature Header */
+.feature-header {
+    background: url("player_bio_title.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/player_bio_title.gif*/ no-repeat scroll 4px 4px white;
+    background-color: #fff;
+    padding: 4px 6px 0;
+    clear: both;
+    border-top: 1px solid #BEBEBE;
+    border-left: 1px solid #BEBEBE;
+    border-right: 1px solid #BEBEBE;
+    min-height: 36px;
+}
+.feature-header h1 {
+    color: #002864;
+    font-size: 20px;
+    padding: 6px 5px 0;
+    text-transform: uppercase;
+}
+.feature-header .moduleSharebar {
+    float: right;
+    height: 30px;
+    padding-left: 10px;
+    width: 70px;
+}
+.feature-header .moduleSharebar a {
+    border-bottom: 1px solid #8B8D8F;
+    display: block;
+    height: 14px;
+}
+.feature-header .moduleSocialbar {
+    width: 215px;
+    padding-top: 5px;
+}
+
+.tournDetailHead.tecnifibreContentWrap {
+	background: #000 url("grey-sidebar-bg.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/grey-sidebar-bg.jpg*/ repeat-y right top !important;
+	color: #f3f7f8;
+	height: auto;
+	filter: none;
+	margin: -10px 0 10px -10px;
+}
+.tecnifibreContentWrap #mediaMainBox {padding: 0;}
+.tecnifibreContentWrap #mediaMainBox #mediaMainTitle {padding: 5px 0 0 10px;}
+.tournDetailHead.tecnifibreContentWrap #tournDetailHeadCol1 {width: 635px; padding: 0 0 10px 0;}
+.tournDetailHead.tecnifibreContentWrap #tournDetailHeadCol2 {
+	width: 320px;
+	margin-top: -10px;
+	height: auto;
+}
+.tournDetailHead.tecnifibreContentWrap h2.heading {
+	font-size: 18px;
+	margin: 0 0 15px 0;
+}
+.tournDetailHead.tecnifibreContentWrap #mainContentColExtra {
+	width: 330px;
+}
+.tournDetailHead.tecnifibreContentWrap #mediaMainBox {
+	background: #191919;
+	border:none;
+	margin: 0 0 30px 0;
+}
+.tournDetailHead.tecnifibreContentWrap #mediaMainBox #mediaTitle {
+	color: #fff;
+	font-size: 14px;
+	margin: 0 0 10px 0;
+	text-transform: none;
+}
+#tournDetailHeadCol1 .tecnifibreContent {padding: 0 20px;}
+.newsFeaturedCallouts {
+	margin: 40px 0 0 -25px;
+}
+.newsFeaturedCallouts .newsFeaturedArticle {
+	width: 284px;
+	margin: 0 0 25px 25px;
+	float: left;
+	display: inline;
+}
+.newsFeaturedArticle h2 {margin: 0 0 5px 0;}
+.newsFeaturedArticle .newsFeaturedArticleInner {border: 1px solid #bebdbb;}
+.newsFeaturedArticle .newsFeaturedContent {
+	background: #021b53 url("article-content-bg.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/article-content-bg.jpg*/ repeat-x left top;
+	padding: 12px;
+	height: 75px;
+}
+.newsFeaturedArticle .newsFeaturedContent h3 a {font-size: 13px;}
+.newsFeaturedArticle .newsFeaturedContent  p {margin: 5px 0 0 0;font-size: 12px;}
+.newsFeaturedArticle .genericButton {
+	float: right;
+	display: inline;
+	margin: 10px 0 0 0;
+}
+.newsFeaturedArticle .genericButton, .newsFeaturedArticle .genericButton button {background-image: url("generic_button_h2h_new.gif")/*tpa=http://www.atpworldtour.com/media/backgrounds/generic_button_h2h_new.gif*/ !important;}
+.newsFeaturedArticle .genericButton button {height: 20px;}
+.greySidebar {
+	padding: 15px;
+	margin: 0 !important;
+	width: 300px;
+}
+.greySidebar .adBox {
+	border: 1px solid #797979;
+	margin: 15px 0;
+	width: 296px;
+	overflow: hidden;
+}
+
+.greySidebar .adBox img
+{
+    width: 100%;
+}
+.greySidebar .adBox:first-child {margin-top: 0;}
+.greySidebar .socialLinks {
+	width: 274px;
+	margin: 30px auto 15px;
+}
+.greySidebar .socialLinks .title {
+	background: url("social-sprite.png")/*tpa=http://www.atpworldtour.com/media/technifibre/social-sprite.png*/ no-repeat left top;
+	display: block;
+	margin: 0 0 18px 0;
+	height: 20px;
+	text-indent: -9999px;
+}
+.greySidebar .socialLinks ul {
+	width: 178px;
+	margin: 0 auto;
+}
+.greySidebar .socialLinks ul li {
+	float: left;
+	display: inline;
+	margin: 0 0 0 28px;
+}
+.greySidebar .socialLinks ul li:first-child {margin-left: 0;}
+.greySidebar .socialLinks ul li a {
+	background: url("social-sprite.png")/*tpa=http://www.atpworldtour.com/media/technifibre/social-sprite.png*/ no-repeat;
+	display: block;
+	width: 40px;
+	height: 41px;
+	text-indent: -9999px;
+}
+.greySidebar .socialLinks .fb-icon {background-position: 0 -30px;}
+.greySidebar .socialLinks .twit-icon {background-position: -50px -30px;}
+.greySidebar .socialLinks .yt-icon {background-position: -100px -30px;}
+#tecnifibreTop #mainTripleColWrap {
+	width: 625px;
+	overflow: hidden;
+	margin: 25px 0 0 15px;
+}
+
+.tecnifibreColWrap{ width:965px;}
+
+.articlePaginationWrap .articleTabbed {}
+.articlePaginationWrap .articleTabbed li {
+	float: left;
+	display: inline;
+	margin: 0 8px 0 0;
+}
+.articlePaginationWrap .articleTabbed li a {
+	background: url("article-tabbed-bg.jpg")/*tpa=http://www.atpworldtour.com/media/backgrounds/article-tabbed-bg.jpg*/ repeat-x left top;
+	border: 1px solid #999999;
+	color: #fff;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	text-decoration: none;
+}
+.articlePaginationWrap .articleTabbed li a span {display: block;padding: 0 15px;}
+.articlePaginationWrap .articleTabbed li.active a, .articlePaginationWrap .articleTabbed li a:hover {background-position: left bottom};
+body .tecnifibreColWrap .newsFilterArchive #newsArchiveList li a {float: left !important;}
+
+.rolexFrame {
+    background-color:#032262;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.rolexBannerStrip img
+{
+    width:655px;
+    height:90px;
+    float:left;
+    margin: 10px 20px 15px 3px;
+}
+
+.miniVideoTeaserStrip 
+{
+    float:left;
+    width: 660px;
+    height: 75px;
+    margin: 21px 0px 30px 0px;
+}
+.Teaser
+{
+    float: right;
+    margin-right: 25px;
+}
+.Teaser, .Teaser .Overlay, .Teaser img
+{
+    width: 133px;
+    height: 75px;
+}
+
+.Teaser p
+{
+    margin-top: 5px;
+    text-align: center;
+}
+
+.Teaser .Overlay 
+{
+    position: absolute;
+    background-image: url("ThumbOverlay.png")/*tpa=http://www.atpworldtour.com/Media/MiniTeasers/ThumbOverlay.png*/; 
+}
+.player{color:#fff}
+.scores p{color:#eeeeee}
+.scores a{color:#fff}
