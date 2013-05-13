@@ -9,9 +9,6 @@ class payment extends CI_Controller {
 
         if ($this->session->userdata('logged_in')) {
 
-
-
-
             $id = $this->session->userdata('user_id');
             $this->load->model('site_model');
             if ($this->site_model->select_user($id)) {
@@ -51,6 +48,38 @@ class payment extends CI_Controller {
 
     function cancelMessage() {
         echo "cancel  message ";
+    }
+
+    function view_addBank() {
+        if ($this->session->userdata('logged_in')) {
+            $this->load->view("civou/view_addBankDetail");
+        } else {
+            $this->load->view("");
+        }
+    }
+
+    function addBank() {
+        
+    }
+
+    function view_allBankDetail() {
+        if ($this->session->userdata('logged_in')) {
+            $this->load->view("civou/view_showAllBankDetail");
+        } else {
+            $this->load->view("");
+        }
+    }
+
+    function show_allBankDetail() {
+        
+    }
+
+    function view_shelinAndDolar() {
+        if ($this->session->userdata('logged_in')) {
+            $this->load->view("civou/view_showAllBankDetail");
+        } else {
+            $this->load->view("");
+        }
     }
 
 }
