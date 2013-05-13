@@ -31,7 +31,7 @@
                             if ($query->num_rows() > 0) {
                                 $rows = $query->result();
                                 foreach ($rows as $row) {
-                                    $sql_count = 'SELECT count( * ) as count FROM `order` WHERE `e_id` =' . $this->session->userdata('employee_id');
+                                    $sql_count = 'SELECT count( * ) as count FROM `order` WHERE `e_id` =' . $this->session->userdata('employee_id').' AND statu=1';
                                     $count_query = $this->db->query($sql_count);
                                     $counts = $count_query->result();
                                     foreach ($counts as $count) {
@@ -131,7 +131,62 @@
                                     ?>
                                     <tr>
                                         <td>
-                                            <p> <a href="<?php echo base_url(); ?>csad/c_service/index/<?php echo $record->order_id; ?>">التفاصيل</a></p> 
+                                            <p> <a href="<?php echo base_url(); ?>csad/c_sad/chat_user/<?php echo $record->order_id;?>/<?php echo $record->user_id; ?>">التفاصيل</a></p> 
+                                        </td>
+
+                                        <td>
+                                            <p> <?php echo $record->price_point; ?></p> 
+                                        </td>
+                                        <td>
+                                            <p> <?php echo $record->start; ?></p> 
+                                        </td>
+                                        <td>
+                                            <p> <?php echo $record->duration; ?></p> 
+                                        </td>
+                                        <td>
+                                            <p> <?php echo 'تاريخ الانتهاء'; //$record->duration;           ?></p> 
+                                        </td>
+                                        <td>
+                                            <p><?php echo $record->username; ?></p> 
+                                        </td>
+                                        <td>
+                                            <p>  <?php echo $record->name; ?></p> 
+                                        </td>
+                                    </tr>
+                                    <?php
+                                }
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                     <h3 class="text-right">خدمات تم الأنتهاء من تنفيذها</h3>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>تفاصيل الخدمة</td>
+                                <th>سعر الخدمة</td>
+                                <th>وقت الحجز</td>
+                                <th>مدة التنفيذ</td>
+                                <th>تاريخ التنفيذ</td>
+                                <th>اسم المستخدم</td>
+                                <th>اسم الخدمة</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $sql = 'SELECT order.id as order_id ,order.u_id ,order.start,order.end ,order.duration ,
+                                user.id as user_id,user.username ,service.name ,service.price_point,service.id as service_id,
+                                order.c_id ,order.sc_id FROM `order` INNER JOIN `user` ON order.u_id = user.id 
+                                INNER JOIN `service` ON order.s_id = service.id where order.e_id=' . $this->session->userdata('employee_id') . ' AND order.statu=2';
+                            $q = $this->db->query($sql);
+                            ///
+                            if ($q->num_rows() > 0) {
+                                $res = $q->result();
+                                foreach ($res as $record) {
+                                    ?>
+                                    <tr>
+                                        <td>
+                                            <p> <a href="<?php echo base_url(); ?>csad/c_sad/chat_user/<?php echo $record->order_id;?>/<?php echo $record->user_id; ?>">التفاصيل</a></p> 
                                         </td>
 
                                         <td>
