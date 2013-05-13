@@ -48,9 +48,8 @@
         echo "<br/>";
         echo form_submit('submit', 'حفظ');
           echo "<br/>";
-        ?>
-
-
+        
+          ?>
 
     </body>
 </html>
