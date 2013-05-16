@@ -43,22 +43,23 @@
         <div id="page-container">
             <?php include 'tempelet/head_page.php';?>
             <?php include 'tempelet/main_menu.php';?>
-                <div id="page-content">
+                <div id="page-content" style="width:81%">
                     <ul id="nav-info"  class="clearfix" style="text-align:right">
 
 
                         <li class="active" style="text-align:right;float:right"><a href="#">الحساب الشخصي</a> <i class="icon-user"></i> </li>
                     </ul>
                     <?php include('header2.php') ?>
-                    <h3 class="page-header page-header-top"><?php
+                    <h3 class="page-header page-header-top">
+					 <?php echo $id ;?> :
+					 
+					 هو 
+					 <?php
                     if (isset($username)) {
                         echo $username;
-                    }
-                    ?> <i class="icon-user"></i>  <small><?php
-                        if (isset($country)) {
-                            echo $country;
-                        }
-                    ?></small></h3>
+                    }?> الاين اب الخاص ب
+					
+                     <i class="icon-user"></i>  <small></small></h3>
                     <div class="row-fluid">
 
                         <div class="span3" style="float:right">
@@ -72,6 +73,7 @@
                             </div>
 
                             <ul class="nav nav-tabs nav-stacked" >
+                             <li><a href="#"><?php echo $id?> : الاين اب <i class="icon-camera"></i> </a></li>
                              <?php
                                 if (isset($owner)) {
                                     if ($owner == 'yes') {
@@ -165,7 +167,7 @@
                                             foreach ($res as $record) {
                                                 ?>
                                                 <h5 class="page-header-sub">
-                                                    <a href="#"><?php echo $record->name; //chat_service/<?php echo $record->order_id; php echo $record->e_id ?>
+                                                    <a href="chat_service/<?php echo $record->order_id; ?>/<?php echo $record->e_id ?>"><?php echo $record->name; ?>
 
                                                         <img id="pic" src="<?php echo base_url(); ?>imagesService/thumb/<?php echo $record->photo_name; ?>"  />
                                                     </a></h5>
@@ -244,13 +246,12 @@
                                                 ?>
                                                 <h5 class="page-header-sub">
                                                     <a href="chat_service/<?php echo $record->order_id; ?>/<?php echo $record->e_id ?>"><?php echo $record->name; ?>
+
                                                         <img src="<?php echo base_url(); ?>imagesService/thumb/<?php echo $record->photo_name; ?>"  width="40" height="50"/>
                                                     </a></h5>
 
                                                 <div class="progress progress-success">
-                                                    <div class="bar" style="width: 100%"><i class="icon-ok"></i> تم التنفيذ 
-                                                        <a>قيم الخدمة</a>
-                                                    </div>
+                                                    <div class="bar" style="width: 100%"><i class="icon-ok"></i> تم التنفيذ </div>
                                                 </div>
                                                 <?php
                                             }

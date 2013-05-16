@@ -52,12 +52,14 @@ footer{ line-height:30px; text-align:center; font-size:14px; height:30px; paddin
                         height: 150px;
                     }
 			 li{list-style:none}
+#page-content{width:97.5%;float:left;padding:20px;background-color:#fff; border-left:1px solid #ccc; min-height:1200px;}			 
 </style>
-<body>
-<div id="page-container" style="widows:100%">
+<body >
+<div id="page-container" >
 <?php include('tempelet/head_page.php') ;?>
-<div id="inner-container"><div id="page-content">
-<div >
+<div id="inner-container" >
+<div id="page-content" >
+<div 
 <?php include('header2.php')?>
 </div>
 <div style="clear:both"></div>

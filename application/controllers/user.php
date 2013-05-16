@@ -14,12 +14,12 @@ class User extends CI_Controller {
     function validation_add_topic() {
         if ($this->session->userdata('logged_in')) {
             $this->load->library('form_validation');
-            $this->form_validation->set_rules('topic_name', 'username', 'required|max_length[125]|trim|xss_clean');
+            $this->form_validation->set_rules('topic_name', 'Topic title', 'required|max_length[125]|trim|xss_clean');
             $this->form_validation->set_rules('tags', 'tags', 'required|max_length[200]|trim|xss_clean');
             $this->form_validation->set_rules('topic', 'topic', 'required|trim|xss_clean|');
             $this->form_validation->set_rules('search_category', 'topic', 'required|trim|xss_clean|');
-            $this->form_validation->set_rules('sub_category', 'sub_category', 'required|trim|xss_clean|');
-            $this->form_validation->set_message('required', "جميع البيانات مطلوبه");
+          
+            
             $this->form_validation->set_message('max_length', "العنوان لا يجب ان يزيد عن 125 حرف");
 
             if ($this->form_validation->run()) {
@@ -27,7 +27,7 @@ class User extends CI_Controller {
                 $this->load->model('user_model');
                 if ($this->user_model->add_topic($id)) {
 
-                    $data['topic_added'] = 'تم اضافه الموضوع بنجاح الي المدونه';
+                    $data['topic_added'] = 'تم اضافه الموضوع بنجاح الي المدونه يجب انتظار تأكيد الادمن علي الموضوع حتي يظهر ف المدونه';
 
                     $this->load->model('site_model');
                     if ($this->site_model->select_user($id)) {
@@ -48,7 +48,7 @@ class User extends CI_Controller {
                     }
 
 
-                    $this->load->view('user_profile', $data);
+                    $this->load->view('add_topic', $data);
                 }
             } else {
                 $id = $this->session->userdata('user_id');
@@ -72,12 +72,13 @@ class User extends CI_Controller {
 
 
 
-                $this->load->view('user_profile', $data);
+                $this->load->view('add_topic', $data);
             }
         } else {
             redirect('site/index');
         }
     }
+
 
 //////////////////////////////////////// upload profile pic
 
@@ -350,7 +351,7 @@ class User extends CI_Controller {
         }
     }
 
-    ///////////////////
+   ///////////////////
     function profile() {
         if ($this->session->userdata('logged_in')) {
 
@@ -360,6 +361,7 @@ class User extends CI_Controller {
             if ($this->site_model->select_user($id)) {
                 $user_data = $this->site_model->select_user($id);
                 $data['username'] = $user_data['username'];
+				$data['id'] = $user_data['id'];
                 $data['email'] = $user_data['email'];
                 $data['city'] = $user_data['city'];
                 $data['country'] = $user_data['country'];

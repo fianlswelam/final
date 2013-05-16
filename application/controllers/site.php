@@ -15,7 +15,11 @@ class Site extends CI_Controller {
 
 ///////////////////////////
     function home() {
+		 if ($this->session->userdata('logged_in')) {
         $this->load->view('home');
+		} else {
+            $this->load->view('view_index');
+        }
     }
 
 //////////////////////////////////
@@ -385,7 +389,7 @@ class Site extends CI_Controller {
 
                 $login_data = array("logged_in" => true, "user_id" => $user['id'], "user_email" => $user['email'], "user_name" => $username);
                 $this->session->set_userdata($login_data);
-                redirect('user/profile');
+                redirect('site/home');
             } else {
                 redirect('site/load_404');
             }
