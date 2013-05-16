@@ -76,9 +76,10 @@
                                 </td>
                                 <td>
                                     <p style="font-size: 20px;"><a>payment</a></p>
-                                    <p><a href="<?php echo base_url('payment/view_addBank'); ?>#"> اضافه بنك </a></p> 
-                                    <p><a href="<?php echo base_url('payment/view_allBankDetail'); ?>#"> عرض وتعديل بيانات البنوك  </a></p>
-                                    <p><a href="<?php echo base_url('payment/view_shelinAndDolar'); ?>#"></a></p> 
+                                    <p><a href="<?php echo base_url(); ?>payment/view_addBank">  add bank </a></p> 
+                                    <p><a href="<?php echo base_url(); ?>payment/view_allBankDetail"> show all banks </a></p> 
+                                    <p><a href="<?php echo base_url(); ?>payment/view_shelinAndDolar">  </a></p> 
+                              
                                 </td>
                             </tr>
                             <tr><td colspan="5"><div class="dotted"></div></td></tr>

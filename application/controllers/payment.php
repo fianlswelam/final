@@ -48,10 +48,10 @@ class payment extends CI_Controller {
     }
 
     function view_addBank() {
-        if ($this->session->userdata('logged_in')) {
-            $this->load->view("civou/view_addBankDetail");
+        if ($this->session->userdata('admin_logged_in')) {
+            $this->load->view('civou/view_addBankDetail');
         } else {
-            $this->load->view("");
+            
         }
     }
 
@@ -60,8 +60,8 @@ class payment extends CI_Controller {
     }
 
     function view_allBankDetail() {
-        if ($this->session->userdata('logged_in')) {
-            $this->load->view("civou/view_showAllBankDetail");
+        if ($this->session->userdata('admin_logged_in')) {
+            $this->load->view('civou/view_showAllBankDetail');
         } else {
             $this->load->view("");
         }
@@ -72,8 +72,16 @@ class payment extends CI_Controller {
     }
 
     function view_shelinAndDolar() {
-        if ($this->session->userdata('logged_in')) {
-            $this->load->view("civou/view_showAllBankDetail");
+        if ($this->session->userdata('admin_logged_in')) {
+            $this->load->view("civou/view_DollarAndShelin");
+        } else {
+            $this->load->view("");
+        }
+    }
+    
+    function view_convertFromSH_to_Dolar(){
+         if ($this->session->userdata('admin_logged_in')) {
+            $this->load->view("civou/view_DollarAndShelin");
         } else {
             $this->load->view("");
         }

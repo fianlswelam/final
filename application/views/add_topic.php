@@ -31,7 +31,11 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/plugins-1.2.css" tppabs="http://pixelcave.com/demo/uadmin/css/plugins-1.2.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/main-1.2.css" tppabs="http://pixelcave.com/demo/uadmin/css/main-1.2.css">
 
-        <script src="<?php echo base_url(); ?>js/modernizr-2.6.2-respond-1.1.0.min.js" tppabs="http://pixelcave.com/demo/uadmin/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="<?php echo base_url(); ?>js/modernizr-2.6.2-respond-1.1.0.min.js" ></script>
+          <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+          
+         <?php include 'tempelet/ajax.php'; ?>
+         <?php include 'dbcon_blog.php'; ?>
 
     </head>
 
@@ -133,7 +137,7 @@
 
 <?php echo form_open_multipart('user/validation_add_topic',array('id'=>'form-validation'));  ?>
     <div style="color:#F00;">
-									 <?php if(isset($updated)){echo '<p class="alert alert-success" >'.$updated.'</p>' ;}else{ 
+									 <?php if(isset($topic_added)){echo '<p class="alert alert-success" >'.$topic_added.'</p>' ;}else{ 
 									 
                                                                              echo validation_errors()  ;} ?></div>
 
@@ -179,7 +183,7 @@
 
 <div class="input-prepend">
 
-<textarea id="val_email" name="topic"  ></textarea>
+<textarea id="val_email" name="tags"  ></textarea>
 <span class="add-on"><i class="icon-tags"></i></span>
 </div>
 </div>
@@ -189,24 +193,36 @@
 <label class="control-label" for="val_username"> القسم </label>
 <div class="controls">
 <div class="input-prepend">
+ <div class="both" style="margin-left:113px;">
 
 <select name="search_category"  id="search_category_id">
 <option value="none" selected="selected" >اختار القسم الرئيسى</option>
-    <option value="1">كتب</option>
-    <option value="2">مقالت دينية</option>
-    <option value="3">تمرااز</option>
-    <option value="4">سسسس</option>
+			<?php
+            $query = "select * from blog_category";
+            $results = mysql_query($query);
+            while ($rows = mysql_fetch_assoc(@$results)) {
+                ?>
+                <option value="<?php echo $rows['id']; ?>"><?php echo $rows['name']; ?></option>
+            <?php }
+            ?>
 </select>
-
+</div>
 <span class="add-on"><i class="icon-pushpin"></i></span>
 </div>
 </div>
+
+</div>
+
+ <div class="both" style="float:right;margin-right:-3px">
+<div id="show_sub_categories" align="right">
+<img src="<?php echo base_url(); ?>images/loading11.gif"  id="loader" alt="" />
+</div>
 </div>
 
 
 
-
-<div class="form-action">
+<div style="clear:top"></div>
+<div class="form-action" style="float:right">
 <button type="reset" class="btn btn-danger"><i class="icon-repeat"></i> مسح</button>
 <button type="submit" class="btn btn-success"><i class="icon-ok"></i> تأكيد</button>
 </div>
@@ -219,14 +235,12 @@
 
                     </div>
                 </div>
-                <footer>
-                    <span id="year-copy"></span> &copy; <strong>uAdmin 1.2</strong> - Crafted with <i class="icon-heart"></i> by <strong><a href="javascript:if(confirm(%27http://themeforest.net/user/pixelcave/portfolio?ref=pixelcave  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://themeforest.net/user/pixelcave/portfolio?ref=pixelcave%27" tppabs="http://themeforest.net/user/pixelcave/portfolio?ref=pixelcave" target="_blank">pixelcave</a></strong>
-                </footer>
+                
             </div>
         </div>
        
-        <script src="<?php echo base_url(); ?>js/jquery.min.js" tppabs="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script>!window.jQuery && document.write(unescape('%3Cscript src="<?php echo base_url(); ?>js/jquery-1.8.3.min.js"/*tpa=http://pixelcave.com/demo/uadmin/js/vendor/jquery-1.8.3.min.js*/%3E%3C/script%3E'));</script>
+        <script src="<?php echo base_url(); ?>js/jquery.min.js" ></script>
+        <script>!window.jQuery && document.write(unescape('%3Cscript src="<?php echo base_url(); ?>js/jquery-1.8.3.min.js"%3E%3C/script%3E'));</script>
         <script src="<?php echo base_url(); ?>js/bootstrap.min.js" tppabs="http://pixelcave.com/demo/uadmin/js/vendor/bootstrap.min.js"></script>
         <script src="<?php echo base_url(); ?>js/js-sensor=true.js" tppabs="http://maps.google.com/maps/api/js?sensor=true"></script>
         <script src="<?php echo base_url(); ?>js/plugins-1.2.js" tppabs="http://pixelcave.com/demo/uadmin/js/plugins-1.2.js"></script>
