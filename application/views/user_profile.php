@@ -130,7 +130,7 @@
                                     if ($owner == 'yes') {
                                         ?>
                                         <li><a href="<?php echo base_url('payment/addCreditPage') ?>">ايداع رصيد <i class="icon-money"></i></a></li>
-                                        <li><a href="<?php echo base_url('payment/convertFromCreditToShelinat') ?>" >  سحب رصيد  <i class="icon-money"></i></a></li>
+                                        <li><a href="<?php echo base_url('payment/withdraw') ?>" >  سحب رصيد  <i class="icon-money"></i></a></li>
                                         <li><a href="<?php echo base_url('payment/convertFromCreditToShelinat') ?>">تحويل من رصيد الي شلينات <i class="icon-money"></i></a></li>
 
                                         <?php

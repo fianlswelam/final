@@ -37,7 +37,8 @@
         echo "<br/>";
         echo "اقل  مبلغ ممكن ان يودع  فى المره الواحده : ";
         echo form_input('min_amount_add');
-        echo "<br/>"; echo "<br/>";
+        echo "<br/>";
+        echo "<br/>";
         echo "  الضريبه : ";
         echo form_input('fees_pers_add');
         echo " + ";
@@ -45,9 +46,14 @@
         echo "<br/>";
         echo "<br/>";
         echo form_submit('submit', 'حفظ');
-          echo "<br/>";
-        
-          ?>
+        echo "<br/>";
+        ?>
+
+        <?php
+        if (isset($name)) {
+            echo "    تم  اضافه البنك بنجاح ";
+        }
+        ?>
 
     </body>
 </html>

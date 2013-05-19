@@ -7,7 +7,7 @@
     <body>
 
         <?php
-        echo form_open('payment/addBank');
+        echo form_open('payment/shelinAndDolar');
 
         echo "  من    دولار  لشلنات  ";
         echo "-----------------------------------------------------------------";
@@ -15,14 +15,14 @@
         echo "<br/>";
 
         echo "اقل  مبلغ ممكن ان  يحول فى المره الواحده  : ";
-        echo form_input('min_amount_add');
+        echo form_input('min_amount_d_s');
         echo "<br/>";
         echo "<br/>";
 
         echo "  الضريبه : ";
-        echo form_input('fees_pers_add');
+        echo form_input('fees_pers_d_s');
         echo " + ";
-        echo form_input('fees_dolar_add');
+        echo form_input('fees_dolar_d_s');
 
         echo "<br/>";
         echo "<br/>";
@@ -33,14 +33,14 @@
         echo "<br/>";
 
         echo "اقل  مبلغ ممكن ان  يحول فى المره الواحده  : ";
-        echo form_input('min_amount_add');
+        echo form_input('min_amount_s_d');
         echo "<br/>";
         echo "<br/>";
-
+        
         echo "  الضريبه : ";
-        echo form_input('fees_pers_add');
+        echo form_input('fees_pers_s_d');
         echo " + ";
-        echo form_input('fees_dolar_add');
+        echo form_input('fees_dolar_s_d');
 
         echo "<br/>";
         echo "<br/>";

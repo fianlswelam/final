@@ -115,9 +115,8 @@
                                 if ($owner == 'yes') {
                                     ?>
                                     <li><a href="<?php echo base_url('payment/addCreditPage') ?>">ايداع رصيد <i class="icon-money"></i></a></li>
-                                    <li><a href="<?php echo base_url('payment/convertFromCreditToShelinat') ?>" >  سحب رصيد  <i class="icon-money"></i></a></li>
+                                    <li><a href="<?php echo base_url('payment/withdraw') ?>" >  سحب رصيد  <i class="icon-money"></i></a></li>
                                     <li><a href="<?php echo base_url('payment/convertFromCreditToShelinat') ?>">تحويل من رصيد الي شلينات <i class="icon-money"></i></a></li>
-
                                     <?php
                                 }
                             }
@@ -129,7 +128,7 @@
 
                     <!------------------------------------->
                     <div>
-                        <form method="post" action="<?php echo base_url(); ?>payment_user/getAmountAfterFees" >
+                        <form method="post" action="<?php echo base_url(); ?>payment_user/getAmountAfterFees_withdraw" >
 
                             <label class="control-label" for="val_email"> المبلغ بعد الخصم  </label>
 

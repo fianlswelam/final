@@ -7,7 +7,7 @@
         
         <?php
        
-        echo form_open('payment/addBank');
+        echo form_open('payment/showAllBankDetail');
         echo "اسم البنك ";
         ?>
         
