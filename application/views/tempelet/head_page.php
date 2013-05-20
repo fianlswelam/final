@@ -1,7 +1,9 @@
 <style type="text/css">
 
 #msg_img{float:right;float:right;width:64px;height:65px;margin-right:0px;}
+
 </style>
+
 <header class="navbar navbar-inverse">
                 <div class="navbar-inner remove-radius remove-box-shadow">
                 
