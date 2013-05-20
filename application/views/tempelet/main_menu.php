@@ -5,7 +5,6 @@
 
     <ul class="nav2" style="margin-top:-10px">
         <h3 id="dept">اقسام السوق</h3>
-      
         <li><a>مبيعات</a></li>                    <div class="sub_links" style="display: none; ">
 
                         <p><a href="#">لعب اطفال</a></p>  
@@ -36,6 +35,7 @@
 
                         </ul>  
 </div>
+
 <div id="service">
 <h3>الخدمات الاكثر شرائا</h3>
 <div style="background-color:#e9e9e9;padding:0 6px 0 6px;">
@@ -99,8 +99,39 @@
 </div>
 
 </div>
+<div id="service">
+<h3>الخدمات الاكثر شرائا</h3>
+<div  style="background-color:#e9e9e9;padding:0 6px 0 6px;">
+
+<div id="all">
+
+<p>تفاصيل الخدمه تفاصيل الخدمه</p>
+<img src="<?php echo base_url()?>images/t.jpg" width="50" height="70" />
+</div>
+
+<div id="all">
+
+<p>تفاصيل الخدمه تفاصيل الخدمه</p>
+<img src="<?php echo base_url()?>images/t.jpg" width="50" height="70" />
+</div>
+
+<div id="all">
+
+<p>تفاصيل الخدمه تفاصيل الخدمه</p>
+<img src="<?php echo base_url()?>images/t.jpg" width="50" height="70" />
+</div>
+
+<div id="all">
+
+<p>تفاصيل الخدمه تفاصيل الخدمه</p>
+<img src="<?php echo base_url()?>images/t.jpg" width="50" height="70" />
+</div>
+
+</div>
+
+</div>
 
 
 
-<p style="margin-top:10px;">All copyrights <a href="<?php echo base_url();?>site/">shelinat.com</a> &copy; 2013</p>
+
 </aside>

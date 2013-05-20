@@ -37,6 +37,13 @@ class payment_user extends CI_Controller {
         $this->load->view("view_selectBank_withdraw", $data);
     }
 
+  
+    function fromDolarToShelin(){
+        
+        
+        
+    }
+    
     
     
     

@@ -60,7 +60,7 @@ body{text-align:right;font-family:myfont;}
 
 <div class="dash-tile dash-tile-ocean clearfix">
 <div class="dash-tile-header">
-<a href="#">
+<a href="<?php echo base_url();?>user/profile" >
 الحساب الشخصي</a>
 <div class="dash-tile-options">
 <div class="btn-group">
@@ -71,7 +71,7 @@ body{text-align:right;font-family:myfont;}
 </div>
 
 <div class="dash-tile-icon"><i class="icon-group"></i></div>
-<div class="dash-tile-text"><a style="font-size:19px;color:#fff" href=""> اذهب اليه </a></div>
+<div class="dash-tile-text"><a style="font-size:19px;color:#fff" href="<?php echo base_url();?>user/profile"> اذهب اليه </a></div>
 </div>
 
 <div class="dash-tile dash-tile-leaf clearfix">
@@ -79,11 +79,11 @@ body{text-align:right;font-family:myfont;}
 <span class="dash-tile-options">
 
 </span>
-<a href="#">عن الموقع</a>
+<a href="<?php echo base_url();?>site/about">عن الموقع</a>
 
 </div>
 <div class="dash-tile-icon"><i class="icon-lightbulb"></i></div>
-<div class="dash-tile-text"><a href="#" style="color:#fff;font-size:18px;">افهم  موقعنا</a></div>
+<div class="dash-tile-text"><a href="<?php echo base_url();?>site/about" style="color:#fff;font-size:18px;">افهم  موقعنا</a></div>
 </div>
 </div>
 
@@ -97,11 +97,11 @@ body{text-align:right;font-family:myfont;}
 </div>
 
 
-<a href="#">شجره الاعضاء</a>
+<a href="<?php echo base_url();?>user/user_tree/<?php echo $this->session->userdata('user_id'); ?>">شجره الاعضاء</a>
 </div>
 <div class="dash-tile-icon"><i class="icon-sitemap"></i></div>
 <div class="dash-tile-text">
-<a href="#" style="color:#fff;font-size:20px;" >مشاهدتها</a>
+<a href="<?php echo base_url();?>user/user_tree/<?php echo $this->session->userdata('user_id'); ?>" style="color:#fff;font-size:20px;" >مشاهدتها</a>
 </div>
 </div>
 <div class="dash-tile dash-tile-fruit clearfix">
@@ -109,12 +109,12 @@ body{text-align:right;font-family:myfont;}
 <div class="dash-tile-options">
 
 </div>
-<a href="#">
+<a href="<?php echo base_url();?>site/contact_us">
 الدعم الفني
 </a>
 </div>
 <div class="dash-tile-icon"><i class="icon-cogs"></i></div>
-<div class="dash-tile-text"><a href="#" style="color:#fff;font-size:18px;">اتصل بنا </a></div>
+<div class="dash-tile-text"><a href="<?php echo base_url();?>site/contact_us" style="color:#fff;font-size:18px;">اتصل بنا </a></div>
 </div>
 </div>
 <div class="span3">
@@ -136,12 +136,12 @@ body{text-align:right;font-family:myfont;}
 <div class="dash-tile-options">
 
 </div>
-<a href="#">
+<a href="<?php echo base_url();?>site/blog">
 المدونه
 </a>
 </div>
 <div class="dash-tile-icon"><i class="icon-book"></i></div>
-<div class="dash-tile-text"><a href="#" style="color:#fff;font-size:18px;">تصفح المدونه</a></div>
+<div class="dash-tile-text"><a href="<?php echo base_url();?>site/blog" style="color:#fff;font-size:18px;">تصفح المدونه</a></div>
 </div>
 </div>
 <div class="span3">
@@ -160,17 +160,24 @@ body{text-align:right;font-family:myfont;}
 <div class="dash-tile-options">
 
 </div>
-<a href="#">
+<a href="<?php echo base_url();?>site/market">
 السوق
 </a>
 </div>
 <div class="dash-tile-icon"><i class="icon-shopping-cart"></i></div>
-<div class="dash-tile-text"><a href="#" style="color:#fff;font-size:18px;">تصفح خدماتنا</a></div>
-</div>
+<div class="dash-tile-text"><a href="<?php echo base_url();?>site/market" style="color:#fff;font-size:18px;">تصفح خدماتنا</a></div>
 </div>
 </div>
 
 
+
+</div>
+
+
+</div>
+<?php include('footer.php')?>
+
+</div>
 </div>
 
 

@@ -1,10 +1,12 @@
 <ul class="nav-dash" >
-   
+   <?php if ($this->session->userdata('logged_in')) {?>
    <li>
         <a href="<?php echo base_url(); ?>site/logout" data-toggle="tooltip" title="تسجيل الخروج">
             <i class="icon-off"></i> 
         </a>
     </li>
+     <?php }?>
+    
      <li>
         <a href="<?php echo base_url(); ?>site/about" data-toggle="tooltip" title="افهم اكتر موقعنا">
             <i class="icon-lightbulb"></i>

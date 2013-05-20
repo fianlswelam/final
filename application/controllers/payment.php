@@ -35,9 +35,8 @@ class payment extends CI_Controller {
     }
 
     function withdraw() {
-
         if ($this->session->userdata('logged_in')) {
-                  $this->load->view('view_selectBank_withdraw');
+            $this->load->view('view_selectBank_withdraw');
         } else {
             
         }
@@ -150,6 +149,15 @@ class payment extends CI_Controller {
 
             $d['name'] = "ok";
             $this->load->view('civou/view_addBankDetail', $d);
+        }
+    }
+
+    function convertFromCreditToShelinat() {
+
+        if ($this->session->userdata('logged_in')) {
+            $this->load->view("");
+        } else {
+            
         }
     }
 
