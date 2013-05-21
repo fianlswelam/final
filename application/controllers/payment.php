@@ -35,11 +35,8 @@ class payment extends CI_Controller {
     }
 
     function withdraw() {
-        if ($this->session->userdata('logged_in')) {
             $this->load->view('view_selectBank_withdraw');
-        } else {
-            
-        }
+       
     }
 
     function okMessage() {

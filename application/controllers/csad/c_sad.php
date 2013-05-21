@@ -15,12 +15,12 @@ class c_sad extends CI_Controller {
     }
 
     public function is_loged_in() {
-        if ($this->session->userdata('employe_logged_in')) {
+       if ($this->session->userdata('employe_logged_in')) {
             $this->load->view('employee/view_employe');
 //            redirect('csad/c_sad/');
         } else {
-            $this->load->view('employee/view_login');
-        }
+           $this->load->view('employee/view_login');
+       }
     }
 
     function valid_loign() {
@@ -33,7 +33,8 @@ class c_sad extends CI_Controller {
             $this->load->view('employee/view_login');
         } else {
             $username = $this->input->post('username');
-            $password = md5($this->input->post('password'));
+            $password = $this->input->post('password');
+            
             $user_id = $this->csad->valid_employee_pass($username, $password);
             if (!$user_id) {
                 $login_data = array("login_error" => true);

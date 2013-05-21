@@ -3,7 +3,7 @@
 include('dbcon.php');
 if ($_REQUEST) {
     $id = $_REQUEST['parent_id'];
-    $query = "select * from blog_sub_categ where b_c_id = " . $id;
+    $query = "select * from sub_categ where c_id = " . $id;
     $results = mysql_query($query);
     ?>
     <select name="sub_category"  id="sub_category_id">
