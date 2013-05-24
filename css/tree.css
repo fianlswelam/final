@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+#big table tr td{padding:10px;border: 1px solid #111;padding-left:60px;}
+#sub_level2{position:absolute;margin-top:130px;margin-bottom:40px;padding-left:50px;}
+#sub_level1{position:absolute;margin-top:830px;}
+#sub_level3{position:absolute;margin-top:150px;border-bottom:1px solid #ccc;padding-right:10px;}
+#sub_level4{position:relative;margin-top:-50px;margin-bottom:100px;padding-left:50px;}
+
+
+#level1{border: 1px solid #FFF;}

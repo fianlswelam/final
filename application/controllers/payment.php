@@ -35,12 +35,20 @@ class payment extends CI_Controller {
     }
 
     function withdraw() {
-            $this->load->view('view_selectBank_withdraw');
-       
+        $this->load->view('view_selectBank_withdraw');
     }
 
-    function okMessage() {
-        echo "ok message ";
+           function okMessage() {
+        echo "ok message </br>";
+        $config['allow_get_array'] = TRUE;
+        // Either of these should work
+        $query_string = http_build_query($this->input->get());
+        $query_string = $this->input->server('QUERY_STRING');
+        $query_string = substr($query_string, 6);
+//        echo $query_string;
+        $data['res'] = urlencode($query_string);
+        $this->load->view('view_payment', $data);	
+
     }
 
     function cancelMessage() {
@@ -152,7 +160,7 @@ class payment extends CI_Controller {
     function convertFromCreditToShelinat() {
 
         if ($this->session->userdata('logged_in')) {
-            $this->load->view("");
+            $this->load->view("view_selectBank_ToShelin");
         } else {
             
         }
@@ -167,10 +175,14 @@ class payment extends CI_Controller {
     }
 
     function showAllBankDetail() {
-        $bank_name = $this->input->post('bank_name');
-        $this->load->model('paymentModel');
-        $data['res'] = $this->paymentModel->showAll($bank_name);
-        $this->load->view('civou/view_updateBankDetail', $data);
+        if ($this->session->userdata('admin_logged_in')) {
+            $bank_name = $this->input->post('bankname');
+            $this->load->model('paymentModel');
+            $data['res'] = $this->paymentModel->showAll($bank_name);
+            $this->load->view('civou/view_updateBankDetail', $data);
+        } else {
+            $this->load->view("");
+        }
     }
 
     function view_shelinAndDolar() {

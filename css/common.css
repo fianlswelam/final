@@ -1,0 +1,374 @@
+/***********************************
+*  DigiCore common Stylesheet
+*  Created on: 08/16/2008
+*  Matthew Ausonio
+***********************************/
+/* Global styles */
+.clear:after {
+    content: ".";
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+.clear {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clear {height: 1%;}
+.clear {display: block;}
+/* End hide from IE-mac */
+.moduleContentInner:after,
+#mainContentColWrap:after {
+    content: ".";
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+.moduleContentInner {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .moduleContentInner {height: 1%;}
+.moduleContentInner {display: block;}
+/* End hide from IE-mac */
+
+.hide {
+	display:none;
+}
+.floatLeft {
+	float:left;
+}
+.floatRight {
+	float:right;
+}
+/* Site Layouts 
+********************************************************************************************************/
+/* first, items that are generally shared in all layouts */
+#navAdCol {
+	width:160px;
+	margin:0 10px 0 0;
+	float:left;
+	_height:1%;
+}
+#mainTripleColWrap {
+	width:800px;
+	float:right;
+}
+#mainContentColExtra,
+#mainContentCol1,
+#mainContentCol2,
+#mainContentCol3,
+#mainContentCol4 {
+	_overflow-x:hidden;
+}
+/* Layout A */
+.layoutA #mainTripleColWrap {
+	width:550px;
+	float:right;
+}
+.layoutA #mainContentCol1 {
+	width:240px;
+	float:left;
+	margin-right:10px;
+}
+.layoutA #mainContentCol2 {
+	width:300px;
+	float:right;
+}
+.layoutA #mainContentCol3,
+.layoutA #mainContentCol4 {
+	display:none;
+}
+.layoutA #mainContentColExtra {
+	float:left;
+	width:240px;
+	margin-right:10px;
+}
+/* Layout Aa */
+.layoutAa #mainTripleColWrap {
+	width:485px;
+	float:left;
+	margin-right:10px;
+}
+.layoutAa #mainContentCol1 {
+	clear:both;
+	width:485px;
+	margin-bottom:10px;
+}
+.layoutAa #mainContentCol2 {
+	width:237px;
+	float:left;
+	margin-right:11px;
+	min-height:1%;
+}
+.layoutAa #mainContentCol3 {
+	width:237px;
+	float:right;
+	min-height:1%;
+}
+.layoutAa #mainContentCol4 {
+	clear:both;
+	width:485px;
+	float:left;
+	*float:none;
+	_float:none;
+	margin-top:10px;
+}
+.layoutAa #mainContentColExtra {
+	float:right;
+	width:300px;
+}
+/* Layout B */
+.layoutB #mainTripleColWrap {
+	width:800px;
+	float:right;
+}
+.layoutB #mainContentCol1 {
+	width:240px;
+	float:left;
+	margin-right:10px;
+}
+.layoutB #mainContentCol2 {
+	width:240px;
+	float:left;
+	margin-right:10px;
+}
+.layoutB #mainContentCol3 {
+	width:300px;
+	float:left;
+}
+.layoutB #mainContentCol4 {
+	display:none;
+}
+.layoutB #mainContentColExtra {
+	float:right;
+	width:800px;
+	margin-bottom:10px;
+}
+/* Layout C */
+.layoutC #mainTripleColWrap {
+	width:485px;
+	margin-right:10px;
+}
+.layoutC #mainContentCol1 {
+	width:485px;
+	margin-bottom:10px;
+}
+.layoutC #mainContentCol2 {
+	width:237px;
+	margin-right:11px;
+	float:left;
+}
+.layoutC #mainContentCol3 {
+	width:237px;
+	float:right;
+}
+.layoutC #mainContentCol4 {
+	display:none;
+}
+.layoutC #mainContentColExtra {
+	float:right;
+	width:300px;
+}
+/* Layout Da */
+.layoutDa #mainTripleColWrap {
+	width:800px;
+	float:left;
+}
+.layoutDa #mainContentCol1 {
+	width:300px;
+	float:right;
+}
+
+.layoutDa #mainContentCol3 {
+	clear:left;
+}
+.layoutDa #mainContentCol3,
+.layoutDa #mainContentCol4 {
+	float:left;
+	width:240px;
+	margin-right:10px;
+	margin-top:10px;
+}
+.layoutDa #mainContentCol2 {
+	float:left;
+	width:490px;
+}
+.layoutDa #mainContentColExtra {
+	float:left;
+	width:800px;
+	margin-bottom:10px;
+}
+/* Layout D */
+.layoutD #mainTripleColWrap {
+	width:800px;
+	float:right;
+}
+.layoutD #mainContentCol1 {
+	width:300px;
+	float:left;
+	margin-right:10px;
+}
+.layoutD #mainContentCol2 {
+	width:490px;
+	float:right;
+}
+.layoutD #mainContentCol3,
+.layoutD #mainContentCol4 {
+	display:none;
+}
+.layoutD #mainContentColExtra {
+	float:right;
+	width:800px;
+	margin-bottom:10px;
+}
+/* Layout E */
+.layoutE #mainTripleColWrap {
+	width:800px;
+	float:right;
+}
+.layoutE #mainContentCol1 {
+	width:490px;
+	float:left;
+	margin-right:10px;
+}
+.layoutE #mainContentCol2 {
+	width:300px;
+	float:right;
+}
+.layoutE #mainContentCol3,
+.layoutE #mainContentCol4 {
+	display:none;
+}
+.layoutE #mainContentColExtra {
+	float:right;
+	width:800px;
+	margin-bottom:10px;
+}
+/* Layout F */
+.layoutF #mainTripleColWrap {
+	width:300px;
+	float:right;
+}
+.layoutF #mainContentCol1 {
+	width:300px;
+}
+.layoutF #mainContentCol2,
+.layoutF #mainContentCol3,
+.layoutF #mainContentCol4 {
+	display:none;
+}
+.layoutF #mainContentColExtra {
+	float:left;
+	width:485px;
+	margin-right:10px;
+}
+/* Layout G */
+.layoutG #navAdCol {
+	display:none;
+}
+.layoutG #mainTripleColWrap {
+	width:300px;
+	float:right;
+}
+.layoutG #mainContentCol1 {
+	width:300px;
+}
+.layoutG #mainContentCol2,
+.layoutG #mainContentCol3,
+.layoutG #mainContentCol4 {
+	display:none;
+}
+.layoutG #mainContentColExtra {
+	float:left;
+	width:655px;
+	margin-right:10px;
+}
+/* Layout H */
+.layoutH #mainTripleColWrap,
+.layoutH #mainContentCol1,
+.layoutH #mainContentCol2,
+.layoutH #mainContentCol3,
+.layoutH #mainContentCol4 {
+	display:none;
+}
+.layoutH #mainContentColExtra {
+	float:right;
+	width:795px;
+}
+/* Layout I */
+.layoutI #navAdCol,
+.layoutI #mainTripleColWrap,
+.layoutI #mainContentCol1,
+.layoutI #mainContentCol2,
+.layoutI #mainContentCol3,
+.layoutI #mainContentCol4 {
+	display:none;
+}
+.layoutI #mainContentColExtra {
+	float:left;
+	width:965px;
+}
+/* Layout K */
+.layoutK #mainTripleColWrap {
+	width:655px;
+	float:left;
+	margin-right:10px;
+}
+.layoutK #mainContentCol1 {
+	clear:both;
+	width:655px;
+	margin-bottom:10px;
+}
+.layoutK #mainContentCol2 {
+	width:322px;
+	float:left;
+	margin-right:11px;
+	min-height:1%;
+}
+.layoutK #mainContentCol3 {
+	width:322px;
+	float:right;
+	min-height:1%;
+}
+.layoutK #navAdCol,
+.layoutK #mainContentCol4 {
+	display:none;
+}
+.layoutK #mainContentColExtra {
+	float:right;
+	width:300px;
+}
+/* Layout L */
+.layoutL #navAdCol {
+	display:none;
+}
+.layoutL #mainTripleColWrap {
+	width:655px;
+	float:left;
+	margin-right:10px;
+}
+.layoutL #mainContentCol1 {
+	clear:both;
+	width:655px;
+	margin-bottom:10px;
+}
+.layoutL #mainContentCol2 {
+	width:322px;
+	float:left;
+	margin-right:11px;
+	min-height:1%;
+	margin-bottom:10px;
+}
+.layoutL #mainContentCol3 {
+	width:322px;
+	float:right;
+	min-height:1%;
+	margin-bottom:10px;
+}
+.layoutL #mainContentCol4 {
+	clear:both;
+	width:655px;
+}
+.layoutL #mainContentColExtra {
+	float:right;
+	width:300px;
+}

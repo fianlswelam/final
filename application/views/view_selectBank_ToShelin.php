@@ -6,7 +6,7 @@
         <!--
         -->
         <meta charset="UTF-8">
-        <title> اضافه موضوع|  
+        <title> تحويل من رصيد لشلنات 
             <?php
             if (isset($username)) {
                 echo $username;
@@ -125,61 +125,22 @@
 
                         </ul></div>
 
-
-
                     <!------------------------------------->
                     <div>
-                        <form method="post" action="<?php echo base_url(); ?>payment_user/getAmountAfterFees" >
-
+                        <form method="post" action="<?php echo base_url(); ?>payment_user/getAmountAfterFees_ToShelin" >
                             <label class="control-label" for="val_email"> المبلغ بعد الخصم  </label>
-
-                            <input type="text" name="amount"  />
-                            <select name="bank_type">
-                                <option value="payza">Payza</option>
-                                <option value="paypal">paypal</option>
-                            </select>
+                            <input type="text" name="amount"  />                         
                             <input type="submit" value="حفظ">
                         </form>
                     </div>
 
-
                     <!------------------------------------->
-
 
                     <!------------------------------------->
                     <div>
 
                         <!-------------------------------------------------------------------------------->
-                        <form method="post" action="https://secure.payza.com/checkout" >
-                            <input type="hidden" name="ap_merchant" value="mohamedsaad2085@yahoo.com"/>
-                            <input type="hidden" name="ap_purchasetype" value="Service"/>
-                            <input type="hidden" name="ap_itemname" value="creidit"/>
-                            <div class="control-group">
-                                <label class="control-label" for="val_email"> *  المبلغ </label>
-                                <div class="controls">
-                                    <div class="input-prepend">
-                                        <?php if (isset($res)) { ?>
-                                        <input type="text" name="ap_amount"  id="val_email" value="<?php  echo $res;?>"readonly="readonly" />
-                                        <?php } ?>
-                                        <span class="add-on"><i class="icon-money"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!---------------------------------------------------------------------------->
-                            <input type="hidden" name="ap_currency" value="USD"/>
-                                    <!--<input type="hidden" name="ap_quantity" value="20"/>-->
-<!--                                    <input type="hidden" name="ap_itemcode" value="XYZ123"/>
-                                    <input type="hidden" name="ap_description" value="Service"/>-->
-                            <input type="hidden" name="ap_returnurl" value="<?php echo base_url(); ?>/payment/okMessage">
-                            <input type="hidden" name="ap_cancelurl" value="<?php echo base_url(); ?>/payment/cancelMessage"/>
-                                    <!--<input type="hidden" name="ap_taxamount" value="2.49"/>-->
-                                    <!--<input type="hidden" name="ap_additionalcharges" value="1.19"/>-->
-                                    <!--<input type="hidden" name="ap_shippingcharges" value="7.99"/>--> 
-
-                                        <!--<input type="hidden" name="ap_discountamount" value="4.99"/>--> 
-                            <input type="hidden" name="apc_1" value="Blue"/>
-                            <input type="image" src="https://www.payza.com/images/payza-buy-now.png"/>
-                        </form>
+                 
                         <!-------------------------------------------->
 
                     </div>

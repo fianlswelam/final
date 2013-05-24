@@ -78,10 +78,15 @@ class Site_model extends CI_Model {
     ///////////////////////////////////////////login method////////////////////////////////////////////
     public function check_can_log_in($username, $password) {
 
-        $query = "select id ,email from user where username=? and pass=? or sec_pass=? ";
+        $query = "select * from user where username=? and pass=? or sec_pass=? ";
         $result = $this->db->query($query, array($username, $password, $password));
         if ($result) {
-            $result = array('id' => $result->row(0)->id, 'email' => $result->row(0)->email);
+            $result = array('id' => $result->row(0)->id,
+                'email' => $result->row(0)->email,
+                'amount_point' => $result->row(0)->amount_point,
+                'amount_money' => $result->row(0)->amount_money
+                );
+            
             return $result;
         } else {
             return false;

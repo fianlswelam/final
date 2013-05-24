@@ -1,0 +1,12 @@
+
+#atpNavBar,
+#siteHeader,
+#mainFooter {
+	display:none;
+}
+.genericModuleHeader {
+	border:0;
+}
+.staticTabSingle {
+	display:block !important;
+}

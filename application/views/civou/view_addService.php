@@ -9,7 +9,7 @@
     </head>
     <body>
 
-        <?php include('dbcon.php'); ?>
+        <?php include('js/dbcon.php'); ?>
         <div id="wrapper">
             <!-- start of section top -->
             <section id="top">

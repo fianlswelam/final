@@ -13,7 +13,7 @@
             <section id="top">
                 <div id="top-wrapp">
                     <?php include('tempelet/header.php') ?>
-                     <?php include 'dbcon.php'; ?>
+                     <?php include '_js/dbcon.php'; ?>
                 </div>
             </section>
             <?php include 'tempelet/news.php'; ?>

@@ -12,8 +12,8 @@
         ?>
         
         <select name="bankname">
-            <option> payza </option>
-            <option> paypal </option>
+            <option value="payza"> payza </option>
+            <option value="paypal" > paypal </option>
         </select>
         
         <?php

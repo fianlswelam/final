@@ -17,6 +17,7 @@
         <meta name="author" content="pixelcave">
         <meta name="robots" content="index, follow">
         <meta name="viewport" content="width=device-width,initial-scale=1">
+        
         <link rel="shortcut icon" href="img/favicon.ico">
         <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
         <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57-precomposed.png">
@@ -34,8 +35,8 @@
         <script src="<?php echo base_url(); ?>js/modernizr-2.6.2-respond-1.1.0.min.js" ></script>
           <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
           
-         <?php include 'tempelet/ajax.php'; ?>
-         <?php include 'dbcon_blog.php'; ?>
+         <?php include 'tempelet/ajax_1.php'; ?>
+         <?php include '_js/dbcon.php'; ?>
 
     </head>
 

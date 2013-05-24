@@ -1,4 +1,4 @@
-<script type="text/javascript" src="<?php echo base_url(); ?>_js/jquery-1.3.2.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>js/jquery-1.3.2.js"></script>
 <script type="text/javascript">
 
     $(document).ready(function() {

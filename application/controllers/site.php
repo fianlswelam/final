@@ -15,9 +15,9 @@ class Site extends CI_Controller {
 
 ///////////////////////////
     function home() {
-		 if ($this->session->userdata('logged_in')) {
-        $this->load->view('home');
-		} else {
+        if ($this->session->userdata('logged_in')) {
+            $this->load->view('home');
+        } else {
             $this->load->view('view_index');
         }
     }
@@ -387,7 +387,12 @@ class Site extends CI_Controller {
 
                 $user = $this->site_model->check_can_log_in($username, $password);
 
-                $login_data = array("logged_in" => true, "user_id" => $user['id'], "user_email" => $user['email'], "user_name" => $username);
+                $login_data = array("logged_in" => true,
+                    "user_id" => $user['id'],
+                    "user_email" => $user['email'],
+                    "amount_point" => $user['amount_point'],
+                    "amount_money" => $user['amount_money'],
+                    "user_name" => $username );
                 $this->session->set_userdata($login_data);
                 redirect('site/home');
             } else {

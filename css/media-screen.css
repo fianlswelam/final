@@ -1,0 +1,147 @@
+/*
+—————————————————————————————————————————––––––
+custom style for some media screen
+—————————————————————————————————————————––––––
+*/
+
+img.scale-grid {
+	max-width:100%;
+	height:auto;
+}
+
+img.maxfolio2{
+	max-width:530px;
+	height:auto;
+}
+
+img.maxfolio3{
+	max-width:340px;
+	height:auto;
+}
+
+img.maxfolio4{
+	max-width:245px;
+	height:auto;
+}
+
+.inner_wrap {
+	width:1180px;
+	margin:0px auto;
+	padding:0px;
+	position:relative;
+}
+
+.top_banner img.scale-grid {
+	margin-left:18px;
+	max-width:100%;
+	height:auto;
+}
+
+#featured iframe{
+	width:625px;
+	height:313px;
+}	
+	
+@media only screen and (min-width: 960px) and (max-width: 1139px) {
+	.flexslider {
+		height:300px;
+	}
+	#featured iframe{
+		width:520px;
+		height:258px;
+	}
+	
+	.featured_form form ul li label {
+		float:none;
+		margin-bottom:20px;
+	}
+	.featured_form form ul li input {
+		margin-top:10px;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.flexslider {
+		height:240px;
+	}
+	#featured iframe{
+		width:408px;
+		height:196px;
+	}	
+
+	.featured_form form ul li label {
+		float:none;
+		margin-bottom:20px;
+	}
+	.featured_form form ul li input {
+		margin-top:10px;
+	}
+	.testimoni{
+		width:318px;
+	}
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	nav ul{ display: none; }
+	nav select{ display: inline-block; }
+	nav select{
+		width:250px;
+		padding:10px;
+	}
+	.flexslider {
+		height:260px;
+	}
+	#featured iframe{
+		width:440px;
+		height:216px;
+		margin-bottom:30px;
+	}	
+	.featured_form form { margin-top:20px; }
+	.featured_form form ul li label {
+		float:none;
+		margin-bottom:20px;
+	}
+	.featured_form form ul li input {
+		margin-top:10px;
+	}
+	.testimoni{
+		width:286px;
+	}
+	footer .widget {
+		margin-bottom:20px;
+	}
+	
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+	nav ul{ display: none; }
+    nav select{ display: inline-block; }
+	nav select{
+		width:280px;
+		padding:10px;
+	}
+	.flexslider {
+		height:160px;
+	}	
+	#featured iframe{
+		width:240px;
+		height:121px;
+		margin-bottom:30px;
+	}	
+	.testimoni{
+		width:188px;
+	}
+	.featured_form form { margin-top:20px; }
+	.featured_form form ul li label {
+		float:none;
+		margin-bottom:20px;
+	}
+	.featured_form form ul li input {
+		margin-top:10px;
+	}
+	.featured_form form .cta-button.optin button {
+		margin-top:10px;
+		width:90%;
+	}
+	footer .widget {
+		margin-bottom:20px;
+	}
+}
+@media print{}
