@@ -123,12 +123,24 @@
                             }
                             ?>
 
-                        </ul></div>
+                        </ul>
+                    </div>
+                    <!------------------------------------->
 
+                    <div>
+                        <?php
+                        foreach ($user as $row) {
+                            echo "رصيد الحالى  :  " . $row->amount_money;
+                            echo "</br>";
+                            echo "نقاطك الحاليه :  " . $row->amount_point;
+                             echo "</br>";
+                        }
+                        ?>
+                    </div>
                     <!------------------------------------->
                     <div>
                         <form method="post" action="<?php echo base_url(); ?>payment_user/getAmountAfterFees_ToShelin" >
-                            <label class="control-label" for="val_email"> المبلغ بعد الخصم  </label>
+                            <label class="control-label" for="val_email">  المبلغ المراد تحويله :  </label>
                             <input type="text" name="amount"  />                         
                             <input type="submit" value="حفظ">
                         </form>
@@ -140,7 +152,19 @@
                     <div>
 
                         <!-------------------------------------------------------------------------------->
-                 
+                        <div>
+                            <!--------------------------------------------------------->
+                            <form method="post" action="<?php echo base_url(); ?>payment_user/updateUserAmount">
+                                  <label class="control-label" for="val_email"> المبلغ بعد الخصم  </label>
+                                <?php if (isset($res)) { ?>
+                                    <input type="text" name="amount"  id="val_email" value="<?php echo $res; ?>"readonly="readonly" />
+                                <?php } ?>
+                                <input type="hidden" name="type" value="2" />
+                                <input type="submit"  value="حفظ "/>
+                            </form>
+
+                            <!--------------------------------------------------------->
+                        </div>
                         <!-------------------------------------------->
 
                     </div>

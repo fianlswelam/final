@@ -133,7 +133,7 @@
                                     <li><a href="<?php echo base_url('payment/addCreditPage') ?>">ايداع رصيد <i class="icon-money"></i></a></li>
                                     <li><a href="<?php echo base_url('payment/withdraw') ?>" >  سحب رصيد  <i class="icon-money"></i></a></li>
                                     <li><a href="<?php echo base_url('payment/convertFromCreditToShelinat') ?>">تحويل من دولار  الي شلينات <i class="icon-money"></i></a></li>
-                                    <li><a href="<?php echo base_url('payment/convertFromCreditToShelinat') ?>">تحويل من شلنات  الي دولار  <i class="icon-money"></i></a></li>
+                                    <li><a href="<?php echo base_url('payment/convertFromShelinToCredit') ?>">تحويل من شلنات  الي دولار  <i class="icon-money"></i></a></li>
 
 
                                     <?php

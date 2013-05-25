@@ -16,6 +16,7 @@ class Site extends CI_Controller {
 ///////////////////////////
     function home() {
         if ($this->session->userdata('logged_in')) {
+            
             $this->load->view('home');
         } else {
             $this->load->view('view_index');

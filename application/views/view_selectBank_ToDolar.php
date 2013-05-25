@@ -122,6 +122,17 @@
                         </ul></div>
                     <!--------------------------------------------------------->
                     <div>
+                        <?php
+                        foreach ($user as $row) {
+                            echo "رصيد الحالى  :  " . $row->amount_money;
+                            echo "</br>";
+                            echo "نقاطك الحاليه :  " . $row->amount_point;
+                             echo "</br>";
+                        }
+                        ?>
+                    </div>
+                    
+                    <div>
                         <form method="post" action="<?php echo base_url(); ?>payment_user/getAmountAfterFees_ToDolar" >
                             <label class="control-label" for="val_email"> المبلغ بعد الخصم  </label>
                             <input type="text" name="amount"  />

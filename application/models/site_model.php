@@ -85,8 +85,8 @@ class Site_model extends CI_Model {
                 'email' => $result->row(0)->email,
                 'amount_point' => $result->row(0)->amount_point,
                 'amount_money' => $result->row(0)->amount_money
-                );
-            
+            );
+
             return $result;
         } else {
             return false;
@@ -274,6 +274,12 @@ FROM `service`";
         } else {
             return false;
         }
+    }
+
+    function getUserData($id) {
+        $this->db->where('id', $id);
+        $query = $this->db->get('user');
+        return $query->result();
     }
 
 ////////////////////////////////////////

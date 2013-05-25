@@ -38,7 +38,7 @@ class payment extends CI_Controller {
         $this->load->view('view_selectBank_withdraw');
     }
 
-           function okMessage() {
+    function okMessage() {
         echo "ok message </br>";
         $config['allow_get_array'] = TRUE;
         // Either of these should work
@@ -47,8 +47,7 @@ class payment extends CI_Controller {
         $query_string = substr($query_string, 6);
 //        echo $query_string;
         $data['res'] = urlencode($query_string);
-        $this->load->view('view_payment', $data);	
-
+        $this->load->view('view_payment', $data);
     }
 
     function cancelMessage() {
@@ -160,7 +159,21 @@ class payment extends CI_Controller {
     function convertFromCreditToShelinat() {
 
         if ($this->session->userdata('logged_in')) {
-            $this->load->view("view_selectBank_ToShelin");
+            $id = $this->session->userdata('user_id');
+            $this->load->model('site_model');
+            $data['user'] = $this->site_model->getUserData($id);
+            $this->load->view('view_selectBank_ToShelin', $data);
+        } else {
+            
+        }
+    }
+
+    function convertFromShelinToCredit() {
+        if ($this->session->userdata('logged_in')) {
+            $id = $this->session->userdata('user_id');
+            $this->load->model('site_model');
+            $data['user'] = $this->site_model->getUserData($id);
+            $this->load->view('view_selectBank_ToDolar', $data);
         } else {
             
         }

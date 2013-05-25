@@ -76,6 +76,7 @@ class payment_user extends CI_Controller {
         $id = $this->session->userdata('user_id');
         $this->load->model('paymentModel');
 
+       
         if ($type == 1) {
             $this->paymentModel->incrementDolar($id,$amount);
             $this->paymentModel->decrementShelin($id,$amount);
@@ -83,6 +84,10 @@ class payment_user extends CI_Controller {
             $this->paymentModel->incrementShelin($id,$amount);
             $this->paymentModel->decrementDolar($id,$amount);
         }
+        
+        
+        $load->load->view('user_profile');
+        
     }
 
 }
