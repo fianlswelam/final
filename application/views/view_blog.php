@@ -114,13 +114,13 @@
 
                                         <div class="media-body">
                                             <h4 class="media-heading"><a href="<?php echo base_url(); ?>site/blog_details/<?php echo $row->id . '/' . $row->c_id; ?>"><?php echo $row->title; ?></a><small><span class="label label-warning"><?php echo substr($row->date, 0, 10) ?></span></small></h4>
-                                            <a href="<?php echo base_url(); ?>site/blog_details/<?php echo $row->id . '/' . $row->c_id; ?>">
+                                            
                                                 <p style="height:60px;">
                                                     <?php echo substr($row->content, 0, 190); ?> ...
                                                    
                                                     <a href="<?php echo base_url(); ?>site/blog_details/<?php echo $row->id . '/' . $row->c_id; ?>"> اقراء المزيد</a>
                                                 </p>
-                                            </a>
+                                          
                                             <ul class="breadcrumb" style="margin:0px;">
                                                 <?php
                                                 $this->db->from('user');

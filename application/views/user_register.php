@@ -19,7 +19,9 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/plugins-1.2.css" tppabs="http://pixelcave.com/demo/uadmin/css/plugins-1.2.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/main-1.2.css" tppabs="http://pixelcave.com/demo/uadmin/css/main-1.2.css">
 
-        <script src="<?php echo base_url(); ?>js/modernizr-2.6.2-respond-1.1.0.min.js" tppabs="http://pixelcave.com/demo/uadmin/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="<?php echo base_url(); ?>js/modernizr-2.6.2-respond-1.1.0.min.js" ></script>
+        
+
 
         <style type="text/css">
             body{text-align:right;font-family:myfont;}
@@ -61,7 +63,7 @@
                             <label class="control-label" for="val_username">* اسم العضو </label>
                             <div class="controls">
                                 <div class="input-prepend">
-                                    <input type="text" id="val_username" name="username" value="<?php echo $this->input->post('username');?>" required>
+                                    <input type="text" id="val_username" name="username" oninvalid="setCustomValidity('من فضلك ادخل هذا الحقل')" value="<?php echo $this->input->post('username');?>" onchange="try{setCustomValidity('')}catch(e){}" required>
                                     <span class="add-on"><i class="icon-user"></i></span>
                                 </div>
                             </div>
@@ -70,7 +72,7 @@
                             <label class="control-label" for="val_email"> * البريد الالكتروني </label>
                             <div class="controls">
                                 <div class="input-prepend">
-                                    <input type="email" id="val_email" name="email" value="<?php echo $this->input->post('email');?>" required>
+                                    <input type="email" id="val_email" name="email" onchange="try{setCustomValidity('')}catch(e){}" value="<?php echo $this->input->post('email');?>" required>
                                     <span class="add-on"><i class="icon-envelope"></i></span>
                                 </div>
                             </div>
@@ -81,17 +83,17 @@
                             <label class="control-label" for="val_password">* كلمه السر</label>
                             <div class="controls">
                                 <div class="input-prepend">
-                                    <input type="password" id="val_password" name="password" required>
+                                    <input type="password" oninvalid="setCustomValidity('من فضلك ادخل هذا الحقل')" onchange="try{setCustomValidity('')}catch(e){}"   id="val_password" name="password" required>
                                     <span class="add-on"><i class="icon-asterisk"></i></span>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="control-group">
-                            <label class="control-label" for="val_confirm_password"> * تأكيد كلمه السر</label>
+                            <label class="control-label"   for="val_confirm_password"> * تأكيد كلمه السر</label>
                             <div class="controls">
                                 <div class="input-prepend">
-                                    <input type="password" id="val_confirm_password" name="c_password" required>
+                                    <input type="password" oninvalid="setCustomValidity('من فضلك ادخل هذا الحقل')" onchange="try{setCustomValidity('')}catch(e){}"  id="val_confirm_password" name="c_password" required>
                                     <span class="add-on"><i class="icon-asterisk"></i></span>
                                 </div>
                             </div>
@@ -99,7 +101,7 @@
 
                      <?php if(isset($parent) && $parent==1){?>
                         <div class="control-group">
-                            <label class="control-label" for="val_website">(الاب لاين (اختياري </label>
+                            <label class="control-label"  for="val_website">(الاب لاين (اختياري </label>
                             <div class="controls">
                                 <div class="input-prepend">
                                     <input type="text" id="val_website" name="parent_link" readonly  value="<?php if(isset($parent_id)){echo $parent_id ;} ?>" class="input-large" >
@@ -108,21 +110,13 @@
                             </div>
                         </div>
                         <?php }elseif(isset($parent) && $parent==0){?>
-                        <div class="control-group">
-                            <label class="control-label" for="val_website">(الاب لاين (اختياري </label>
-                            <div class="controls">
-                                <div class="input-prepend">
-                                    <input type="text" id="val_website" name="parent_link" placeholder="http://" value="<?php echo $this->input->post('parent_link'); ?>" class="input-large" >
-                                    <span class="add-on"><i class="icon-globe"></i></span>
-                                </div>
-                            </div>
-                        </div>
+                       
                         <?php }?>
 
                         <div class="control-group">
                             <label class="control-label" for="val_website">* الدوله </label>
                             <div class="controls">
-                                <select id="val_skill" name="country" required>
+                                <select id="val_skill"  oninvalid="setCustomValidity('اختار دولتك من فضلك')"  name="country" required>
                                    
                                     <option value="<?php echo $this->input->post('country'); ?>" selected>اختار دولتك</option>
                                     

@@ -28,7 +28,7 @@
         body{text-align:right;font-family:myfont;}
         .pull-left{float:right;padding-left:10px;}
         .content-text p{text-align:right}
-
+        #profile{width:65px;height:70px}
     </style>
 
     <body>
@@ -37,6 +37,11 @@
             <div id="inner-container">
                 <?php include 'tempelet/main_menu.php'; ?>
                 <div id="page-content">
+                 <ul id="nav-info"  class="clearfix" style="text-align:right">
+                           
+
+                        <li class="active" style="text-align:right;float:right"><a href="#">مدونه شلينات</a> <i class="icon-book"></i> </li>
+                    </ul>
                     <?php include('header2.php') ?>
                     <?php
                     if ($this->uri->segment(3) != '') {
@@ -62,7 +67,7 @@
                     <div class=" sub-header" style="margin-top:-30px;">
                         <div class="row-fluid">
                             <div class="span8 offset2">
-                                <h3><?php echo $row->title; ?><i class="icon-file"></i></h3>
+                                <h3> <a href="<?php echo base_url(); ?>site/blog_details/<?php echo $row->id . '/' . $row->c_id; ?>"><?php echo $row->title; ?></a><i class="icon-file"></i></h3>
                             </div>
                         </div>
                     </div>
@@ -87,11 +92,11 @@
                                         }
                                     }
                                     ?>
-                                    <a href="#"><?php echo $user_row->username; ?></a> بواسطه
+                                    <a href="#"><?php echo $user_row->username; ?></a> تمت الاضافه بواسطه
                                 </div>
                                 <div class="dash-tile-content">
                                     <div class="dash-tile-content-inner-fluid dash-tile-content-light content-text">
-                                        <p><img src="<?php echo base_url(); ?>upload/topic/<?php echo $row->t_photo_name; ?>"  alt="Image" class="pull-left" width="400" height="300"> 
+                                        <p><img src="<?php echo base_url(); ?>upload/topic/<?php echo $row->t_photo_name; ?>"  alt="Image" class="pull-left" style="width:100%;margin:auto;text-align:center"><div style="clear:both"></div> <br/>
                                             <?php echo $row->content; ?>
                                         </p>
                                         <ul class="pager">
@@ -191,7 +196,7 @@
 
                                                     <div class="media media-hover">
                                                         <a href="" class="pull-left">
-                                                            <img src="<?php echo base_url(); ?>images/profile/thumb_profile/<?php echo $user_row->profile_pic; ?> " width="60" height="60" class="media-object img-polaroid" alt="Image">
+                                                            <img src="<?php echo base_url(); ?>images/profile/thumb_profile/<?php echo $user_row->profile_pic; ?> " width="60" height="60" class="media-object img-polaroid" id="profile" alt="Image">
                                                         </a>
 
                                                         <div class="media-body">
@@ -231,11 +236,21 @@
                                         }
                                         ?>
                                         <!---------------------->
-
+<?php
+                        $this->db->from('user');
+                        $this->db->where('id', $this->session->userdata('user_id'));
+                        $query = $this->db->get();
+                        if ($query->num_rows() > 0) {
+                            $rows = $query->result();
+                            foreach ($rows as $row) {
+                                
+                            }
+                        }
+                        ?>
                                         <!-------------------------------------------->
                                         <div class="media media-hover">
                                             <a href="#" class="pull-left">
-                                                <img src="<?php echo base_url(); ?>images/image_dark_64x64.png" tppabs="http://pixelcave.com/demo/uadmin/img/placeholders/image_dark_64x64.png" class="media-object img-polaroid" alt="Image">
+                                                <img src="<?php echo base_url(); ?>images/profile/thumb_profile/<?php echo $row->profile_pic;?>" id="profile"  class="media-object img-polaroid" alt="Image">
                                             </a>
                                             <div class="media-body">
                                                 <!--<form class="form-horizontal" onsubmit="return false;">-->
