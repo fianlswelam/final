@@ -15,6 +15,10 @@ class sitead extends CI_Model {
             return false;
         }
     }
+    
+    function addOffer($data){
+        $this->db->insert('offers', $data);
+    }
 
     public function update($data, $table, $where) {
         $this->db->where('id', $where);

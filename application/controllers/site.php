@@ -23,6 +23,9 @@ class Site extends CI_Controller {
         }
     }
 
+    function offers(){
+         $this->load->view('index_offers');
+    }
 //////////////////////////////////
     function market_date() {
 
@@ -78,7 +81,6 @@ class Site extends CI_Controller {
 
 ///////////////////////////
 
-
     function order() {
         if ($this->session->userdata('logged_in')) {
             if ($this->uri->segment(3) != '') {
@@ -90,6 +92,12 @@ class Site extends CI_Controller {
             redirect("user/profile");
         }
     }
+
+    
+    function  offer_reqest(){
+        
+    }
+
 
     function confirm_order() {
         $this->load->model('sitead');
@@ -106,7 +114,7 @@ class Site extends CI_Controller {
                 $sc_id = $this->input->post('sc_id');
                 $duration = $this->input->post('duration');
 //                $order_point = $_POST['order_price'];
-///valid price
+///               valid price
                 $amount = $this->sitead->vaild_amount_point($user_id);
 //                echo $amount;
                 if ($amount < $order_p) {
@@ -304,7 +312,7 @@ class Site extends CI_Controller {
 //generate a rundom key
             $key = md5(uniqid());
             $this->load->library('email', array('mailtype' => 'html'));
-            $this->email->from('me@website.com', "temraz");
+            $this->email->from('admin@shelinat.com', "Shelinat.com");
             $this->email->to($this->input->post('email'));
             $this->email->subject("تفعيل حسابك");
             $message = "<p> شكرا للتسجيل معنا لتفعيل حسابك اضغط علي الرابط التالي من فضلك </p>";
@@ -507,15 +515,11 @@ class Site extends CI_Controller {
 ///////////////////////////
     function market_deatils() {
         if ($this->uri->segment(4) != '') {
-
             $c_id = $this->uri->segment(4);
             $this->load->model('site_model');
             if ($this->site_model->select_same_serv1($c_id)) {
                 $topics1 = $this->site_model->select_same_serv1($c_id);
-
                 $data['same_topics1'] = $topics1->result();
-
-
                 $this->load->view('market_details', $data);
             }
         } else {
@@ -523,6 +527,17 @@ class Site extends CI_Controller {
         }
     }
 
+    function offers_details(){
+       
+            $id = $this->uri->segment(3);
+            $this->load->model('site_model');
+            if ($this->site_model->getOffer($id)) {
+                $topics1 = $this->site_model->getOffer($id);
+                $data['same_topics1'] = $topics1;
+                $this->load->view('offer_details', $data);
+            }
+        
+    }
 //////////////////////////////////////////
     function blog_details() {
         if ($this->uri->segment(4) != '') {

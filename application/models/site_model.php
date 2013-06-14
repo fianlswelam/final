@@ -276,6 +276,11 @@ FROM `service`";
         }
     }
 
+   function  getOffer($id){
+          $this->db->where('id', $id);
+        $query = $this->db->get('offers');
+        return $query->result();
+    }
     function getUserData($id) {
         $this->db->where('id', $id);
         $query = $this->db->get('user');

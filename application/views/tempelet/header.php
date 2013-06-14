@@ -32,7 +32,13 @@
                 <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20">
                     <a href="<?php echo base_url(); ?>site/market" >
                         <div class="bullet left"></div>
-                        السوق</a></li>
+                        السوق</a>
+                </li>
+                 <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20">
+                    <a href="<?php echo base_url(); ?>site/offers" >
+                        <div class="bullet left"></div>
+                        الهدايا والعروض </a>
+                </li>
 
                 <?php if (!$this->session->userdata('logged_in')) { ?>
                     <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19">

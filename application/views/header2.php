@@ -38,7 +38,11 @@
            <i class="icon-shopping-cart"></i>
         </a>
     </li>
-    
+     <li>
+        <a href="<?php echo base_url(); ?>site/offers" data-toggle="tooltip" title="الهدايا والعروض ">
+           <i class="icon-shopping-cart"></i>
+        </a>
+    </li>
      <li>
      <?php if ($this->session->userdata('logged_in')) {?>
         <a href="<?php echo base_url(); ?>user/profile" data-toggle="tooltip" title="الحساب الشخصى">

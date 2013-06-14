@@ -40,6 +40,12 @@
                                     <p><a href="<?php echo base_url(); ?>civou/c_service/loadAddService">Add Service</a></p> 
                                     <p><a href="<?php echo base_url(); ?>civou/c_service/loadAddService">Show All Service</a></p> 
                                 </td>
+                                  <td>
+                                    <p style="font-size: 20px;"><a>Service</a></p>
+                                    <p><a href="<?php echo base_url(); ?>civou/c_offer/loadAddOffer">Add offer</a></p>
+                                    <p><a href="<?php echo base_url(); ?>civou/c_offer/">Show All offers</a></p> 
+                                        </td>
+                                
                                 <td>
                                     <p style="font-size: 20px;"><a>Blog</a></p>
                                     <p><a href="<?php echo base_url(); ?>civou/c_b_category/loadaddBCategory">Add Category</a></p> 
