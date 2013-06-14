@@ -1,6 +1,4 @@
-<?php
-if ($this->session->userdata('logged_in')) {
-    ?>
+
 
     <style type="text/css">
 
@@ -65,7 +63,7 @@ if ($this->session->userdata('logged_in')) {
 
                     </li>
                     <!----------------------------------->
-
+<?php if ($this->session->userdata('logged_in')) {?>
                     <li class="divider-vertical remove-margin"></li>
                     <li id="messages-widget" class="dropdown dropdown-left-responsive">
                         <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
@@ -164,17 +162,10 @@ if ($this->session->userdata('logged_in')) {
                             }
                             ?>
                             <li>
-                                <ul>
-                                    <li class="label label-info">1 month ago</li>
-                                    <li class="text-info">Milestone #3 achieved!</li>
-                                    <li class="text-info"><a href="javascript:void(0)" class="widget-link">John Doe</a> joined the project!</li>
-                                </ul>
+                              
                             </li>
                             <li>
-                                <ul>
-                                    <li class="label">1 year ago</li>
-                                    <li class="text-muted">This is an old notification</li>
-                                </ul>
+                               
                             </li>
                             <li class="divider"></li>
 
@@ -215,11 +206,10 @@ if ($this->session->userdata('logged_in')) {
                             </li>
                         </ul>
                     </li>
+                    <?php }?>
                 </ul>
             </div>
         </div>
     </header>
 
-    <?php
-}
-?>
+  

@@ -32,7 +32,7 @@
 
     <body>
         <div id="page-container">
-            <?php include('tempelet/head_page.php'); ?>
+            <?php include('tempelet/head_page.php') ;?>
             <div id="inner-container">
                 <?php include('tempelet/main_menu.php'); ?>
 
