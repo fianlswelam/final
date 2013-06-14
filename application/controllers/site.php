@@ -277,32 +277,43 @@ class Site extends CI_Controller {
 
 ///////////////////////////
     function user_register() {
-        $this->load->view('user_register');
-    }
+		
+			if ($this->uri->segment(3) != '') { 
+			$id=$this->uri->segment(3);
+			$this->load->model('site_model');
+			if($this->site_model->valid_user($id)){
+			 $data['parent']=1;
+			 $data['parent_id']=$this->uri->segment(3);
+			$this->load->view('user_register',$data);
+			  }else{
+				  $data['valid_parent']='هذا الاب لاين التي اتيت من خلاله غير صحيح من فضلك تأكد من الاين اب الخاص بك';
+				  $this->load->view('user_register',$data);
+				  }
+				  
+			}else{
+			$data['parent']=0;
+			$this->load->view('user_register',$data);
+			}
+			
+		}
 
 //////////////////////////////////////// user registration /////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////// validate user
     public function sign_user_validation() {
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('username', 'username', 'required|max_length[25]|trim|xss_clean');
+        $this->form_validation->set_rules('username', 'username', 'required|max_length[25]|trim|xss_clean|is_unique[user.username]');
         $this->form_validation->set_rules('email', 'Email', 'required|trim|xss_clean|valid_email|max_length[150]|is_unique[user_temp.email]|is_unique[user.email]
 											 ');
-        $this->form_validation->set_rules('bank_email', 'Payment email', 'required|trim|xss_clean|valid_email|max_length[150]|is_unique[user_temp.email]|is_unique[user.email]
-											 ');
+     
         $this->form_validation->set_rules('country', 'Country', 'required|trim|xss_clean');
-        $this->form_validation->set_rules('city', 'city', 'required|max_length[30]|trim|xss_clean');
-        $this->form_validation->set_rules('zip_code', 'Zip code', 'required|max_length[30]|trim|xss_clean|numeric');
-
-
-        $this->form_validation->set_rules('address', 'Address', 'required|max_length[100]|trim|xss_clean');
-        $this->form_validation->set_rules('phone', 'Phone', 'required|max_length[20]|trim|xss_clean|numeric');
-        $this->form_validation->set_rules('parent_link', 'parent link', 'required|max_length[500]|trim|xss_clean');
+     
+        $this->form_validation->set_rules('parent_link', 'parent link', 'max_length[10]|trim|xss_clean');
         $this->form_validation->set_rules('password', 'Password', 'required|md5|max_length[250]|trim');
-        $this->form_validation->set_rules('sec_password', 'Second Password', 'required|md5|max_length[250]|trim');
+     
 
         $this->form_validation->set_rules('c_password', 'Confirm Password', 'required|matches[password]|md5|max_length[250]|trim');
 
-        $this->form_validation->set_message('is_unique', "هذا البريد الالكتروني استخدم مره قبل ذلك ");
+
         $this->form_validation->set_message('valid_email', "البريد الالكتروني الذي تم ادخاله غير صحيح ");
         $this->form_validation->set_message('matches', "كلمتين السر اللذان تم ادخالهما غير متشابهاش ");
 

@@ -42,7 +42,11 @@
                     </ul>
 
                     <?php include('header2.php') ?>
+                     <?php if(isset($valid_parent)){?>
+                    <h5 class="alert alert-faluir" style="text-align:center;" ><?php echo $valid_parent ;?></h3>
+                    <?php }?>
                     <h3>* يجب عليك ادخال البيانات التي يوجد بجوارها هذه العلامه </h3>
+                   
                     <?php echo form_open('site/sign_user_validation', array('id' => 'form-validation')); ?>
                     <div style="color:#F00;margin-right:140px;">
                         <?php
@@ -57,7 +61,7 @@
                             <label class="control-label" for="val_username">* اسم العضو </label>
                             <div class="controls">
                                 <div class="input-prepend">
-                                    <input type="text" id="val_username" name="username" value="" >
+                                    <input type="text" id="val_username" name="username" value="<?php echo $this->input->post('username');?>" required>
                                     <span class="add-on"><i class="icon-user"></i></span>
                                 </div>
                             </div>
@@ -66,27 +70,18 @@
                             <label class="control-label" for="val_email"> * البريد الالكتروني </label>
                             <div class="controls">
                                 <div class="input-prepend">
-                                    <input type="text" id="val_email" name="email" value="" >
+                                    <input type="email" id="val_email" name="email" value="<?php echo $this->input->post('email');?>" required>
                                     <span class="add-on"><i class="icon-envelope"></i></span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="control-group">
-                            <label class="control-label" for="val_email"> * البريد الالكتروني للبنك </label>
-                            <div class="controls">
-                                <div class="input-prepend">
-                                    <input type="text" id="val_email" name="bank_email" value="" >
-                                    <span class="add-on"><i class="icon-envelope"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        
+                       
                         <div class="control-group">
                             <label class="control-label" for="val_password">* كلمه السر</label>
                             <div class="controls">
                                 <div class="input-prepend">
-                                    <input type="password" id="val_password" name="password">
+                                    <input type="password" id="val_password" name="password" required>
                                     <span class="add-on"><i class="icon-asterisk"></i></span>
                                 </div>
                             </div>
@@ -96,37 +91,41 @@
                             <label class="control-label" for="val_confirm_password"> * تأكيد كلمه السر</label>
                             <div class="controls">
                                 <div class="input-prepend">
-                                    <input type="password" id="val_confirm_password" name="c_password" >
+                                    <input type="password" id="val_confirm_password" name="c_password" required>
                                     <span class="add-on"><i class="icon-asterisk"></i></span>
                                 </div>
                             </div>
                         </div>
 
+                     <?php if(isset($parent) && $parent==1){?>
                         <div class="control-group">
-                            <label class="control-label" for="val_password">* كلمه السر الثانيه</label>
+                            <label class="control-label" for="val_website">(الاب لاين (اختياري </label>
                             <div class="controls">
                                 <div class="input-prepend">
-                                    <input type="password" id="val_password" name="sec_password">
-                                    <span class="add-on"><i class="icon-asterisk"></i></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="control-group">
-                            <label class="control-label" for="val_website">* الاب لين </label>
-                            <div class="controls">
-                                <div class="input-prepend">
-                                    <input type="text" id="val_website" name="parent_link" placeholder="http://" value="<?php echo $this->input->post('parent_link'); ?>" class="input-large">
+                                    <input type="text" id="val_website" name="parent_link" readonly  value="<?php if(isset($parent_id)){echo $parent_id ;} ?>" class="input-large" >
                                     <span class="add-on"><i class="icon-globe"></i></span>
                                 </div>
                             </div>
                         </div>
+                        <?php }elseif(isset($parent) && $parent==0){?>
+                        <div class="control-group">
+                            <label class="control-label" for="val_website">(الاب لاين (اختياري </label>
+                            <div class="controls">
+                                <div class="input-prepend">
+                                    <input type="text" id="val_website" name="parent_link" placeholder="http://" value="<?php echo $this->input->post('parent_link'); ?>" class="input-large" >
+                                    <span class="add-on"><i class="icon-globe"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <?php }?>
 
                         <div class="control-group">
                             <label class="control-label" for="val_website">* الدوله </label>
                             <div class="controls">
-                                <select id="val_skill" name="country">
-                                    <option value="">اختار دولتك</option>
+                                <select id="val_skill" name="country" required>
+                                   
+                                    <option value="<?php echo $this->input->post('country'); ?>" selected>اختار دولتك</option>
+                                    
                                     <option value="الأردن">الأردن</option>
                                     <option value="الإمارات">الإمارات</option>
                                     <option value="البحرين">البحرين</option>
@@ -153,56 +152,15 @@
                             </div>
                         </div>
 
-                        <div class="control-group">
-                            <label class="control-label" for="val_username"> المدينه </label>
-                            <div class="controls">
-                                <div class="input-prepend">
-
-                                    <input type="text" id="val_username" name="city"   value="<?php echo $this->input->post('city'); ?>" >
-                                    <span class="add-on"><i class="icon-user"></i></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="control-group">
-                            <label class="control-label" for="val_username">العنوان </label>
-                            <div class="controls">
-                                <div class="input-prepend">
-
-                                    <input type="text" id="val_username" name="address" value="<?php echo $this->input->post('address'); ?>" >
-                                    <span class="add-on"><i class="icon-user"></i></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="control-group">
-                            <label class="control-label" for="val_username">التليفون  </label>
-                            <div class="controls">
-                                <div class="input-prepend">
-
-                                    <input type="text" id="val_username" name="phone" value="<?php echo $this->input->post('phone'); ?>" >
-                                    <span class="add-on"><i class="icon-asterisk"></i></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="control-group">
-                            <label class="control-label" for="val_username">* الرقم البريدي  </label>
-                            <div class="controls">
-                                <div class="input-prepend">
-
-                                    <input type="text" id="val_username" name="zip_code" value="<?php echo $this->input->post('zip_code'); ?>" >
-                                    <span class="add-on"><i class="icon-asterisk"></i></span>
-                                </div>
-                            </div>
-                        </div>
+                      
 
 
 
-                        <div class="form-actions">
+
+
                             <button type="reset" class="btn btn-danger"><i class="icon-repeat"></i> مسح</button>
                             <button type="submit" class="btn btn-success"><i class="icon-ok"></i> تسجيل</button>
-                        </div>
+
                     </div>
                     </form>
                 </div>

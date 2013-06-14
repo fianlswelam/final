@@ -33,7 +33,7 @@
 body{text-align:right;font-family:myfont;}
 #control-group label{float:right}
 #control-group input{float:left}
-input{width:560px;}
+input{width:560px;text-align:right;}
 </style>
 
 </head>

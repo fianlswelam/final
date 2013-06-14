@@ -1,3 +1,4 @@
+
 <?php
 
 class Site_model extends CI_Model {
@@ -8,15 +9,15 @@ class Site_model extends CI_Model {
         $data = array(
             'username' => $this->input->post('username'),
             'email' => $this->input->post('email'),
-            'payment_email' => $this->input->post('bank_email'),
+           
             'country' => $this->input->post('country'),
-            'city' => $this->input->post('city'),
-            'address' => $this->input->post('address'),
-            'phone' => $this->input->post('phone'),
+           
+           
+           
             'pass' => $this->input->post('password'),
             'parent_link' => $this->input->post('parent_link'),
-            'zip_code' => $this->input->post('zip_code'),
-            'sec_pass' => $this->input->post('sec_password'),
+           
+           
             'key' => $key
         );
 
@@ -50,15 +51,15 @@ class Site_model extends CI_Model {
             $data = array(
                 'username' => $row->username,
                 'email' => $row->email,
-                'payment_email' => $row->payment_email,
+               
                 'country' => $row->country,
-                'city' => $row->city,
-                'address' => $row->address,
-                'phone' => $row->phone,
+               
+               
+               
                 'pass' => $row->pass,
-                'sec_pass' => $row->sec_pass,
+               
                 'parent_link' => $row->parent_link,
-                'zip_code' => $row->zip_code,
+                
                 'profile_pic' => 'default_pic.jpg',
             );
 
@@ -125,7 +126,16 @@ class Site_model extends CI_Model {
             return false;
         }
     }
-
+/////////////////////////////////////////////////////////////
+function valid_user($id){
+	$sql='select id from user where id=?';
+	 $result = $this->db->query($sql, $id);
+	 if ($result->num_rows() == 1) {
+		 return true;
+		 }else{
+		 return false;
+		 }
+	}
 ////////////////////////////////////////////////////////////////////////
 
     function contact_form($name, $mail, $type, $message) {

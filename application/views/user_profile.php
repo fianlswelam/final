@@ -51,7 +51,7 @@
                 </ul>
                 <?php include('header2.php') ?>
                 <h3 class="page-header page-header-top">
-                    <?php echo $id; ?> :
+                   <?php echo base_url();?>/site/user_register/<?php echo $id; ?> :
 
                     هو 
                     <?php
@@ -74,7 +74,7 @@
                         </div>
 
                         <ul class="nav nav-tabs nav-stacked" >
-                            <li><a href="#"><?php echo $id ?> : الاين اب <i class="icon-camera"></i> </a></li>
+                            
                             <?php
                             if (isset($owner)) {
                                 if ($owner == 'yes') {

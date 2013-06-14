@@ -63,8 +63,17 @@ if ($this->session->userdata('user_id')) {
 ?>">شجره الاعضاء <i class="icon-sitemap"></i></a></li>
 </ul>
                 <?php include 'header2.php'; ?>
-                <!---------------------------- start of content---------------------------------------->
+<h3 class="page-header page-header-top">                <!---------------------------- start of content---------------------------------------->
       
+      <?php echo base_url();?>/site/user_register/<?php echo $recev_id; ?> :
+
+                    هو 
+                    <?php
+                    if (isset($username)) {
+                        echo $username;
+                    }
+                    ?> الاين اب الخاص ب
+</h3>
 <h3>للاستفسار عن اي معلومه او الابلاغ عن شكوي ما بالموقع ادخل البيانات التاليه من فضلك </h3>
  <table border="1">
             <td>

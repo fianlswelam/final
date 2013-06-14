@@ -87,6 +87,8 @@ class User_model extends CI_Model {
     function update_user($id) {
         $data = array(
             'email' => $this->input->post('email'),
+			'payment_email' => $this->input->post('bank_email'),
+			
             'country' => $this->input->post('country'),
             'city' => $this->input->post('city'),
             'address' => $this->input->post('address'),
@@ -94,7 +96,7 @@ class User_model extends CI_Model {
             'zip_code' => $this->input->post('zip_code'),
         );
 
-        $query_str = "update user set email=?,country=?,city=?,address=?,phone=?,zip_code=? where id = '{$id}' ";
+        $query_str = "update user set email=?,payment_email=?,country=?,city=?,address=?,phone=?,zip_code=? where id = '{$id}' ";
         $result = $this->db->query($query_str, $data);
         if ($result) {
             return true;
