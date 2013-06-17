@@ -568,4 +568,7 @@ class Site extends CI_Controller {
     }
 
 //////////////////////////////////////////////// 
+function rss(){
+	$this->load->view('rss_feeds');
+	}
 }

@@ -25,7 +25,7 @@
                     <li class="divider-vertical remove-margin"></li>
                     <!------------------------------>
                     <li id="messages-widget" class="dropdown dropdown-left-responsive">
-                        <a href="#">
+                        <a href="<?php echo base_url();?>site/rss">
                             <i class="icon-rss"></i>
 
                         </a>
@@ -101,7 +101,7 @@
                                             FROM `user_chat`
                                             WHERE mess_id=' . $row->id . '
                                             ORDER BY `user_chat`.`mess_date` DESC
-                                            LIMIT 0 , 1
+                                            LIMIT 8
                                             ';
                                         $mess_query = $this->db->query($mess_sql);
 

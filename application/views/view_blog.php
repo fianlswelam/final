@@ -49,7 +49,7 @@
         <div id="page-container">
             <?php include 'tempelet/head_page.php'; ?>
             <div id="inner-container">
-                <?php include 'tempelet/main_menu.php'; ?>
+                <?php include 'tempelet/main_menu_blog.php'; ?>
                 <div id="page-content">
                     <ul id="nav-info"  class="clearfix" style="text-align:right">
 
