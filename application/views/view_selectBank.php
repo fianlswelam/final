@@ -159,7 +159,7 @@
                                 <div class="controls">
                                     <div class="input-prepend">
                                         <?php if (isset($res)) { ?>
-                                        <input type="text" name="ap_amount"  id="val_email" value="<?php  echo $res;?>"readonly="readonly" />
+                                            <input type="text" name="ap_amount"  id="val_email" value="<?php echo $res; ?>"readonly="readonly" />
                                         <?php } ?>
                                         <span class="add-on"><i class="icon-money"></i></span>
                                     </div>
@@ -181,6 +181,32 @@
                             <input type="image" src="https://www.payza.com/images/payza-buy-now.png"/>
                         </form>
                         <!-------------------------------------------->
+                        <!-------------------------------------------->
+
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="mohamedsaad2085@gmail.com">
+                            <input type="hidden" name="lc" value="US">
+                            <input type="hidden" name="item_name" value="transfer">
+                            <input type="hidden" name="item_number" value="number">
+
+                            <input type="text" name="amount" >
+
+                            <input type="hidden" name="notify_url" value="my_ipn.php">
+                            <input type="hidden" name="return" value="complete.php">
+                            <input type="hidden" name="cancel_return" value="cancel.php">
+
+
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="button_subtype" value="services">
+                            <input type="hidden" name="no_note" value="0">
+                            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                        <!-------------------------------------------->
+                        <!-------------------------------------------->
+
 
                     </div>
                 </div>
