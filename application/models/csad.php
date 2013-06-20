@@ -7,7 +7,7 @@ class csad extends CI_Model {
         $this->db->select('id,username,pass');
         $this->db->from('employee');
         $this->db->where('username', $user);
-        $this->db->where('pass', $pass);
+        $this->db->where('pass', md5($pass));
         $query = $this->db->get();
         if ($query->num_rows() == 1) {
             return $query->row(0)->id;

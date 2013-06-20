@@ -6,7 +6,7 @@
     <head>
 
         <meta charset="UTF-8">
-        <title>uAdmin - Professional, Responsive and Flat Admin Template</title>
+        <title>لوحه دخول الموظف  </title>
                 <link rel="stylesheet" href="<?php echo base_url(); ?>css/css-family=Roboto-400,400italic,700,700italic.css" >       
 
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.css" tppabs="http://pixelcave.com/demo/uadmin/css/bootstrap.css">
