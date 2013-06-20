@@ -49,8 +49,7 @@
                     //get from order s_id , get service where s_id
                     $sql = '
                             SELECT `service`.`id` AS service_id, `order`.`id` AS order_id, u_id, e_id,
-                            START ,
-                            END , service.name AS service_name, price_point, detail, photo_name, instruction, `employee`.`username` AS e_username, `user`.`username` AS u_username, `user`.profile_pic
+                            START ,END , service.name AS service_name, price_point, detail, photo_name, instruction, `employee`.`username` AS e_username, `user`.`username` AS u_username, `user`.profile_pic
                             FROM `order`
                             INNER JOIN `service`
                             INNER JOIN `employee`
@@ -89,6 +88,21 @@
                                     <span>الى</span>
                                     <a href="#"><?php echo $row->e_username; ?></a> مقدم الخدمة
                                 </div>
+                                <?php
+                                //
+                                $today = date('Y-m-d');
+                                $Date = $row->START;
+                                $exiption = date('Y-m-d', strtotime($Date . ' + 3 days'));
+//                                $sta = Date('Y:m:d', strtotime("+3 days"));
+                                //
+                                if ($exiption >= $today) {
+                                    ?>
+                                    <div class="dash-tile-header">
+                                        <a href="<?php echo base_url(); ?>///<?php echo $row->order_id ?>"> ألغاء الخدمه </a><i class="icon-remove"></i>
+                                    </div>
+                                    <?php
+                                }
+                                ?>
                                 <div class="dash-tile-content"  >
                                     <div class="dash-tile-content-inner-fluid dash-tile-content-light content-text">
                                         <p><img src="<?php echo base_url(); ?>imagesService/thumb/<?php echo $row->photo_name; ?>"   alt="Image" class="pull-left" > 
@@ -176,9 +190,6 @@
                     </div>
 
                 </div>
-                <footer>
-                    <span id="year-copy"></span> &copy; <strong>uAdmin 1.2</strong> - Crafted with <i class="icon-heart"></i> by <strong><a href="javascript:if(confirm(%27http://themeforest.net/user/pixelcave/portfolio?ref=pixelcave  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://themeforest.net/user/pixelcave/portfolio?ref=pixelcave%27" tppabs="http://themeforest.net/user/pixelcave/portfolio?ref=pixelcave" target="_blank">pixelcave</a></strong>
-                </footer>
             </div>
         </div>
 

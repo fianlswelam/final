@@ -650,7 +650,6 @@ class User extends CI_Controller {
                 $rows = $query->result();
                 foreach ($rows as $row) {
                     $name = $row->username;
-
                     //
                     $data = array(
                         'sender_id' => $this->session->userdata('user_id'),

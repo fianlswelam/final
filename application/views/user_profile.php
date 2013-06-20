@@ -13,16 +13,6 @@
             }
             ?>
         </title>
-        <meta name="description" content="uAdmin is a Professional, Responsive and Flat Admin Template created by pixelcave and published on Themeforest">
-        <meta name="author" content="pixelcave">
-        <meta name="robots" content="index, follow">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57-precomposed.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png">
         <link rel="stylesheet" href="css-family=Roboto-400,400italic,700,700italic.css" >
 
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/css-family=Roboto-400,400italic,700,700italic.css" >       
@@ -170,10 +160,12 @@
                                         foreach ($res as $record) {
                                             ?>
                                             <h5 class="page-header-sub">
-                                                <a href="chat_service/<?php echo $record->order_id; ?>/<?php echo $record->e_id ?>"><?php echo $record->name; ?>
+                                                <!--<a href="chat_service/<?php echo $record->order_id; ?>/<?php echo $record->e_id ?>">-->
+                                                    <?php echo $record->name; ?>
 
                                                     <img id="pic" src="<?php echo base_url(); ?>imagesService/thumb/<?php echo $record->photo_name; ?>"  />
-                                                </a></h5>
+                                                <!--</a>-->
+                                            </h5>
                                             <div class="progress progress-warning">
                                                 <div class="bar" style="width: 100%"><i class="icon-time"></i> لم ينفذ</div>
                                             </div>

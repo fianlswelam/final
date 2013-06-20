@@ -236,8 +236,8 @@ class sitead extends CI_Model {
 //            $date = date_create(date("Y-m-d"));
 //            $date =date_add(date_create(date("Y-m-d")), date_interval_create_from_date_string('5 days'));
 //            $time = strtotime($date);
-            $date = Date('Y:m:d', strtotime("+" . $duration . " days"));
-            $this->db->insert('order', array('s_id' => $order_id, 'u_id' => $user_id, 'c_id' => $c_id, 'sc_id' => $sc_id, 'duration' => $duration, 'end' => $date));
+//            $date = Date('Y:m:d', strtotime("+" . $duration . " days"));
+            $this->db->insert('order', array('s_id' => $order_id, 'u_id' => $user_id, 'c_id' => $c_id, 'sc_id' => $sc_id, 'duration' => $duration));//, 'end' => $date)
             $this->db->where('id', $user_id);
             $this->db->update('user', array('amount_point' => $amount));
             $this->db->trans_complete();

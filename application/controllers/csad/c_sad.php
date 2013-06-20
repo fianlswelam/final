@@ -15,12 +15,12 @@ class c_sad extends CI_Controller {
     }
 
     public function is_loged_in() {
-       if ($this->session->userdata('employe_logged_in')) {
+        if ($this->session->userdata('employe_logged_in')) {
             $this->load->view('employee/view_employe');
 //            redirect('csad/c_sad/');
         } else {
-           $this->load->view('employee/view_login');
-       }
+            $this->load->view('employee/view_login');
+        }
     }
 
     function valid_loign() {
@@ -34,7 +34,7 @@ class c_sad extends CI_Controller {
         } else {
             $username = $this->input->post('username');
             $password = $this->input->post('password');
-            
+
             $user_id = $this->csad->valid_employee_pass($username, $password);
             if (!$user_id) {
                 $login_data = array("login_error" => true);
@@ -49,6 +49,7 @@ class c_sad extends CI_Controller {
 
     /////////////////////////////////////////////////////////////////////////////
     public function perform() {
+        //            $date = Date('Y:m:d', strtotime("+" . $duration . " days"));
         if ($this->session->userdata('employe_logged_in')) {
             if ($this->uri->segment(4) != '') {
                 $id = $this->uri->segment(4);
@@ -57,11 +58,23 @@ class c_sad extends CI_Controller {
                 //date
                 //duration
                 $this->load->helper('date');
+                //select duration
+                $this->db->from('order');
+                $this->db->where('id', $id);
+                $q = $this->db->get();
+                if ($q->num_rows() > 0) {
+                    $res = $q->result();
+
+                    foreach ($res as $record) {
+                        
+                    }
+                }
+                $date_end = Date('Y:m:d', strtotime("+" . $record->duration . " days"));
                 $data = array(
                     'e_id' => $e_id,
                     'statu' => 1,
-                    'end' => date('Y-m-d H:i:s', now()),
-                    'start' => date('Y-m-d H:i:s', now())
+                    'end' => $date_end,
+                    'start' => Date('Y:m:d')
                 );
                 $this->load->model('csad');
                 if ($this->csad->update($data, "order", $id)) {
@@ -77,12 +90,26 @@ class c_sad extends CI_Controller {
     }
 
     function per($id) {
+        $this->load->helper('date');
+        //select duration
+        $this->db->from('order');
+        $this->db->where('id', $id);
+        $q = $this->db->get();
+        if ($q->num_rows() > 0) {
+            $res = $q->result();
+
+            foreach ($res as $record) {
+                
+            }
+        }
+        $date_end = Date('Y:m:d', strtotime("+" . $record->duration . " days"));
+
         $e_id = $this->session->userdata('employee_id');
         $this->load->helper('date');
         $data = array(
             'e_id' => $e_id,
 //            'statu' => 1,
-            'end' => 5,
+            'end' => $date_end,
             'start' => date('Y-m-d H:i:s', now())
         );
         $this->load->model('csad');
@@ -102,11 +129,11 @@ class c_sad extends CI_Controller {
             if ($this->uri->segment(4) != '') {
                 $data['order_id'] = $this->uri->segment(4);
                 $data['user_id'] = $this->uri->segment(5);
-                if ($this->per($this->uri->segment(4))) {
-                    $this->load->view('employee/message_level2', $data);
-                } else {
-                    
-                }
+//                if ($this->per($this->uri->segment(4))) {
+                $this->load->view('employee/message_level2', $data);
+//                } else {
+//                    
+//                }
             } else {
                 //redirect
                 $this->load->view('employee/view_employe');
