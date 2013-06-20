@@ -98,7 +98,7 @@
                                 if ($exiption >= $today) {
                                     ?>
                                     <div class="dash-tile-header">
-                                        <a href="<?php echo base_url(); ?>///<?php echo $row->order_id ?>"> ألغاء الخدمه </a><i class="icon-remove"></i>
+                                        <a href="<?php echo base_url(); ?>user/reject/<?php echo $row->order_id ?>"> ألغاء الخدمه </a><i class="icon-remove"></i>
                                     </div>
                                     <?php
                                 }

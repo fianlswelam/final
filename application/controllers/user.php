@@ -18,8 +18,8 @@ class User extends CI_Controller {
             $this->form_validation->set_rules('tags', 'tags', 'required|max_length[200]|trim|xss_clean');
             $this->form_validation->set_rules('topic', 'topic', 'required|trim|xss_clean|');
             $this->form_validation->set_rules('search_category', 'topic', 'required|trim|xss_clean|');
-          
-            
+
+
             $this->form_validation->set_message('max_length', "العنوان لا يجب ان يزيد عن 125 حرف");
 
             if ($this->form_validation->run()) {
@@ -78,7 +78,6 @@ class User extends CI_Controller {
             redirect('site/index');
         }
     }
-
 
 //////////////////////////////////////// upload profile pic
 
@@ -351,7 +350,7 @@ class User extends CI_Controller {
         }
     }
 
-   ///////////////////
+    ///////////////////
     function profile() {
         if ($this->session->userdata('logged_in')) {
 
@@ -361,7 +360,7 @@ class User extends CI_Controller {
             if ($this->site_model->select_user($id)) {
                 $user_data = $this->site_model->select_user($id);
                 $data['username'] = $user_data['username'];
-				$data['id'] = $user_data['id'];
+                $data['id'] = $user_data['id'];
                 $data['email'] = $user_data['email'];
                 $data['city'] = $user_data['city'];
                 $data['country'] = $user_data['country'];
@@ -721,6 +720,22 @@ class User extends CI_Controller {
         }
     }
 
+//////////////////////
+    function reject() {
+        if ($this->session->userdata('logged_in')) {
+            if ($this->uri->segment(3) != '') {
+                $order_id = $this->uri->segment(3);
+//                echo $order_id;
+                $this->load->model('user_model');
+                if ($this->user_model->delete('order', $order_id)) {
+                    redirect('site/index');
+                }
+            } else {
+                redirect('site/index');
+            }
+        } else {
+                redirect('site/index');
+            }
+    }
 }
-
 ?>

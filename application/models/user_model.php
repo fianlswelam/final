@@ -283,6 +283,10 @@ class User_model extends CI_Model {
         $insert = $this->db->insert('service_message', $data);
         return $insert;
     }
+    function delete($table, $where) {
+        $this->db->where('id', $where);
+        return $this->db->delete($table); 
+    }
 
 ////////////////////////////////////////////////////					
 }
