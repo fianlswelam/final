@@ -207,17 +207,7 @@ class User_model extends CI_Model {
         }
     }
 
-    ///////////////////////////////////////////////////////////// add chat messages 
-    function add_chat_message($sender_id, $receiv_id, $message) {
-
-        $query_str = "insert into user_chat ( sender_id, receiv_id ,message,receiv_seen,sender_seen ) values ( ?,? ,?,?,?) ";
-        $result = $this->db->query($query_str, array($receiv_id, $sender_id, $message, 0, 1));
-        if ($result) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+  
 
     ///////////////////////////////////////////////////////////		 
     function select_messages_level1($id) {
@@ -242,24 +232,7 @@ class User_model extends CI_Model {
         }
     }
 
-    ////////////////////////////////////////////////////////////////////////////
-    function get_chat_messages($sender_id, $receiv_id) {
-        $sql = "SELECT id,(select username from user where id=receiv_id) as recevier_name ,
-									(select profile_pic from user where id=receiv_id) as recevier_photo,
-									(select username from user where id=sender_id) as sender_name , 
-									(select profile_pic from user where id=sender_id) as sender_photo , 
-									message, receiv_seen, sender_seen,mess_date,receiv_id,sender_id
-									FROM `user_chat`
-									where(receiv_id=? and sender_id=?) or (receiv_id=? and sender_id=?)
-                 ";
-
-        $result = $this->db->query($sql, array($receiv_id, $sender_id, $sender_id, $receiv_id));
-        if ($result->num_rows() > 0) {
-            return $result;
-        } else {
-            return false;
-        }
-    }
+   
 
 ///////////////////////////////////////////////////
     function select_user_by_name($name) {
@@ -283,15 +256,81 @@ class User_model extends CI_Model {
         $insert = $this->db->insert('service_message', $data);
         return $insert;
     }
-    function delete($table, $where) {
-        $this->db->where('id', $where);
-        return $this->db->delete($table); 
-    }
 
-////////////////////////////////////////////////////					
-}
-?>
+////////////////////////////////////////////////////
+function select_contacts($id,$parent_id){
+	$sql='select id,email,username,phone,country,city,address,profile_pic,zip_code,amount_point,amount_money  from user where parent_id=? or id=?';
+	
+	$result = $this->db->query($sql, array($id,$parent_id));
+        if ($result->num_rows() > 0) {
+            return $result;
+        } else {
+            return false;
+        }
+	}					
+/////////////////////////////////////////////////////
 
+	function add_chat_message($from_id , $to_id, $chat_message_content){
+		$data = array(
+            'from' => $from_id,
+            'to' => $to_id,
+            'message' => $chat_message_content,
+			
+            );
+        $query = $this->db->insert('chat', $data);
+        if($this->db->affected_rows()==1){
+			 
+			return true;
+			}else{
+				return false;
+				}		
+		        }
+	////////////////////////////////////////////////			
+	function get_chat_messages($from_id ,$to_id){
+	$sql='select * from chat where `from`=? and `to`=? or `from`=? and `to`=? order by message_date ASC';
+	$result=$this->db->query($sql,array($from_id,$to_id,$to_id,$from_id));
+	if($result->num_rows() >= 1){
+	
+            return $result;
+        } else {
+            return false;
+        }	
+		}
+		//////////////////////////////////////////////
+			////////////////////////////////////////////////
+	function update_message_seen($from_id ,$to_id){
+		$sql='update chat set to_seen=1 where `from`=? and `to`=? or `from`=? and `to`=?';
+		$result=$this->db->query($sql,array($from_id,$to_id,$to_id,$from_id));
+           if($this->db->affected_rows()==1){
+			 
+			return true;
+			}else{
+				return false;
+				}
+		}
+	///////////////////////////////////////////////////////
 
+function get_chat_messages_last_one($from_id ,$to_id){
+	$sql='select * from chat where `from`=? and `to`=? or `from`=? and `to`=?  order by id desc limit 1 ';
+	$result=$this->db->query($sql,array($from_id,$to_id,$to_id,$from_id));
+	if($result->num_rows() == 1){
+	
+            return $result;
+        } else {
+            return false;
+        }
+	
+	}		
+	////////////////////////////////////////////////////////
+	function select_user_chat($id){
+		$sql='select id,email,username,phone,country,city,address,profile_pic,zip_code,amount_point,amount_money  from user where  id=?';
+	
+	$result = $this->db->query($sql, array($id));
+        if ($result->num_rows() == 1) {
+            return $result;
+        } else {
+            return false;
+        }
+		}	
 
-
+}?>

@@ -1,74 +1,80 @@
-// JavaScript Document
-$(document).ready(function(){
+jQuery(document).ready(function(){
 
-
-setInterval(function(){get_chat_messages();},1000);
-
-$("input#chat_message").keypress(function(e){
-if(e.which == 13 ){
-		$("#post_button").click();
-		return false;
-		}
+	setInterval(function(){get_chat_messages();},3000);
+//window.setTimeout(function() { });
+	 get_chat_messages();
+	jQuery('#message_button').click(function(){
+		enterMessage();
 	});
 	
+	jQuery('#msgbox').keypress(function(e){
+		if(e.which == 13)
+			enterMessage();
+	});
 	
-	
-	
-	$("#post_button").click(function(){
-		
-	var chat_message_content=$("#chat_message").val();
-	
-	  
-	if(chat_message_content==""){
-		return false;
-		}
-		
-	$.post(base_url+"user/ajax_add_chat" ,{ sender_id : sender_id , receiv_id : receiv_id , chat_message_content : chat_message_content }, function(data){
-
-
-
-			},"json");
-			$("#chat_message").val("");
+	function enterMessage() {
+		var msg = jQuery('#msgbox').val();	
+		if(to_id == ''){
+			jQuery('#chatmessageinner').append('<p style="color:#F00"><strong>Error Message:</strong> You must select one contact from your contact list !!</p>', function(){
+						jQuery('#chatmessageinner').animate({scrollTop: jQuery('#chatmessageinner').height()});
+			});
+			return false;
+			}
+		if(msg != '') {
 			
-		return false;
+			jQuery.post(base_url+"user/ajax_add_chat" ,{ from_id : from_id , to_id : to_id , msg : msg }, function(data){
+            
+            jQuery('#msgbox').val('');
+			jQuery('#msgbox').focus();
+			jQuery('#chatmessageinner').animate({scrollTop: jQuery('#chatmessageinner').height()});
 			
-		
-		});
-		
 			
-		////////////////////////////////////////
+			
+			});
+			
+			////////////////////////////////////////
 		
+	
+			
+						
+			//window.setTimeout(  
+			//	function() {  
+					//this is just a sample reply when somebody send a message
+			//		jQuery('#chatmessageinner').append('<p><strong>Joey Lacaba:</strong> This is an automated reply!!</p>', function(){
+			//			jQuery(this).animate({scrollTop: jQuery(this).height()});
+			//		});
+			//	}, 1000);			
+		}	
+        }
+	
+	
 		function get_chat_messages(){
 		
         
-		$.post(base_url +"user/ajax_get_chat_messages",{sender_id : sender_id , receiv_id : receiv_id }, function(data){
+		jQuery.post(base_url +"user/ajax_get_chat_messages",{ from_id : from_id , to_id : to_id }, function(data){
 			if(data.status == 'ok'){
-				$(".chat_box").html(data.content);
+				jQuery('#messages_content').html(data.content);
+				//jQuery('#chatAudio')[0].play();
 				}else{
 					//there was an error 
-					$(".chat_box").html(data.content);
+					jQuery('#messages_content').html(data.content);
 					}
 			},"json");
+	        }
 			
 			
+			
+		jQuery('#msgbox').focus(function(){
+			
+			update();
+			
+			});	
+			
+			function update(){
+				jQuery.post(base_url+"user/ajax_select_last_message" ,{ from_id : from_id , to_id : to_id }, function(data2){
+				
+				
+				});
+				}
 	
-	
-		}
-		
-		/////////////////////////////////////////////
-		
-		///////////////////////////////////////////////
-		
-		
-		
-		///////////////////////////////////////////
-		get_chat_messages();
-		
-	
-		
-		
-		
-	
-		});
-	
-		
+});

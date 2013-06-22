@@ -2,8 +2,9 @@
  <script src="<?php echo base_url(); ?>js/custom.js" type="text/javascript" ></script> 
 <aside id="page-sidebar" class="nav-collapse collapse">
 <div class="main_menu" >
+<nav id="primary-nav">
 
-    <ul class="nav2" style="margin-top:-10px">
+    <ul class="nav" style="margin-top:-10px">
         <h3 id="dept">اقسام المدونه</h3>
           <?php
         $query1 = $this->db->get('blog_category');
@@ -37,6 +38,7 @@
         ?>
 
                         </ul>  
+                        </nav>
 </div>
 
 <div id="service">

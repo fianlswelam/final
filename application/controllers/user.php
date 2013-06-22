@@ -18,8 +18,8 @@ class User extends CI_Controller {
             $this->form_validation->set_rules('tags', 'tags', 'required|max_length[200]|trim|xss_clean');
             $this->form_validation->set_rules('topic', 'topic', 'required|trim|xss_clean|');
             $this->form_validation->set_rules('search_category', 'topic', 'required|trim|xss_clean|');
-
-
+          
+            
             $this->form_validation->set_message('max_length', "العنوان لا يجب ان يزيد عن 125 حرف");
 
             if ($this->form_validation->run()) {
@@ -78,6 +78,7 @@ class User extends CI_Controller {
             redirect('site/index');
         }
     }
+
 
 //////////////////////////////////////// upload profile pic
 
@@ -350,7 +351,7 @@ class User extends CI_Controller {
         }
     }
 
-    ///////////////////
+   ///////////////////
     function profile() {
         if ($this->session->userdata('logged_in')) {
 
@@ -360,7 +361,7 @@ class User extends CI_Controller {
             if ($this->site_model->select_user($id)) {
                 $user_data = $this->site_model->select_user($id);
                 $data['username'] = $user_data['username'];
-                $data['id'] = $user_data['id'];
+				$data['id'] = $user_data['id'];
                 $data['email'] = $user_data['email'];
                 $data['city'] = $user_data['city'];
                 $data['country'] = $user_data['country'];
@@ -464,20 +465,38 @@ class User extends CI_Controller {
     ////////////////////////////////////////////////////// recived messages
     function show_messages() {
         if ($this->session->userdata('logged_in')) {
-            $user_id = $this->session->userdata('user_id');
-            $this->load->model('user_model');
-            if ($this->user_model->select_messages_level1($user_id)) {
-                $user_messages = $this->user_model->select_messages_level1($user_id);
-                if ($user_messages->num_rows() > 0) {
-                    $data['user_messages'] = $user_messages->result();
-                } else {
-                    $data['error'] = "لا يوجد رسائل في صندوقك الرسائل الخاص بك حاليا  ";
-                }
-                $this->load->view('message_level1', $data);
-            } else {
-                $data['messages'] = 'لا يمكن استرجاع الرسائل الخاصه بك حاليا من فضلك حاول مره اخره';
-                $this->load->view('message_level1', $data);
-            }
+			 $user_id = $this->session->userdata('user_id');
+			      $this->load->model('site_model');
+                    
+                        $user_data = $this->site_model->select_user($user_id);
+                        $parent_id = $user_data['parent_id'];
+		 if ($this->uri->segment(3) != '') {	
+           
+	       
+                    
+						
+			
+			if($this->user_model->select_contacts($user_id,$parent_id)){
+				$data['contacts']=$this->user_model->select_contacts($user_id,$parent_id)->result();
+				 $this->load->view('message_level1',$data);
+				}else{
+					$data['no_contacts']=1;
+					 $this->load->view('message_level1',$data);
+					}
+		 }else{
+			 if($this->user_model->select_contacts($user_id,$parent_id)){
+				$data['contacts']=$this->user_model->select_contacts($user_id,$parent_id)->result();
+				 $data['segment']=1;
+				 $this->load->view('message_level1',$data);
+				}else{
+					$data['no_contacts']=1;
+					 $data['segment']=1;
+					 $this->load->view('message_level1',$data);
+					}
+			
+			 		 
+			 }
+          
         } else {
             redirect('site/index');
         }
@@ -507,125 +526,128 @@ class User extends CI_Controller {
     /////////////////////////////////////////////////////// add chat_messages
     function ajax_add_chat() {
         if ($this->session->userdata('logged_in')) {
-            $sender_id = $this->session->userdata('user_id');
-            $receiver_id = $this->input->post('receiv_id');
-            $chat_message_content = $this->input->post("chat_message_content", true);
+			
+			   $this->load->library('form_validation');
+        $this->form_validation->set_rules('from_id', 'The employee', 'required|trim|numeric|xss_clean');
+		$this->form_validation->set_rules('to_id', 'the manager', 'required|trim|xss_clean|numeric');
+		$this->form_validation->set_rules('msg', 'the manager', 'required|trim|xss_clean');
+	
+       
+		
+        if ($this->form_validation->run() == false) {
+			    echo 'no1';
+		}else{
+			  $from_id = $this->input->post('from_id');;
+            $to_id = $this->input->post('to_id');
+            $message_content = $this->input->post("msg", true);
 
-            $this->load->model('user_model');
-            if ($this->user_model->add_chat_message($sender_id, $receiver_id, $chat_message_content)) {
-                $result = "saved";
-                return $result;
+
+            if ($this->user_model->add_chat_message($from_id, $to_id, $message_content)) {
+                $result = "ok";
+                echo $result;
             } else {
+				echo 'no2';
                 //no chat return
             }
+			
+			}
+			
+			
+          
         } else {
 
             redirect('site/index');
         }
     }
+////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+		function ajax_select_last_message(){
+			 $from_id=$this->input->post('from_id');
+		     $to_id=$this->input->post('to_id');
+			 echo $this->_ajax_select_last_message($from_id ,$to_id);
+			 }
+			 
+		 function _ajax_select_last_message($from_id ,$to_id){
+			 		
+					$chat_messages=$this->user_model->get_chat_messages_last_one($from_id ,$to_id);
+					if(isset($chat_messages)){
+	
+						$result=$chat_messages->row(0)->to;
+						$my_id=$this->session->userdata('user_id');
+						if($my_id==$result){
+							$this->user_model->update_message_seen($from_id,$to_id);
+							}
+						
+						}else{
+							//no chat return
+						$result=array('status'=>'no' ,'content'=>'there is know');
+						return json_encode($result);
+							exit();
+							}
+					
+			 }
+    ///////////////////////////////////////////////////////// update messages by ajax
 
-    ///////////////////////////////////////////////////////// get messages by ajax
+	
 //////////////////////////////////////////////////////// get messages by ajax
 
-    function ajax_get_chat_messages() {
-        $sender_id = $this->session->userdata('user_id');
-        $receiv_id = $this->input->post('receiv_id');
-        echo $this->_get_chat_messages($sender_id, $receiv_id);
-    }
+//////////////////////////////////////////////////////////////
+		 function ajax_get_chat_messages(){
+			 $from_id=$this->input->post('from_id');
+		     $to_id=$this->input->post('to_id');
+			 echo $this->_get_chat_messages($from_id ,$to_id);
+			 }
+		 
+		 
+		 function _get_chat_messages($from_id ,$to_id){
+			 		
+					$chat_messages=$this->user_model->get_chat_messages($from_id ,$to_id)->result();
+					if(isset($chat_messages)){
+						//we have some messages
+                             $chat_message_html='<span>';
+						
+						foreach($chat_messages as $chat_message){
+							
+								
+						    $username=$this->user_model->select_user_chat($chat_message->from)->row(0)->username;
 
-    function chat_service() {
+							$seder_pic=$this->user_model->select_user_chat($chat_message->from)->row(0)->profile_pic;
+							
+							
+							$chat_message_html.='
+							   <a href="" class="pull-left">
+                                                            <img src="http://localhost/final_s/images/profile/thumb_profile/'.$seder_pic.' " width="60" height="60" class="media-object img-polaroid" id="profile" alt="Image">
+                                                        </a>
 
-        if ($this->session->userdata('logged_in')) {
-            if ($this->uri->segment(3) != '') {
-                $this->load->view('service_chat');
-            } else {
-                redirect('site/index');
-            }
-        } else {
-            redirect('site/index');
-        }
-    }
-
-    function _get_chat_messages($sender_id, $receiv_id) {
-
-        $this->load->model('user_model');
-        $chat_messages = $this->user_model->get_chat_messages($sender_id, $receiv_id);
-
-
-
-        if ($chat_messages->num_rows() > 0) {
-//we have some messages
-
-            $chat_message_html = '<ul>';
-            foreach ($chat_messages->result() as $chat_message) {
-//$li_class=($this->session->userdata('agent_id') == $chat_message->agent_id)? 'class="by_current_user "' : '';
-                if ($this->session->userdata('user_id') == $chat_message->sender_id) {
-                    $chat_message_html.='
-
-
-<div class="blog-one left" >
-
-<a href="' . base_url() . 'user/visit_profile/' . $chat_message->id . '">
-
-<img id="mail_icon" src="' . base_url() . 'images/profile/thumb_profile/' . $chat_message->sender_photo . '" width="50" height="45" /> </a>
-
-<p id="sender" style="padding:0 5px 0 5px;color:#3C6">
-
-<a style="color:#fff" id="user" href="' . base_url() . 'user/visit_profile/' . $chat_message->id . '">' . $chat_message->sender_name . '</a></p>
-
-<div id="clear"></div>
-
-<p id="sender" style="margin:-30px 60px 0 0;width:600px;color:#eeeeee">
-
-' . $chat_message->message . '
-</p>
-
-</div><!--/blog-one-->
-
-';
-                } else {
-
-                    $chat_message_html.='
-
-
-<div class="blog-one left" >
-
-<a href="' . base_url() . 'user/visit_profile/' . $chat_message->id . '">
-
-<img id="mail_icon" src="' . base_url() . 'images/profile/thumb_profile/' . $chat_message->recevier_photo . '" width="50" height="45" /> </a>
-
-<p id="sender" style="padding:0 5px 0 5px;color:#3C6">
-
-<a style="color:#fff" id="user" href="' . base_url() . 'user/visit_profile/' . $chat_message->id . '">' . $chat_message->recevier_name . '</a></p>
-
-<div id="clear"></div>
-
-<p id="sender" style="margin:-30px 60px 0 0;width:600px;color:#eeeeee">
-
-' . $chat_message->message . '
-</p>
-
-</div><!--/blog-one-->
-
-';
-                }
-            }
-
-
-            $chat_message_html.='</ul>';
-
-
-            $result = array('status' => 'ok', 'content' => $chat_message_html);
-            return json_encode($result);
-            exit();
-        } else {
-//no chat return
-            $result = array('status' => 'no', 'content' => 'No posts have been published');
-            return json_encode($result);
-            exit();
-        }
-    }
-
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading"> <small><span class="label label-info">'.$chat_message->message_date.'</span> في</small> <a href="#">
+                                                                    '.$username.'                                                                </a></h5>
+																	
+                                                            <p>'.$chat_message->message.'</p>
+                                                            
+                                                        </div>
+														<br/>
+							   
+							';
+							
+							}
+							
+							
+						$chat_message_html.='</span>';
+						
+						
+						$result=array('status'=>'ok' ,'content'=>$chat_message_html);
+						return json_encode($result);
+						exit();
+						}else{
+							//no chat return
+						$result=array('status'=>'no' ,'content'=>'there is know');
+						return json_encode($result);
+							exit();
+							}
+					
+			 }
+		///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////
     function addcomment() {
         $this->load->model('user_model');
@@ -649,6 +671,7 @@ class User extends CI_Controller {
                 $rows = $query->result();
                 foreach ($rows as $row) {
                     $name = $row->username;
+
                     //
                     $data = array(
                         'sender_id' => $this->session->userdata('user_id'),
@@ -720,22 +743,6 @@ class User extends CI_Controller {
         }
     }
 
-//////////////////////
-    function reject() {
-        if ($this->session->userdata('logged_in')) {
-            if ($this->uri->segment(3) != '') {
-                $order_id = $this->uri->segment(3);
-//                echo $order_id;
-                $this->load->model('user_model');
-                if ($this->user_model->delete('order', $order_id)) {
-                    redirect('site/index');
-                }
-            } else {
-                redirect('site/index');
-            }
-        } else {
-                redirect('site/index');
-            }
-    }
 }
+
 ?>
