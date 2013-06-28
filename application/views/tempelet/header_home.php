@@ -1,8 +1,8 @@
-<div class="bg-menu right">
-   
+<div class="bg-menu right" style="width:100%">
+    <div class="bg-menu-left left"></div>
 
     <nav>
-        <div class="menu-menu-container">
+        <div class="menu-menu-container" style="width:100%">
             <ul id="menu-menu" class="sf-menu">
 
                 <?php if ($this->session->userdata('logged_in')) { ?>

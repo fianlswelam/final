@@ -264,15 +264,8 @@ footer{ line-height:30px; text-align:center; font-size:14px; height:30px; paddin
     <div style="clear:both;margin-bottom:20px;"></div>
     
 </div>
- <div style="clear:both"></div>
-  <div style="clear:both"></div>
   
-<footer>
-
-<span id="year-copy"></span> &copy; <strong>uAdmin 1.2</strong> - Crafted with <i class="icon-heart"></i> by <strong><a href=""  target="_blank">pixelcave</a></strong>
-
-</footer>
-
+<?php include('footer.php'); ?>
 </div>
 </div>
 

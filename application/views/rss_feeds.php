@@ -42,6 +42,28 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' ;?>
                                 </item>
                                 
                                 <?php }}}?>
+                                
+           
+           <?php
+                   
+                       $sql2='select * from service';
+					   $result=$this->db->query($sql2);
+                        if ($result->num_rows() > 0) {
+                            $services = $result->result();
+							if(isset($services)){
+                            foreach ($services as $row) { ?>
+                            
+                              <item>
+                                <title><?php echo $row->name; ?></title>
+                                <description><?php echo substr($row->detail, 0, 190); ?></description>
+                                <link><?php echo base_url(); ?>/site/market_deatils/<?php echo $row->id . '/' . $row->c_id; ?></link>
+                                <pubDate><?php echo $row->add_date; ?></pubDate>
+                                </item> 
+                            
+                    <?php
+					 }}}
+					 ?>
+                                
 
 </channel>  
 </rss>  

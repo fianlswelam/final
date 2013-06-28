@@ -327,12 +327,19 @@ class Site extends CI_Controller {
             $this->email->to($this->input->post('email'));
             $this->email->subject("تفعيل حسابك");
             $message = "<p> شكرا للتسجيل معنا لتفعيل حسابك اضغط علي الرابط التالي من فضلك </p>";
-            $message.="<p><a href='" . base_url() . "site/register_user/$key' >اضغط هنا</a>لتفعيل حسابك</p>";
+            $message.="<p><a href='" . base_url() . "site/register_user/$key' >اضغط هنا</a></p>";
             $this->email->message($message);
             if ($this->email->send()) {
-                echo " تم ارسال الرساله بنجاح";
+               $data['regist']='تم التسجيل بنجاح, من فضلك اذهب الي بريدك الالكتروني لتفعيل حسابك ,شكرا لك';
+$this->load->view('user_register',$data);
+                $data['key'] = $key;
+                $this->load->view("activation", $data);
             } else {
-                echo "غير قادر علي ارسال الرساله حاليا حاول مره اخري من فضلك";
+                
+				$data['regist']='غير قادر علي ارسال الرساله حاليا حاول مره اخري من فضلك';
+$this->load->view('user_register',$data);
+                $data['key'] = $key;
+                $this->load->view("activation", $data);
             }
 //			
 //send email to the user			
@@ -340,8 +347,8 @@ class Site extends CI_Controller {
             $this->load->model('site_model');
 
             if ($this->site_model->add_temp_user($key)) {
-//$data['regist']='تم التسجيل بنجاح, من فضلك اذهب الي بريدك الالكتروني لتفعيل حسابك ,شكرا لك';
-//$this->load->view('user_register',$data);
+$data['regist']='تم التسجيل بنجاح, من فضلك اذهب الي بريدك الالكتروني لتفعيل حسابك ,شكرا لك';
+$this->load->view('user_register',$data);
                 $data['key'] = $key;
                 $this->load->view("activation", $data);
             }

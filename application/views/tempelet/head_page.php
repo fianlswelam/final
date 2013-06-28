@@ -63,93 +63,79 @@
 
                     </li>
                     <!----------------------------------->
-<?php if ($this->session->userdata('logged_in')) {?>
+<?php if ($this->session->userdata('logged_in')) {
+	$id = $this->session->userdata('user_id');
+	  $sql = "select * from chat where `to`=? and to_seen=?";
+                            $query = $this->db->query($sql,array($id,0));
+
+                            if ($query->num_rows() > 0) {
+                                $count_message = count($query->result());
+								$rows = $query->result();
+							
+							}
+	
+	?>
                     <li class="divider-vertical remove-margin"></li>
                     <li id="messages-widget" class="dropdown dropdown-left-responsive">
                         <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="icon-envelope"></i>
-                            <span class="badge badge-success">1</span>
+                            <span class="badge badge-success"><?php if(isset($count_message)){ echo $count_message;}else{ echo '0' ;}?></span>
                         </a>
                         <ul class="dropdown-menu widget pull-right">
                             <li class="widget-heading"><i class="icon-comment pull-right"></i>الرسائل الجديده</li>
                             <?php
-                            $sql = "select * from chat_id where user_id1=" . $this->session->userdata('user_id') . " or user_id2=" . $this->session->userdata('user_id');
-                            $query = $this->db->query($sql);
-
-                            if ($query->num_rows() > 0) {
-                                $rows = $query->result();
+                          if(isset($rows)){
                                 foreach ($rows as $row) {
+									$username=$this->user_model->select_user_chat($row->to)->row(0)->username;
+
+							$seder_pic=$this->user_model->select_user_chat($row->to)->row(0)->profile_pic;
                                     ?>
                                     <tr>
-                                        <?php
-                                        if ($row->user_id1 == $this->session->userdata('user_id')) {
-                                            $user_id = $row->user_id2;
-                                        } else {
-                                            $user_id = $row->user_id1;
-                                        }
-                                        $this->db->where('id', $user_id);
-                                        $this->db->from('user');
-                                        $query_sender = $this->db->get();
-                                        if ($query_sender->num_rows() > 0) {
-                                            $sender = $query_sender->result();
-                                            foreach ($sender as $sender_data) {
-                                                
-                                            }
-                                        }
-                                        $mess_sql = '
-                                            SELECT *
-                                            FROM `user_chat`
-                                            WHERE mess_id=' . $row->id . '
-                                            ORDER BY `user_chat`.`mess_date` DESC
-                                            LIMIT 8
-                                            ';
-                                        $mess_query = $this->db->query($mess_sql);
-
-                                        if ($mess_query->num_rows() > 0) {
-                                            $mess = $mess_query->result();
-                                            foreach ($mess as $mess_data) {
-                                                
-                                            }
-                                        }
-                                        ?>
+                                        
+                                        
                                     <li class="new-on">
                                         <div class="media">
-                                            <a class="pull-left" href="<?php echo base_url() ?>user/messages/<?php echo $user_id ?>">
-                                                <img id="msg_img" src="<?php echo base_url(); ?>images/image_light_64x64.png"  alt="fakeimg" width="32" height="32">
+                                            <a class="pull-left" href="<?php echo base_url() ?>user/messages/<?php echo $row->message ?>">
+                                                <img id="msg_img" src="<?php echo base_url(); ?>images/profile/thumb_profile/<?php echo $seder_pic?>"  alt="fakeimg" width="32" height="32">
                                             </a>
                                             <div class="media-body">
-                                                <h6 class="media-heading"><a href="<?php echo base_url(); ?>user/visite_profile/<?php echo $user_id; ?>"><?php echo $sender_data->username; ?></a></h6>
-                                                <div class="media"><a href="<?php echo base_url() ?>user/messages/<?php echo $user_id ?>"><?php echo $mess_data->message; ?></a></div>
+                                                <h6 class="media-heading"><a href="<?php echo base_url(); ?>user/show_messages/<?php echo $row->from; ?>"><?php echo $username; ?></a></h6>
+                                                <div class="media"><a href="<?php echo base_url() ?>user/show_messages/<?php echo $row->from ?>"><?php echo $row->message; ?></a></div>
                                             </div>
                                         </div>
                                     </li>
                                     <li class="divider"></li>
                                     <?php
                                 }
-                            }
+						  }
                             ?>
 
-                            <li class="text-center"><a href="javascript:void(0)">مشاهده كل الرسائل</a></li>
+                            <li class="text-center"><a href="<?php echo base_url() ?>user/show_messages/">مشاهده كل الرسائل</a></li>
                         </ul>
                     </li>
-                    <li class="divider-vertical remove-margin"></li>
-                    <li id="notifications-widget" class="dropdown dropdown-center-responsive">
-                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="icon-flag"></i>
-                            <span class="badge badge-important">1</span>
-
-                        </a>
-                        <ul class="dropdown-menu widget">
-
-                            <li class="widget-heading"><a href="javascript:void(0)" class="pull-right widget-link"><i class="icon-bookmark"></i></a><a href="javascript:void(0)" class="widget-link">مركز  التنبيهات </a></li>
-                            <?php
+                     <?php
                             $this->db->from('notifications');
                             $this->db->where('user_id', $this->session->userdata('user_id'));
                             $this->db->order_by("date", "desc");
                             $query = $this->db->get();
                             if ($query->num_rows() > 0) {
-                                $rows = $query->result();
-                                foreach ($rows as $row) {
+								$notif_count=count($query->result());
+                                $rows2 = $query->result();
+							}
+								?>
+                    <li class="divider-vertical remove-margin"></li>
+                    <li id="notifications-widget" class="dropdown dropdown-center-responsive">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-flag"></i>
+                            <span class="badge badge-important"><?php if(isset($notif_count)){echo $notif_count;}else{ echo '0' ;}?></span>
+
+                        </a>
+                        <ul class="dropdown-menu widget">
+
+                            <li class="widget-heading"><a href="#" class="pull-right widget-link"><i class="icon-bookmark"></i></a><a href="javascript:void(0)" class="widget-link">مركز  التنبيهات </a></li>
+                           <?php
+						   if(isset($rows2)){
+                                foreach ($rows2 as $row) {
                                     ?>
                                     <li>
                                         <ul>

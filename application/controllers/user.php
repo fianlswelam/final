@@ -616,7 +616,7 @@ class User extends CI_Controller {
 							
 							$chat_message_html.='
 							   <a href="" class="pull-left">
-                                                            <img src="http://localhost/final_s/images/profile/thumb_profile/'.$seder_pic.' " width="60" height="60" class="media-object img-polaroid" id="profile" alt="Image">
+                                                            <img src="'.base_url().'images/profile/thumb_profile/'.$seder_pic.' " width="60" height="60" class="media-object img-polaroid" id="profile" alt="Image">
                                                         </a>
 
                                                         <div class="media-body">

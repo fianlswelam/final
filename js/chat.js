@@ -1,6 +1,6 @@
 jQuery(document).ready(function(){
 
-	setInterval(function(){get_chat_messages();},3000);
+//	setInterval(function(){get_chat_messages();},3000);
 //window.setTimeout(function() { });
 	 get_chat_messages();
 	jQuery('#message_button').click(function(){

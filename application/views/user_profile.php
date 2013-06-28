@@ -6,7 +6,7 @@
         <!--
         -->
         <meta charset="UTF-8">
-        <title> صفحة 
+        <title>  
             <?php
             if (isset($username)) {
                 echo $username;
@@ -41,7 +41,7 @@
                 </ul>
                 <?php include('header2.php') ?>
                 <h3 class="page-header page-header-top">
-                   <?php echo base_url();?>/site/user_register/<?php echo $id; ?> :
+                   <?php echo base_url();?>site/user_register/<?php echo $id; ?> :
 
                     هو 
                     <?php
@@ -78,7 +78,7 @@
                             if (isset($owner)) {
                                 if ($owner == 'yes') {
                                     ?>
-                                    <li><a href="<?php echo base_url(); ?>user/show_messages"  id="message"><span style="color:#F90">3</span> صندوق الرسائل <i class="icon-envelope-alt"></i> </a></li>
+                                    <li><a href="<?php echo base_url(); ?>user/show_messages"  id="message"><span style="color:#F90"></span> صندوق الرسائل <i class="icon-envelope-alt"></i> </a></li>
                                 <?php } else { ?>
                                     <li><a href="<?php echo base_url(); ?>user/messages/<?php
                             if (isset($recev_id)) {

@@ -5,7 +5,7 @@
 <nav id="primary-nav">
 
     <ul class="nav" style="margin-top:-10px">
-        <h3 id="dept">اقسام المدونه</h3>
+        <h4 id="dept" style="text-align:center;border:1px dashed #ccc;padding:5px;">اقسام المدونه</h4>
           <?php
         $query1 = $this->db->get('blog_category');
         if ($query1->num_rows() > 0) {
@@ -39,10 +39,17 @@
 
                         </ul>  
                         </nav>
+                        
+<style type="text/css">
+#service h4{
+	       text-align:center;border:1px dashed #ccc;padding:5px;
+	
+	    }
+</style>
 </div>
 
 <div id="service">
-<h3>الخدمات الاكثر شرائا</h3>
+<h4>الخدمات الاكثر شرائا</h4>
 <div style="background-color:#e9e9e9;padding:0 6px 0 6px;">
 
 <div id="all">
@@ -74,7 +81,7 @@
 </div>
 
 <div id="service">
-<h3>الخدمات الاكثر شرائا</h3>
+<h4>الخدمات الاكثر شرائا</h4>
 <div  style="background-color:#e9e9e9;padding:0 6px 0 6px;">
 
 <div id="all">
@@ -105,7 +112,7 @@
 
 </div>
 <div id="service">
-<h3>الخدمات الاكثر شرائا</h3>
+<h4>الخدمات الاكثر شرائا</h4>
 <div  style="background-color:#e9e9e9;padding:0 6px 0 6px;">
 
 <div id="all">

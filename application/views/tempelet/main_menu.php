@@ -2,8 +2,8 @@
  <script src="<?php echo base_url(); ?>js/custom.js" type="text/javascript" ></script> 
 
 <aside id="page-sidebar" class="nav-collapse collapse">
-<h4>اقسام السوق</h4>
-<div class="main_menu" >
+<h4 style="text-align:center;border:1px dashed #ccc;padding:5px;">اقسام السوق</h4>
+<div class="main_menu" style="margin-top:-20px;">
 <nav id="primary-nav">
 <ul class="nav">
     <?php
@@ -42,10 +42,16 @@
 </nav>
 
 
-
+<style type="text/css">
+#service h4{
+	       text-align:center;border:1px dashed #ccc;padding:5px;
+	
+	    }
+#all p{color:#999;}		
+</style>
 
 <div id="service">
-<h4>الخدمات الاكثر شرائا</h4>
+<h4 >الخدمات الاكثر شرائا</h4>
 <div style="background-color:#e9e9e9;padding:0 6px 0 6px;">
 
 <div id="all">
